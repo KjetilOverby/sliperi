@@ -1,9 +1,9 @@
 import React from "react";
 
-const OversiktMain = () => {
+const NewBladesMain = () => {
   return (
     <>
-      <div className="content-container">Overview component</div>
+      <div className="content-container">New Blades</div>
       <style jsx>
         {`
           .container {
@@ -14,4 +14,4 @@ const OversiktMain = () => {
   );
 };
 
-export default OversiktMain;
+export default NewBladesMain;

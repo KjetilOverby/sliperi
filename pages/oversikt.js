@@ -1,6 +1,6 @@
 import React from "react";
 import PageLayoutSidebar from "../src/components/common/PagelayoutSidebar";
-import SideBar from "../src/components/common/Sidebar";
+import SideBar from "../src/components/common/SideBar";
 import OversiktMain from "../src/components/OversiktMain";
 
 const oversikt = () => {

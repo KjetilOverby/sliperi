@@ -5,9 +5,9 @@ import { useRouter } from "next/router";
 import { IoMenuSharp } from "react-icons/io5";
 const SideBar = () => {
   const [activateOversikt, setActivateOversikt] = useState();
-  const [activate, setActivate] = useState();
-  const [activate2, setActivate2] = useState();
+  const [activateSearch, setActivateSearch] = useState();
   const [activate3, setActivate3] = useState();
+  const [activateNewBlades, setActivateNewBlades] = useState();
   const [activate4, setActivate4] = useState();
   const [activate5, setActivate5] = useState();
   const [activateSnippets, setActivateSnippets] = useState();
@@ -36,10 +36,10 @@ const SideBar = () => {
   useEffect(() => {
     if (router.pathname === "/oversikt") {
       setActivateOversikt("tab-active");
-    } else if (router.pathname === "/about") {
-      setActivate2("tab-active");
-    } else if (router.pathname === "/#") {
-      setActivate3("tab-active");
+    } else if (router.pathname === "/search") {
+      setActivateSearch("tab-active");
+    } else if (router.pathname === "/newblades") {
+      setActivateNewBlades("tab-active");
     } else if (router.pathname === "/#") {
       setActivate4("tab-active");
     } else if (router.pathname === "/#") {
@@ -64,20 +64,21 @@ const SideBar = () => {
       {openSidebar && isMobile && (
         <div
           onClick={openSidebarHandler}
-          className="menu-invisible-container"
-        ></div>
+          className="menu-invisible-container"></div>
       )}
       <div className={`container ${container}`}>
         <Link href="/">
           <p className={`logo`}>☯︎</p>
         </Link>
         <h4 className="section-header">Linck sagblad</h4>
-        <input className="input" placeholder="Search" />
+        <Link href="/search">
+          <p className={`section-tab ${activateSearch}`}>Søk</p>
+        </Link>
         <Link href="/oversikt">
           <p className={`section-tab ${activateOversikt}`}>Oversikt</p>
         </Link>
-        <Link href="/">
-          <p className={`section-tab ${activate2}`}>Work</p>
+        <Link href="/newblades">
+          <p className={`section-tab ${activateNewBlades}`}>Nye Blad</p>
         </Link>
         <Link href="/layout/columns2layout">
           <p className={`section-tab ${activate3}`}>News</p>
@@ -111,6 +112,7 @@ const SideBar = () => {
           padding: 1rem;
           transform: ${isMobile && "translateX(-15rem)"};
           z-index: 1500;
+          width: 15rem;
         }
         .container-open {
           animation: openContainer 0.8s forwards;
