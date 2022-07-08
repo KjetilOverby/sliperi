@@ -12,8 +12,7 @@ return (
   <SearchMain />
 </PagelayoutSidebar>
 <style jsx>{`
-.container {
-}
+
 `}
 </style>
 </>

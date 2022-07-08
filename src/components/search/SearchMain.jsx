@@ -14,7 +14,7 @@ const SearchMain = () => {
           border-radius: 5px;
           border: none;
           outline: none;
-          background: grey;
+          background: #dedede;
         }
       `}</style>
     </>

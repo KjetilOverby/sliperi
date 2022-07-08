@@ -182,9 +182,7 @@ const SideBar = () => {
           background: #58ccd6;
           color: #58ccd6;
         }
-         {
-          /* .tab-active { background: #58ccd6; width: 90%;e } */
-        }
+
         @keyframes openContainer {
           50% {
             transform: translateX(0);
