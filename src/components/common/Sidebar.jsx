@@ -64,7 +64,8 @@ const SideBar = () => {
       {openSidebar && isMobile && (
         <div
           onClick={openSidebarHandler}
-          className="menu-invisible-container"></div>
+          className="menu-invisible-container"
+        ></div>
       )}
       <div className={`container ${container}`}>
         <Link href="/">
@@ -80,21 +81,15 @@ const SideBar = () => {
         <Link href="/newblades">
           <p className={`section-tab ${activateNewBlades}`}>Nye Blad</p>
         </Link>
-        <Link href="/layout/columns2layout">
-          <p className={`section-tab ${activate3}`}>News</p>
+        <h4 className="section-header">Trimmerblad</h4>
+        <Link href="/">
+          <p className={`section-tab ${activate5}`}>Søk</p>
         </Link>
         <Link href="/">
-          <p className={`section-tab ${activate4}`}>Testing</p>
-        </Link>
-        <h4 className="section-header">Build</h4>
-        <Link href="/">
-          <p className={`section-tab ${activate5}`}>House</p>
-        </Link>
-        <Link href="/">
-          <p className={`section-tab ${activateHeader}`}>Mall</p>
+          <p className={`section-tab ${activateHeader}`}>Oversikt</p>
         </Link>{" "}
         <Link href="/">
-          <p className={`section-tab ${activateFooter}`}>Apartment</p>
+          <p className={`section-tab ${activateFooter}`}>Nye blad</p>
         </Link>
         <h4 className="section-header">Color</h4>
         <Link href="/">
