@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <MyContext.Provider value={{ linckBlades }}>
-      <Component {...pageProps} />{" "}
+      <Component {...pageProps} />
     </MyContext.Provider>
   );
 }
