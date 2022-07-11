@@ -22,8 +22,22 @@ h6 {
 .content-container {
   grid-area: content;
   padding: 5rem;
+  overflow: scroll;
+  max-height: 100vh
+}
+.header {
+  font-weight: 300;
+}
+.mb {
+  margin-bottom: 1.5rem
 }
 
 * {
   box-sizing: border-box;
+}
+
+@media only screen and (max-width: 1000px) {
+   .content-container {
+    padding: 5rem .5rem
+   }
 }

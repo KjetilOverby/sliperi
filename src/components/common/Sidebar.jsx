@@ -64,8 +64,7 @@ const SideBar = () => {
       {openSidebar && isMobile && (
         <div
           onClick={openSidebarHandler}
-          className="menu-invisible-container"
-        ></div>
+          className="menu-invisible-container"></div>
       )}
       <div className={`container ${container}`}>
         <Link href="/">
@@ -105,9 +104,9 @@ const SideBar = () => {
           grid-area: sideBar;
           background: #333;
           padding: 1rem;
+          width: 15rem;
           transform: ${isMobile && "translateX(-15rem)"};
           z-index: 1500;
-          width: 15rem;
         }
         .container-open {
           animation: openContainer 0.8s forwards;
