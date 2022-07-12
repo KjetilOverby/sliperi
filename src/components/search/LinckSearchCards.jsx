@@ -26,7 +26,7 @@ const LinckCards = ({
   commentDate,
 }) => {
   /* const { user, isAuthenticated } = useAuth0(); */
-  const user = { sub: "test" };
+  const user = { sub: process.env.USER_SUB };
 
   const [color, setColor] = useState("green");
   const [innerColor, setInnerColor] = useState("blue");
