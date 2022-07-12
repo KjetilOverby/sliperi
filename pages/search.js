@@ -4,6 +4,10 @@ import SideBar from "../src/components/common/SideBar";
 import SearchMain from "../src/components/search/SearchMain";
 
 const search = () => {
+
+
+ 
+
   return (
     <>
       <PagelayoutSidebar>

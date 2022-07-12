@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
   const [linckBlades, setLinckBlades] = useState();
   const [linckID, setLinckID] = useState();
 
-  console.log(linckID);
+ 
 
   useEffect(() => {
     (async () => {
@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   return (
-    <MyContext.Provider value={{ linckBlades, setLinckID }}>
+    <MyContext.Provider value={{ linckBlades, setLinckID, linckID}}>
       <Component {...pageProps} />
     </MyContext.Provider>
   );

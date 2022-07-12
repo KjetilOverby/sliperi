@@ -7,7 +7,7 @@ import { GiRapidshareArrow } from "react-icons/gi";
 import { RiDeleteBin6Fill } from "react-icons/ri";
 
 const SearchMain = () => {
-  const { linckBlades, setLinckID } = useContext(MyContext);
+  const { linckBlades, setLinckID, linckID } = useContext(MyContext);
   const [input, setInput] = useState();
 
   const [filteredBlades, setFilteredBlades] = useState();
@@ -25,6 +25,11 @@ const SearchMain = () => {
   const currentYear = new Date().getFullYear();
   const [getType, setGetType] = useState();
   const [getNumberOfRetip, setGetNumberOfRetip] = useState();
+  const axios = require("axios");
+
+  const api = axios.create({
+    baseURL: process.env.api,
+  });
 
   const inputSearcHandler = (e) => {
     setInput(e.target.value);
@@ -38,6 +43,47 @@ const SearchMain = () => {
         linckBlades.filter((blades) => blades.serial.includes(input))
     );
   }, [input]);
+
+  const user = { sub: process.env.USER_SUB };
+
+  const createDeletedBladeHandler = async () => {
+    try {
+      await api
+        .post(`/api/linck/createDeletedBlade/?user=${user.sub}`, {
+          type: getType,
+          serial: getSerial,
+          wasteNumberOfRetip: getNumberOfRetip,
+          wasteDate: new Date(),
+        })
+        .then(function (response) {
+          console.log(response);
+        });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const deleteBladeHandler = async () => {
+    try {
+      await api
+        .delete(`/api/linck/deleteBlade/?del=${linckID}&user=${user.sub}`)
+        .then((res) => {
+          /*    console.log(res);
+          setOpenDeleteModal(false);
+          setLinckUpdate(!linckUpdate);
+          setTimeout(() => {
+            
+            createDeletedBladeHandler();
+          }, 1500);
+
+          setSearchInput(""); */
+
+          createDeletedBladeHandler();
+        });
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <>
@@ -67,6 +113,7 @@ const SearchMain = () => {
           titleLeftBtn="OK"
           titleRightBtn="AVBRYT"
           cancel={() => setOpenDeleteModal(false)}
+          action={deleteBladeHandler}
         />
       )}
 

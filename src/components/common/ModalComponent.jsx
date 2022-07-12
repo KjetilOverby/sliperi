@@ -7,6 +7,7 @@ const ModalComponent = ({
   titleLeftBtn,
   titleRightBtn,
   cancel,
+  action,
 }) => {
   return (
     <>
@@ -19,7 +20,9 @@ const ModalComponent = ({
               <p>{text}</p>
             </div>
             <div>
-              <button className="btn">{titleLeftBtn}</button>
+              <button onClick={action} className="btn">
+                {titleLeftBtn}
+              </button>
               <button onClick={cancel} className="btn">
                 {titleRightBtn}
               </button>
