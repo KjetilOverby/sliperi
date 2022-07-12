@@ -26,7 +26,7 @@ const LinckCards = ({
   commentDate,
 }) => {
   /* const { user, isAuthenticated } = useAuth0(); */
-  const user = { sub: "user" };
+  const user = { sub: "test" };
 
   const [color, setColor] = useState("green");
   const [innerColor, setInnerColor] = useState("blue");
@@ -106,7 +106,8 @@ const LinckCards = ({
                   <>
                     <p
                       style={{ marginRight: "1rem", width: "8rem" }}
-                      className="comment-text container-text">
+                      className="comment-text container-text"
+                    >
                       {item}
                     </p>
                   </>
@@ -127,17 +128,22 @@ const LinckCards = ({
         {user && user.sub === process.env.USER_SUB && (
           <div className="icon-btn-container">
             <div className="icon-container comment-container">
-              <FaComments onClick={openCommentModalHandler} />
+              <FaComments
+                style={{ fontSize: "1.2rem" }}
+                onClick={openCommentModalHandler}
+              />
             </div>
             <div
               onClick={openRetipModalHandler}
-              className="icon-container retip-btn-container">
-              <BsArrowRepeat />
+              className="icon-container retip-btn-container"
+            >
+              <BsArrowRepeat style={{ fontSize: "1.2rem" }} />
             </div>
             <div
               onClick={openDeleteModalHandler}
-              className="icon-container delete-container">
-              <RiDeleteBin6Line />
+              className="icon-container delete-container"
+            >
+              <RiDeleteBin6Line style={{ fontSize: "1.2rem" }} />
             </div>
           </div>
         )}
@@ -157,7 +163,7 @@ const LinckCards = ({
               "middle middle ."
               "bottom bottom ."
               "comment comment .";
-            background: #e6ffff;
+            background: #e0fbf4;
           }
           .container-text {
             height: auto;
@@ -168,17 +174,21 @@ const LinckCards = ({
             display: flex;
           }
           .comment-text {
-            color: red;
+            color: #2d694d;
             font-style: italic;
+            font-size: 0.9rem;
           }
           .icon-container {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 2rem;
-            width: 2rem;
+            height: 2.5rem;
+            width: 2.5rem;
             border-radius: 50%;
             font-size: 1rem;
+          }
+          .icon-container:hover {
+            cursor: pointer;
           }
           .icon-btn-container {
             width: 10rem;
@@ -253,10 +263,12 @@ const LinckCards = ({
           .retip-container {
             display: flex;
             grid-area: bottom;
+            margin: 1rem 0;
           }
           .retip-text {
             color: #1982d8;
             font-style: italic;
+            font-size: 0.9rem;
           }
           .serial {
             margin: 0 0.5rem 0 0;
@@ -270,6 +282,8 @@ const LinckCards = ({
           .regist {
             color: grey;
             font-style: italic;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
           }
           .top-container {
             display: flex;
@@ -284,7 +298,7 @@ const LinckCards = ({
                 "top . "
                 "middle  ."
                 "bottom ."
-                "comment ."
+                "comment comment"
                 "button button";
             }
             .icon-btn-container {

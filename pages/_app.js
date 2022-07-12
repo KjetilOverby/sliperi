@@ -7,28 +7,27 @@ const api = axios.create({
   baseURL: process.env.api,
 });
 
+const url = "/api/linck/linckblades";
+
 function MyApp({ Component, pageProps }) {
   const [linckBlades, setLinckBlades] = useState();
+  const [linckID, setLinckID] = useState();
 
+  console.log(linckID);
 
   useEffect(() => {
- 
-
     (async () => {
       try {
-        const response = await api.get('/api/linck/linckblades')
+        const response = await api.get(url);
         setLinckBlades(response.data.data);
       } catch (error) {
         console.log(error.response.body);
       }
     })();
-  }, [])
-
-
-
+  }, []);
 
   return (
-    <MyContext.Provider value={{ linckBlades }}>
+    <MyContext.Provider value={{ linckBlades, setLinckID }}>
       <Component {...pageProps} />
     </MyContext.Provider>
   );

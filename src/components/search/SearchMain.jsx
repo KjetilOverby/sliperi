@@ -4,9 +4,10 @@ import { MyContext } from "../../contexts/MyContext";
 import ModalComponent from "../common/ModalComponent";
 import LinckSearchCards from "./LinckSearchCards";
 import { GiRapidshareArrow } from "react-icons/gi";
+import { RiDeleteBin6Fill } from "react-icons/ri";
 
 const SearchMain = () => {
-  const { linckBlades } = useContext(MyContext);
+  const { linckBlades, setLinckID } = useContext(MyContext);
   const [input, setInput] = useState();
 
   const [filteredBlades, setFilteredBlades] = useState();
@@ -15,7 +16,7 @@ const SearchMain = () => {
   const [openRetipModal, setOpenRetipModal] = useState(false);
   const [openCommentModal, setOpenCommentModal] = useState(false);
   const [getSerial, setGetSerial] = useState();
-  const [linckID, setLinckID] = useState();
+
   const [deletedBlades, setDeletedBlades] = useState();
   const [wasteMonth, setWasteMonth] = useState(new Date().getMonth() + 1);
   const [wasteMonth2, setWasteMonth2] = useState(new Date().getMonth() + 2);
@@ -49,9 +50,23 @@ const SearchMain = () => {
           }
           title="Omlodding"
           text="Omlodde med dagens dato fra stridsbergs?"
-          titleLeftBtn="SLETT"
+          titleLeftBtn="OK"
           titleRightBtn="AVBRYT"
           cancel={() => setOpenRetipModal(false)}
+        />
+      )}
+      {openDeleteModal && (
+        <ModalComponent
+          icon={
+            <RiDeleteBin6Fill
+              style={{ color: "indianred", fontSize: "3rem" }}
+            />
+          }
+          title="Slett"
+          text="Slette dette bladet?"
+          titleLeftBtn="OK"
+          titleRightBtn="AVBRYT"
+          cancel={() => setOpenDeleteModal(false)}
         />
       )}
 
@@ -59,7 +74,7 @@ const SearchMain = () => {
         <div>
           <h1 className="header mb">Søk i lincksagblad</h1>
         </div>
-        <div>
+        <div className="input-container">
           <input
             onChange={inputSearcHandler}
             className="input"
@@ -104,6 +119,10 @@ const SearchMain = () => {
           border: none;
           outline: none;
           background: #dedede;
+          font-size: 1.5rem;
+        }
+        .input-container {
+          margin-bottom: 2rem;
         }
       `}</style>
     </>
