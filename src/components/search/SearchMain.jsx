@@ -1,17 +1,23 @@
-import React, { useState } from "react";
-import { useContext, useEffect } from "react";
+import React, { useState, useContext, useEffect } from "react";
+
 import { MyContext } from "../../contexts/MyContext";
 import ModalComponent from "../common/ModalComponent";
 import LinckSearchCards from "./LinckSearchCards";
 import { GiRapidshareArrow } from "react-icons/gi";
 import { RiDeleteBin6Fill } from "react-icons/ri";
+import BladesListDelRetip from "./BladesListDelRetip";
 
 const SearchMain = () => {
-  const { linckBlades, setLinckID, linckID } = useContext(MyContext);
+  const {
+    linckBlades,
+    setLinckID,
+    linckID,
+    setLinckUpdateDatabase,
+    linckUpdateDatabase,
+  } = useContext(MyContext);
   const [input, setInput] = useState();
 
   const [filteredBlades, setFilteredBlades] = useState();
-  const [searchInput, setSearchInput] = useState();
   const [openDeleteModal, setOpenDeleteModal] = useState(false);
   const [openRetipModal, setOpenRetipModal] = useState(false);
   const [openCommentModal, setOpenCommentModal] = useState(false);
@@ -46,43 +52,45 @@ const SearchMain = () => {
 
   const user = { sub: process.env.USER_SUB };
 
-  const createDeletedBladeHandler = async () => {
+  const createDeletedBladeHandler = () => {
+    return new Promise((resolve, reject) => {
+      try {
+        api
+          .post(`/api/linck/createDeletedBlade/?user=${user.sub}`, {
+            type: getType,
+            serial: getSerial,
+            wasteNumberOfRetip: getNumberOfRetip,
+            wasteDate: new Date(),
+          })
+          .then(function (response) {
+            resolve(response);
+          });
+      } catch (error) {
+        console.log(error);
+      }
+    });
+  };
+
+  const deleteLinckBlade = () => {
     try {
-      await api
-        .post(`/api/linck/createDeletedBlade/?user=${user.sub}`, {
-          type: getType,
-          serial: getSerial,
-          wasteNumberOfRetip: getNumberOfRetip,
-          wasteDate: new Date(),
-        })
-        .then(function (response) {
-          console.log(response);
+      api
+        .delete(`/api/linck/deleteBlade/?del=${linckID}&user=${user.sub}`)
+        .then((res) => {
+          console.log(res);
         });
     } catch (error) {
       console.log(error);
     }
   };
 
-  const deleteBladeHandler = async () => {
-    try {
-      await api
-        .delete(`/api/linck/deleteBlade/?del=${linckID}&user=${user.sub}`)
-        .then((res) => {
-          /*    console.log(res);
-          setOpenDeleteModal(false);
-          setLinckUpdate(!linckUpdate);
-          setTimeout(() => {
-            
-            createDeletedBladeHandler();
-          }, 1500);
+  const deleteBladeHandler = () => {
+    setOpenDeleteModal(false);
 
-          setSearchInput(""); */
-
-          createDeletedBladeHandler();
-        });
-    } catch (error) {
-      console.log(error);
-    }
+    deleteLinckBlade();
+    createDeletedBladeHandler().then(() => {
+      setLinckUpdateDatabase(!linckUpdateDatabase);
+      setInput("");
+    });
   };
 
   return (
@@ -126,12 +134,14 @@ const SearchMain = () => {
             onChange={inputSearcHandler}
             className="input"
             placeholder="Søk"
+            value={input}
           />
           <p>Antall blad: {linckBlades && linckBlades.length}</p>
           <p>Antall treff: {searchResult && searchResult.length}</p>
         </div>
         <div>
           {searchResult &&
+            input.length > 1 &&
             searchResult.map((blade) => {
               return (
                 <div>
@@ -158,6 +168,7 @@ const SearchMain = () => {
               );
             })}
         </div>
+        <BladesListDelRetip />
       </div>
       <style jsx>{`
         .input {
