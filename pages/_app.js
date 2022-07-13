@@ -10,6 +10,7 @@ const api = axios.create({
 function MyApp({ Component, pageProps }) {
   const [linckBlades, setLinckBlades] = useState();
   const [linckBladesDeleted, setLinckBladesDeleted] = useState();
+  const [linckServiceBlades, setLinckServiceBlades] = useState();
   const [linckID, setLinckID] = useState();
   const [linckUpdateDatabase, setLinckUpdateDatabase] = useState(false);
 
@@ -39,7 +40,20 @@ function MyApp({ Component, pageProps }) {
     })();
   }, [linckUpdateDatabase]);
 
-  console.log(linckBladesDeleted);
+  // SERVICE
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const response = await api.get(`/api/linck/service/serviceBlades?&month=${month}&month2=${month2}&yearRequest=${year}`);
+        setLinckServiceBlades(response.data.data);
+      } catch (error) {
+        console.log(error.response.body);
+      }
+    })();
+  }, [linckUpdateDatabase]);
+
+ 
 
   return (
     <MyContext.Provider
@@ -50,6 +64,7 @@ function MyApp({ Component, pageProps }) {
         linckID,
         setLinckUpdateDatabase,
         linckUpdateDatabase,
+        linckServiceBlades
       }}
     >
       <Component {...pageProps} />

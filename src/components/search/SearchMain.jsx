@@ -15,7 +15,7 @@ const SearchMain = () => {
     setLinckUpdateDatabase,
     linckUpdateDatabase,
   } = useContext(MyContext);
-  const [input, setInput] = useState();
+  const [input, setInput] = useState("");
 
   const [filteredBlades, setFilteredBlades] = useState();
   const [openDeleteModal, setOpenDeleteModal] = useState(false);
@@ -85,7 +85,6 @@ const SearchMain = () => {
 
   const deleteBladeHandler = () => {
     setOpenDeleteModal(false);
-
     deleteLinckBlade();
     createDeletedBladeHandler().then(() => {
       setLinckUpdateDatabase(!linckUpdateDatabase);
@@ -125,52 +124,59 @@ const SearchMain = () => {
         />
       )}
 
-      <div className="content-container">
+      <div className="content-container main-container">
         <div>
           <h1 className="header mb">Søk i lincksagblad</h1>
         </div>
-        <div className="input-container">
-          <input
-            onChange={inputSearcHandler}
-            className="input"
-            placeholder="Søk"
-            value={input}
-          />
-          <p>Antall blad: {linckBlades && linckBlades.length}</p>
-          <p>Antall treff: {searchResult && searchResult.length}</p>
+        <div className="container">
+          <BladesListDelRetip />
+          <div>
+            <div className="input-container">
+              <input
+                onChange={inputSearcHandler}
+                className="input"
+                placeholder="Søk"
+                value={input}
+              />
+              <p>Antall blad: {linckBlades && linckBlades.length}</p>
+              <p>Antall treff: {searchResult && searchResult.length}</p>
+            </div>
+            {searchResult &&
+              input.length > 1 &&
+              searchResult.map((blade) => {
+                return (
+                  <div key={blade._id}>
+                    <LinckSearchCards
+                      keyID={blade._id}
+                      serial={blade.serial}
+                      type={blade.type}
+                      regDate={blade.registDate}
+                      updated={blade.updated}
+                      performer={blade.performer}
+                      date={blade.date}
+                      setOpenDeleteModal={setOpenDeleteModal}
+                      setOpenRetipModal={setOpenRetipModal}
+                      setOpenCommentModal={setOpenCommentModal}
+                      setGetSerial={setGetSerial}
+                      setLinckID={setLinckID}
+                      setGetType={setGetType}
+                      setGetNumberOfRetip={setGetNumberOfRetip}
+                      wasteUpdate={wasteUpdate}
+                      comment={blade.comment}
+                      commentDate={blade.commentDate}
+                    />
+                  </div>
+                );
+              })}
+          </div>
         </div>
-        <div>
-          {searchResult &&
-            input.length > 1 &&
-            searchResult.map((blade) => {
-              return (
-                <div>
-                  <LinckSearchCards
-                    keyID={blade._id}
-                    serial={blade.serial}
-                    type={blade.type}
-                    regDate={blade.registDate}
-                    updated={blade.updated}
-                    performer={blade.performer}
-                    date={blade.date}
-                    setOpenDeleteModal={setOpenDeleteModal}
-                    setOpenRetipModal={setOpenRetipModal}
-                    setOpenCommentModal={setOpenCommentModal}
-                    setGetSerial={setGetSerial}
-                    setLinckID={setLinckID}
-                    setGetType={setGetType}
-                    setGetNumberOfRetip={setGetNumberOfRetip}
-                    wasteUpdate={wasteUpdate}
-                    comment={blade.comment}
-                    commentDate={blade.commentDate}
-                  />
-                </div>
-              );
-            })}
-        </div>
-        <BladesListDelRetip />
       </div>
       <style jsx>{`
+        .container {
+          display: grid;
+          grid-template-columns: 30rem 1fr;
+        }
+
         .input {
           padding: 0.5rem;
           border-radius: 5px;
