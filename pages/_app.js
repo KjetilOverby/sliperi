@@ -24,9 +24,12 @@ function MyApp({ Component, pageProps }) {
       }
     })();
   }, [linckUpdateDatabase]);
-  const year = "2022";
-  const month = "07";
-  const month2 = "07";
+
+  const year = new Date().getFullYear();
+  const month = new Date().getMonth() + 1;
+  const month2 = new Date().getMonth() + 2;
+
+  console.log(month);
   useEffect(() => {
     (async () => {
       try {
