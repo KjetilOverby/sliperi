@@ -6,6 +6,7 @@ import LinckSearchCards from "./LinckSearchCards";
 import { GiRapidshareArrow } from "react-icons/gi";
 import { RiDeleteBin6Fill } from "react-icons/ri";
 import BladesListDelRetip from "./BladesListDelRetip";
+import dateFormat from "dateformat";
 
 const SearchMain = () => {
   const {
@@ -92,6 +93,48 @@ const SearchMain = () => {
     });
   };
 
+  const retipUpdatePromise = () => {
+    return new Promise((resolve, reject) => {
+      api
+        .post(
+          `/api/linck/service/updateretip/?ids=${linckID}&user=${user.sub}`,
+          {
+            type: getType,
+            performer: "Stridsbergs",
+            date: dateFormat(new Date(), "dd.mm.yyyy HH:MM"),
+          }
+        )
+        .then(function (res) {
+          resolve(console.log(res.status === 200));
+        });
+    });
+  };
+
+  const createServiceBladeHandler = () => {
+    try {
+      api
+        .post(`/api/linck/service/createserviceBlade/?user=${user.sub}`, {
+          type: getType,
+          serial: getSerial,
+          serviceDate: new Date(),
+        })
+        .then(function (response) {
+          console.log(response);
+        });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const retipUpdateHandler = () => {
+    createServiceBladeHandler();
+    setOpenRetipModal(false);
+    retipUpdatePromise().then(() => {
+      setLinckUpdateDatabase(!linckUpdateDatabase);
+      setInput(getSerial);
+    });
+  };
+
   return (
     <>
       {openRetipModal && (
@@ -106,6 +149,7 @@ const SearchMain = () => {
           titleLeftBtn="OK"
           titleRightBtn="AVBRYT"
           cancel={() => setOpenRetipModal(false)}
+          action={retipUpdateHandler}
         />
       )}
       {openDeleteModal && (
