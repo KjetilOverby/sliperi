@@ -49,7 +49,7 @@ const SearchMain = () => {
       linckBlades &&
         linckBlades.filter((blades) => blades.serial.includes(input))
     );
-  }, [input]);
+  }, [input, linckUpdateDatabase, searchResult]);
 
   const user = { sub: process.env.USER_SUB };
 
@@ -105,7 +105,7 @@ const SearchMain = () => {
           }
         )
         .then(function (res) {
-          resolve(console.log(res.status === 200));
+          resolve(console.log(res));
         });
     });
   };
@@ -205,7 +205,6 @@ const SearchMain = () => {
                       setLinckID={setLinckID}
                       setGetType={setGetType}
                       setGetNumberOfRetip={setGetNumberOfRetip}
-                      wasteUpdate={wasteUpdate}
                       comment={blade.comment}
                       commentDate={blade.commentDate}
                     />

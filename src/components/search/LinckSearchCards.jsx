@@ -21,7 +21,6 @@ const LinckCards = ({
   setLinckID,
   setGetType,
   setGetNumberOfRetip,
-  wasteUpdate,
   comment,
   commentDate,
 }) => {
@@ -30,7 +29,7 @@ const LinckCards = ({
 
   const [color, setColor] = useState("green");
   const [innerColor, setInnerColor] = useState("blue");
-  const { userID } = useContext(MyContext);
+  const { userID, linckUpdateDatabase } = useContext(MyContext);
 
   useEffect(() => {
     if (performer.length <= 1) {
@@ -43,7 +42,7 @@ const LinckCards = ({
       setColor("#d14242");
       setInnerColor("#b149495f");
     }
-  }, [performer, wasteUpdate]);
+  }, [performer, linckUpdateDatabase]);
 
   const openDeleteModalHandler = () => {
     setOpenDeleteModal(true);
@@ -106,7 +105,8 @@ const LinckCards = ({
                   <>
                     <p
                       style={{ marginRight: "1rem", width: "8rem" }}
-                      className="comment-text container-text">
+                      className="comment-text container-text"
+                    >
                       {item}
                     </p>
                   </>
@@ -134,12 +134,14 @@ const LinckCards = ({
             </div>
             <div
               onClick={openRetipModalHandler}
-              className="icon-container retip-btn-container">
+              className="icon-container retip-btn-container"
+            >
               <BsArrowRepeat style={{ fontSize: "1.2rem" }} />
             </div>
             <div
               onClick={openDeleteModalHandler}
-              className="icon-container delete-container">
+              className="icon-container delete-container"
+            >
               <RiDeleteBin6Line style={{ fontSize: "1.2rem" }} />
             </div>
           </div>

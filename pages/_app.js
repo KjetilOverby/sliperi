@@ -45,15 +45,15 @@ function MyApp({ Component, pageProps }) {
   useEffect(() => {
     (async () => {
       try {
-        const response = await api.get(`/api/linck/service/serviceBlades?&month=${month}&month2=${month2}&yearRequest=${year}`);
+        const response = await api.get(
+          `/api/linck/service/serviceBlades?&month=${month}&month2=${month2}&yearRequest=${year}`
+        );
         setLinckServiceBlades(response.data.data);
       } catch (error) {
         console.log(error.response.body);
       }
     })();
   }, [linckUpdateDatabase]);
-
- 
 
   return (
     <MyContext.Provider
@@ -64,7 +64,7 @@ function MyApp({ Component, pageProps }) {
         linckID,
         setLinckUpdateDatabase,
         linckUpdateDatabase,
-        linckServiceBlades
+        linckServiceBlades,
       }}
     >
       <Component {...pageProps} />
