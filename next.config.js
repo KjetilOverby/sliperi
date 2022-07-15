@@ -8,6 +8,5 @@ module.exports = {
     MONGO_URITRIMMER:
       "mongodb+srv://moelvenkjetil:2ubuFwxFsh6sfOXl@kanefusa-hiteo.mongodb.net/Trimmer?retryWrites=true&w=majority",
     USER_SUB: "auth0|5f27b78668033f003d618d38",
-    USER: "auth0|5f27b78668033f003d618d38",
   },
 };

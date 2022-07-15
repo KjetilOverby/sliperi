@@ -2,12 +2,15 @@ import "../styles/globals.css";
 import { useState, useEffect } from "react";
 import { MyContext } from "../src/contexts/MyContext";
 const axios = require("axios");
+import { Auth0Provider } from "@auth0/auth0-react";
 
 const api = axios.create({
   baseURL: process.env.api,
 });
 
 function MyApp({ Component, pageProps }) {
+  const domain = process.env.REACT_APP_AUTH0_DOMAIN;
+  const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
   const [linckBlades, setLinckBlades] = useState();
   const [linckBladesDeleted, setLinckBladesDeleted] = useState();
   const [linckServiceBlades, setLinckServiceBlades] = useState();
@@ -59,19 +62,25 @@ function MyApp({ Component, pageProps }) {
   }, [linckUpdateDatabase]);
 
   return (
-    <MyContext.Provider
-      value={{
-        linckBlades,
-        linckBladesDeleted,
-        setLinckID,
-        linckID,
-        setLinckUpdateDatabase,
-        linckUpdateDatabase,
-        linckServiceBlades,
-      }}
+    <Auth0Provider
+      domain={domain}
+      clientId={clientId}
+      redirectUri={typeof window !== "undefined" && window.location.origin}
     >
-      <Component {...pageProps} />
-    </MyContext.Provider>
+      <MyContext.Provider
+        value={{
+          linckBlades,
+          linckBladesDeleted,
+          setLinckID,
+          linckID,
+          setLinckUpdateDatabase,
+          linckUpdateDatabase,
+          linckServiceBlades,
+        }}
+      >
+        <Component {...pageProps} />
+      </MyContext.Provider>
+    </Auth0Provider>
   );
 }
 

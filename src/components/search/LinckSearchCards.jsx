@@ -4,7 +4,7 @@ import { BsArrowRepeat } from "react-icons/bs";
 import { FaComments } from "react-icons/fa";
 import { MyContext } from "../../contexts/MyContext";
 import dateFormat, { masks } from "dateformat";
-/* import { useAuth0 } from "@auth0/auth0-react"; */
+import { useAuth0 } from "@auth0/auth0-react";
 
 const LinckCards = ({
   keyID,
@@ -24,8 +24,7 @@ const LinckCards = ({
   comment,
   commentDate,
 }) => {
-  /* const { user, isAuthenticated } = useAuth0(); */
-  const user = { sub: process.env.USER_SUB };
+  const { user, isAuthenticated } = useAuth0();
 
   const [color, setColor] = useState("green");
   const [innerColor, setInnerColor] = useState("blue");

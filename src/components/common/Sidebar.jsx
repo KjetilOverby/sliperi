@@ -3,7 +3,11 @@ import { useMediaQuery } from "react-responsive";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { IoMenuSharp } from "react-icons/io5";
+import LoginButton from "../../components/auth/LoginButton";
+import LogoutButton from "../../components/auth/LogoutButton";
+import { useAuth0 } from "@auth0/auth0-react";
 const SideBar = () => {
+  const { user, isAuthenticated } = useAuth0();
   const [activateOversikt, setActivateOversikt] = useState();
   const [activateSearch, setActivateSearch] = useState();
   const [activate3, setActivate3] = useState();
@@ -64,12 +68,15 @@ const SideBar = () => {
       {openSidebar && isMobile && (
         <div
           onClick={openSidebarHandler}
-          className="menu-invisible-container"></div>
+          className="menu-invisible-container"
+        ></div>
       )}
       <div className={`container ${container}`}>
         <Link href="/">
           <p className={`logo`}>☯︎</p>
         </Link>
+        <LoginButton />
+        <LogoutButton />
         <h4 className="section-header">Linck sagblad</h4>
         <Link href="/search">
           <p className={`section-tab ${activateSearch}`}>Søk</p>
@@ -135,7 +142,8 @@ const SideBar = () => {
           color: #dadada;
         }
         .logo {
-          color: #58ccd6;
+          color: ${user ? "#58ccd6" : "red"};
+
           font-size: 3rem;
           margin-bottom: 2rem;
         }

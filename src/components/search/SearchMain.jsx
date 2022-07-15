@@ -7,8 +7,11 @@ import { GiRapidshareArrow } from "react-icons/gi";
 import { RiDeleteBin6Fill } from "react-icons/ri";
 import BladesListDelRetip from "./BladesListDelRetip";
 import dateFormat from "dateformat";
+const axios = require("axios");
+import { useAuth0 } from "@auth0/auth0-react";
 
 const SearchMain = () => {
+  const { user, isAuthenticated } = useAuth0();
   const {
     linckBlades,
     setLinckID,
@@ -32,7 +35,6 @@ const SearchMain = () => {
   const currentYear = new Date().getFullYear();
   const [getType, setGetType] = useState();
   const [getNumberOfRetip, setGetNumberOfRetip] = useState();
-  const axios = require("axios");
 
   const api = axios.create({
     baseURL: process.env.api,
@@ -50,8 +52,6 @@ const SearchMain = () => {
         linckBlades.filter((blades) => blades.serial.includes(input))
     );
   }, [input, linckUpdateDatabase, searchResult]);
-
-  const user = { sub: process.env.USER_SUB };
 
   const createDeletedBladeHandler = () => {
     return new Promise((resolve, reject) => {
