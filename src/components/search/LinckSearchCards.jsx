@@ -150,7 +150,6 @@ const LinckCards = ({
         {`
           .container {
             padding: 1rem;
-            border: 0.5px solid grey;
             margin: 0.5rem;
             display: grid;
             border-radius: 5px;
@@ -161,7 +160,11 @@ const LinckCards = ({
               "middle middle ."
               "bottom bottom ."
               "comment comment .";
-            background: linear-gradient(to right, #e0fbf4, #fef);
+            background: linear-gradient(to right, #deebec, #f6f6f6);
+            box-shadow: 1px 1px 10px lightgrey;
+          }
+          .container:hover {
+            background: #e7e7e7;
           }
           .container-text {
             height: auto;

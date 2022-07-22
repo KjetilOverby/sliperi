@@ -51,7 +51,9 @@ const SearchMain = () => {
       linckBlades &&
         linckBlades.filter((blades) => blades.serial.includes(input))
     );
-  }, [input, linckUpdateDatabase, searchResult]);
+  }, [input, linckUpdateDatabase]);
+
+  // Dont put searchresult inside useEffect it causes an infinite loop
 
   const createDeletedBladeHandler = () => {
     return new Promise((resolve, reject) => {
