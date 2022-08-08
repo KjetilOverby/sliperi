@@ -61,6 +61,30 @@ function MyApp({ Component, pageProps }) {
     })();
   }, [linckUpdateDatabase]);
 
+
+  // Tabell Data
+
+  const [tabellLinckBlad, setTabellLinckBlad] = useState();
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const response = await api.get(
+          `/api/oversikt/linkBladesTabell`
+        );
+        setTabellLinckBlad(response.data.data);
+      } catch (error) {
+        console.log(error.response.body);
+      }
+    })();
+  }, []);
+
+ 
+
+  
+
+
+
   return (
     <Auth0Provider
       domain={domain}
@@ -76,6 +100,7 @@ function MyApp({ Component, pageProps }) {
           setLinckUpdateDatabase,
           linckUpdateDatabase,
           linckServiceBlades,
+          tabellLinckBlad
         }}
       >
         <Component {...pageProps} />

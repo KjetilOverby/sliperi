@@ -38,6 +38,9 @@ h6 {
 * {
   box-sizing: border-box;
 }
+.tabell-text {
+  font-size: .8rem
+}
 .tab {
   color: white;
 }

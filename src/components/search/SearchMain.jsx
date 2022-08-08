@@ -233,6 +233,12 @@ const SearchMain = () => {
         .input-container {
           margin-bottom: 2rem;
         }
+
+        @media only screen and (max-width: 1000px) {
+          .container {
+            grid-template-columns: 1fr;
+          }
+        }
       `}</style>
     </>
   );

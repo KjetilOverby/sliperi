@@ -104,8 +104,7 @@ const LinckCards = ({
                   <>
                     <p
                       style={{ marginRight: "1rem", width: "8rem" }}
-                      className="comment-text container-text"
-                    >
+                      className="comment-text container-text">
                       {item}
                     </p>
                   </>
@@ -133,14 +132,12 @@ const LinckCards = ({
             </div>
             <div
               onClick={openRetipModalHandler}
-              className="icon-container retip-btn-container"
-            >
+              className="icon-container retip-btn-container">
               <BsArrowRepeat style={{ fontSize: "1.2rem" }} />
             </div>
             <div
               onClick={openDeleteModalHandler}
-              className="icon-container delete-container"
-            >
+              className="icon-container delete-container">
               <RiDeleteBin6Line style={{ fontSize: "1.2rem" }} />
             </div>
           </div>
@@ -160,7 +157,7 @@ const LinckCards = ({
               "middle middle ."
               "bottom bottom ."
               "comment comment .";
-            background: linear-gradient(to right, #deebec, #f6f6f6);
+            background: linear-gradient(to right, #cfd9df, #e2ebf0);
             box-shadow: 1px 1px 10px lightgrey;
           }
           .container:hover {
