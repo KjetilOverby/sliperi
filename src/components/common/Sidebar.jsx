@@ -68,8 +68,7 @@ const SideBar = () => {
       {openSidebar && isMobile && (
         <div
           onClick={openSidebarHandler}
-          className="menu-invisible-container"
-        ></div>
+          className="menu-invisible-container"></div>
       )}
       <div className={`container ${container}`}>
         <Link href="/">
@@ -77,7 +76,7 @@ const SideBar = () => {
         </Link>
         <LoginButton />
         <LogoutButton />
-        <h4 className="section-header">Linck sagblad</h4>
+        <h4 className="section-header">Linck sagblader</h4>
         <Link href="/search">
           <p className={`section-tab ${activateSearch}`}>Søk</p>
         </Link>
@@ -87,7 +86,7 @@ const SideBar = () => {
         <Link href="/newblades">
           <p className={`section-tab ${activateNewBlades}`}>Nye Blad</p>
         </Link>
-        <h4 className="section-header">Trimmerblad</h4>
+        {/*  <h4 className="section-header">Trimmerblad</h4>
         <Link href="/">
           <p className={`section-tab ${activate5}`}>Søk</p>
         </Link>
@@ -104,7 +103,7 @@ const SideBar = () => {
         <h4 className="section-header">Support</h4>
         <Link href="">
           <p className={`section-tab ${activateSnippets}`}>Helpdesk</p>
-        </Link>
+        </Link> */}
       </div>
       <style jsx>{`
         .container {
