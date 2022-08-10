@@ -44,7 +44,7 @@ const SideBar = () => {
       setActivateSearch("tab-active");
     } else if (router.pathname === "/newblades") {
       setActivateNewBlades("tab-active");
-    } else if (router.pathname === "/#") {
+    } else if (router.pathname === "/bladoversiktvisuell") {
       setActivate4("tab-active");
     } else if (router.pathname === "/#") {
       setActivate5("tab-active");
@@ -76,7 +76,7 @@ const SideBar = () => {
         </Link>
         <LoginButton />
         <LogoutButton />
-        <h4 className="section-header">Linck sagblader</h4>
+        <h4 className="section-header">Sagblad</h4>
         <Link href="/search">
           <p className={`section-tab ${activateSearch}`}>Søk</p>
         </Link>
@@ -85,6 +85,9 @@ const SideBar = () => {
         </Link>
         <Link href="/newblades">
           <p className={`section-tab ${activateNewBlades}`}>Nye Blad</p>
+        </Link>
+        <Link href="/bladoversiktvisuell">
+          <p className={`section-tab ${activate4}`}>Visuell oversikt</p>
         </Link>
         {/*  <h4 className="section-header">Trimmerblad</h4>
         <Link href="/">
