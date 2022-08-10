@@ -21,6 +21,7 @@ const NewBladesMain = () => {
   const [bladeInfo, setBladeInfo] = useState();
 
   const [updateNewblades, setUpdateNewblades] = useState(false);
+
   const { user, isAuthenticated } = useAuth0();
   const monthRequest = "08";
   const monthRequest2 = "09";
@@ -148,12 +149,16 @@ const NewBladesMain = () => {
       <div className="content-container">
         <h1 className="header mb">Legg til nye blad</h1>
         <div className="addblades-container">
-          <AddBladesInputComponent
-            setSelectorValue={setSelectorValue}
-            setSerialInput={setSerialInput}
-            createNewBladeHandler={createNewBladeHandler}
-            onSubmit={onSubmit}
-          />
+          {user && user.sub === process.env.USER_SUB ? (
+            <AddBladesInputComponent
+              setSelectorValue={setSelectorValue}
+              setSerialInput={setSerialInput}
+              createNewBladeHandler={createNewBladeHandler}
+              onSubmit={onSubmit}
+            />
+          ) : (
+            <h3>Logg inn for å legge til nye blad</h3>
+          )}
         </div>
         <div className="newblades-main-container">
           {newBlades &&
@@ -168,10 +173,14 @@ const NewBladesMain = () => {
               };
               return (
                 <div
+                  key={item.newid}
                   onClick={openDeleteNewbladesHandler}
-                  className="newblade-container">
-                  <p className="serial">{item.serial}</p>
-                  <p>{item.type}</p>
+                  className="newblade-container"
+                >
+                  <p key={item.serial} className="serial">
+                    {item.serial}
+                  </p>
+                  <p key={item.serial}>{item.type}</p>
                 </div>
               );
             })}

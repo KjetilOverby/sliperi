@@ -3,9 +3,10 @@ import { useMediaQuery } from "react-responsive";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { IoMenuSharp } from "react-icons/io5";
-import LoginButton from "../../components/auth/LoginButton";
-import LogoutButton from "../../components/auth/LogoutButton";
+import LoginButton from "../auth/LoginButton";
+import LogoutButton from "../auth/LogoutButton";
 import { useAuth0 } from "@auth0/auth0-react";
+import Colors from "../../Colors";
 const SideBar = () => {
   const { user, isAuthenticated } = useAuth0();
   const [activateOversikt, setActivateOversikt] = useState();
@@ -144,7 +145,7 @@ const SideBar = () => {
           color: #dadada;
         }
         .logo {
-          color: ${user ? "#58ccd6" : "red"};
+          color: ${user ? `${Colors.login}` : "indianred"};
 
           font-size: 3rem;
           margin-bottom: 2rem;
@@ -156,7 +157,7 @@ const SideBar = () => {
           position: fixed;
           right: 2rem;
           top: 2rem;
-          background: #58ccd6;
+          background: ${Colors.login};
           width: 3rem;
           height: 3rem;
           z-index: 1500;
@@ -183,8 +184,8 @@ const SideBar = () => {
           content: "🁢 ";
           position: absolute;
           left: 0;
-          background: #58ccd6;
-          color: #58ccd6;
+          background: ${Colors.login};
+          color: ${Colors.login};
         }
 
         @keyframes openContainer {
