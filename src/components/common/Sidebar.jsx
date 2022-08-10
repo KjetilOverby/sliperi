@@ -47,7 +47,7 @@ const SideBar = () => {
       setActivateNewBlades("tab-active");
     } else if (router.pathname === "/bladoversiktvisuell") {
       setActivate4("tab-active");
-    } else if (router.pathname === "/#") {
+    } else if (router.pathname === "/segmentoversiktvisuell") {
       setActivate5("tab-active");
     } else if (router.pathname === "/#") {
       setActivateSnippets("tab-active");
@@ -90,10 +90,11 @@ const SideBar = () => {
         <Link href="/bladoversiktvisuell">
           <p className={`section-tab ${activate4}`}>Visuell oversikt</p>
         </Link>
-        {/*  <h4 className="section-header">Trimmerblad</h4>
-        <Link href="/">
-          <p className={`section-tab ${activate5}`}>Søk</p>
+        <h4 className="section-header">Segmenter</h4>
+        <Link href="/segmentoversiktvisuell">
+          <p className={`section-tab ${activate5}`}>Visuell oversikt</p>
         </Link>
+        {/* 
         <Link href="/">
           <p className={`section-tab ${activateHeader}`}>Oversikt</p>
         </Link>{" "}
