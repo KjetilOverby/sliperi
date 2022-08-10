@@ -8,7 +8,9 @@ const BladesListDelRetip = () => {
     <>
       <div className="container">
         <div>
-          <h2 className="header mb">Vrakede blad denne måneden</h2>
+          <h2 className="header header-search-component mb">
+            Vrakede blad denne måneden
+          </h2>
           <p>Antall: {linckBladesDeleted && linckBladesDeleted.length}</p>
           {linckBladesDeleted &&
             linckBladesDeleted.map((waste) => {
@@ -22,7 +24,9 @@ const BladesListDelRetip = () => {
             })}
         </div>
         <div>
-          <h2 className="header mb mt">Omloddede blad denne måneden</h2>
+          <h2 className="header header-search-component mb mt">
+            Omloddede blad denne måneden
+          </h2>
           <p>Antall: {linckServiceBlades && linckServiceBlades.length}</p>
           {linckServiceBlades &&
             linckServiceBlades.map((retip) => {
@@ -44,7 +48,8 @@ const BladesListDelRetip = () => {
             font-size: 0.8rem;
             font-style: italic;
           }
-          .header {
+          .header-search-component {
+            font-size: 1.2rem;
           }
         `}
       </style>

@@ -39,10 +39,11 @@ h6 {
   box-sizing: border-box;
 }
 .tabell-text {
-  font-size: .8rem
+  font-size: 0.8rem;
 }
 .tab {
-  color: white;
+  color: #58ccd6;
+  font-weight: 100;
 }
 .tab:hover {
   cursor: pointer;

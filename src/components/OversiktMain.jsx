@@ -81,7 +81,7 @@ const OversiktMain = ({
           }
           .tab-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
             grid-gap: 5rem;
           }
           .type {
