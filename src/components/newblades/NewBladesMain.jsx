@@ -173,11 +173,14 @@ const NewBladesMain = () => {
               };
               return (
                 <div
+                  key={item.newid}
                   onClick={openDeleteNewbladesHandler}
                   className="newblade-container"
                 >
-                  <p className="serial">{item.serial}</p>
-                  <p>{item.type}</p>
+                  <p key={item.serial} className="serial">
+                    {item.serial}
+                  </p>
+                  <p key={item.serial}>{item.type}</p>
                 </div>
               );
             })}

@@ -3,8 +3,8 @@ import { useMediaQuery } from "react-responsive";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { IoMenuSharp } from "react-icons/io5";
-import LoginButton from "../../components/auth/LoginButton";
-import LogoutButton from "../../components/auth/LogoutButton";
+import LoginButton from "../auth/LoginButton";
+import LogoutButton from "../auth/LogoutButton";
 import { useAuth0 } from "@auth0/auth0-react";
 import Colors from "../../Colors";
 const SideBar = () => {
