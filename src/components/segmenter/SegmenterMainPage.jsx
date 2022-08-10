@@ -110,7 +110,7 @@ const SegmenterMainPage = () => {
           />
           <ToolImageCard
             img={vp32SegmentV}
-            title="Fres 2 segment høyre"
+            title="Fres 2 segment venstre"
             type="VP34-08-056"
             dim="ø403/305-3,5/2,5/5,00"
             antTenner="8"
@@ -147,7 +147,7 @@ const SegmenterMainPage = () => {
           />
           <ToolImageCard
             img={vp48SegmentV}
-            title="Fres 2 segment høyre"
+            title="Fres 2 segment venstre"
             type="VP34-08-056"
             dim="ø403/305-3,5/2,5/5,00"
             antTenner="8"
