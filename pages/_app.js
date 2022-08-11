@@ -76,6 +76,26 @@ function MyApp({ Component, pageProps }) {
     })();
   }, []);
 
+ //TOOLS
+ const [tools, setTools] = useState();
+
+ useEffect(() => {
+  (async () => {
+    try {
+  const response = await api
+    .get("/api/tool/getToolregist")
+   
+      setTools(response.data.data);
+    } catch(error) {
+      // handle error
+      console.log(error);
+    }
+    })();
+    
+}, []);
+
+console.log(tools);
+
   return (
     <Auth0Provider
       domain={domain}
@@ -92,6 +112,7 @@ function MyApp({ Component, pageProps }) {
           linckUpdateDatabase,
           linckServiceBlades,
           tabellLinckBlad,
+          tools
         }}
       >
         <Component {...pageProps} />

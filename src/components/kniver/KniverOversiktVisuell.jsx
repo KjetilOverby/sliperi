@@ -11,6 +11,17 @@ import vpp34motstH from "../../../assets/kniver/vpp34motstH.jpg";
 import vpp34motstV from "../../../assets/kniver/vpp34motstV.jpg";
 import vpp34Bolt from "../../../assets/kniver/vpp34Bolt.jpg";
 import vpp34justSkrue from "../../../assets/kniver/vpp34justSkrue.jpg";
+import vp34kniv from "../../../assets/kniver/vp34kniv.jpg";
+import vp34motst from "../../../assets/kniver/vp34motst.jpg";
+import vp34Bolt from "../../../assets/kniver/vp34Bolt.jpg";
+import vp34justSkrue from "../../../assets/kniver/vp34justSkrue.jpg";
+import vp48kniv from "../../../assets/kniver/vp48kniv.jpg";
+import vp48motstH from "../../../assets/kniver/vp48motstH.jpg";
+import vp48motstV from "../../../assets/kniver/vp48motstV.jpg";
+import bruks from "../../../assets/kniver/bruks.jpg";
+import bruksmotst15 from "../../../assets/kniver/bruksmotst15.jpg";
+import bruksmotst44 from "../../../assets/kniver/bruksmotst44.jpg";
+import bruksJust from "../../../assets/kniver/bruksJust.jpg";
 
 const KniverOversiktVisuell = () => {
   return (
@@ -134,6 +145,153 @@ const KniverOversiktVisuell = () => {
             antTenner=""
             antMaskin="48"
             maskin="VP34/VPP34"
+          />
+        </div>
+        <h1 className="card-header">Fres 2/3 horizontal (VP34)</h1>
+        <hr
+          style={{
+            color: "lightgrey",
+            marginTop: "-1.8rem",
+            marginBottom: "2rem",
+          }}
+        />
+        <div className="container">
+          <ToolImageCard
+            img={vp34kniv}
+            title="Kniv"
+            type=""
+            dim=""
+            antTenner=""
+            antMaskin="8"
+            maskin="VP34"
+          />
+          <ToolImageCard
+            img={vp34motst}
+            title="Motstål"
+            type=""
+            dim=""
+            antTenner=""
+            antMaskin="8"
+            maskin="VP34"
+          />
+          <ToolImageCard
+            img={vp34Bolt}
+            title="Bolt"
+            type="Unbraco"
+            dim="M16x45"
+            antTenner=""
+            antMaskin="16"
+            maskin="VP34"
+          />
+          <ToolImageCard
+            img={vp34justSkrue}
+            title="Stillskruer"
+            type="Unbraco"
+            dim=" M6x30"
+            antTenner=""
+            antMaskin="16"
+            maskin="VP34"
+          />
+        </div>
+        <h1 className="card-header">Fres 3 Vertical (VP48)</h1>
+        <hr
+          style={{
+            color: "lightgrey",
+            marginTop: "-1.8rem",
+            marginBottom: "2rem",
+          }}
+        />
+        <div className="container">
+          <ToolImageCard
+            img={vp48kniv}
+            title="Kniv"
+            type="VP48-08-037"
+            dim="50x100x10mm"
+            antTenner=""
+            antMaskin="8"
+            maskin="VP48"
+          />
+          <ToolImageCard
+            img={vp48motstH}
+            title="Motstål høyre"
+            type=""
+            dim="55x85x25x6mm"
+            antTenner=""
+            antMaskin="8"
+            maskin="VP48"
+          />
+          <ToolImageCard
+            img={vp48motstV}
+            title="Motstål ventre"
+            type=""
+            dim="55x85x25x6mm"
+            antTenner=""
+            antMaskin="16"
+            maskin="VP34"
+          />
+          <ToolImageCard
+            img={vp34Bolt}
+            title="Bolt"
+            type="Unbraco"
+            dim="M16x45"
+            antTenner=""
+            antMaskin="16"
+            maskin="VP48"
+          />
+          <ToolImageCard
+            img={vp34justSkrue}
+            title="Stillskruer"
+            type="Unbraco"
+            dim=" M6x30"
+            antTenner=""
+            antMaskin="16"
+            maskin="VP48"
+          />
+        </div>
+        <h1 className="card-header">Råsortering/stikkhugger (Bruks)</h1>
+        <hr
+          style={{
+            color: "lightgrey",
+            marginTop: "-1.8rem",
+            marginBottom: "2rem",
+          }}
+        />
+        <div className="container">
+          <ToolImageCard
+            img={bruks}
+            title="Huggerkniv"
+            type="V-KH5300"
+            dim="575x185x15/16mm 6-214,2/332"
+            antTenner=""
+            antMaskin="2"
+            maskin="Bruks 820 CS"
+          />
+          <ToolImageCard
+            img={bruksmotst15}
+            title=""
+            type="V-KM7100"
+            dim="580x59x15"
+            antTenner=""
+            antMaskin="2"
+            maskin="Bruks 820 CS"
+          />
+          <ToolImageCard
+            img={bruksmotst44}
+            title=""
+            type="580x59x44"
+            dim="V-KM5105"
+            antTenner=""
+            antMaskin="2"
+            maskin=" Bruks 820 CS"
+          />
+          <ToolImageCard
+            img={bruksJust}
+            title="Stillskruer"
+            type=""
+            dim="M10x80"
+            antTenner=""
+            antMaskin="4"
+            maskin=""
           />
         </div>
       </div>

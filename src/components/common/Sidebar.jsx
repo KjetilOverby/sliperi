@@ -16,6 +16,7 @@ const SideBar = () => {
   const [activate4, setActivate4] = useState();
   const [activate5, setActivate5] = useState();
   const [activate6, setActivate6] = useState();
+  const [activate7, setActivate7] = useState();
   const [activateSnippets, setActivateSnippets] = useState();
   const [activateAnimate, setActivateAnimate] = useState();
   const [activateHeader, setActivateHeader] = useState();
@@ -52,8 +53,8 @@ const SideBar = () => {
       setActivate5("tab-active");
     } else if (router.pathname === "/knivoversiktvisuell") {
       setActivate6("tab-active");
-    } else if (router.pathname === "/#") {
-      setActivateAnimate("tab-active");
+    } else if (router.pathname === "/oversiktsegmenter") {
+      setActivate7("tab-active");
     } else if (router.pathname === "/#") {
       setActivateHeader("tab-active");
     } else if (router.pathname === "/#") {
@@ -90,6 +91,10 @@ const SideBar = () => {
         </Link>
         <Link href="/bladoversiktvisuell">
           <p className={`section-tab ${activate4}`}>Visuell oversikt</p>
+        </Link>
+        <h4 className="section-header">Segmenter og kniver</h4>
+        <Link href="/oversiktsegmenter">
+          <p className={`section-tab ${activate7}`}>Oversikt</p>
         </Link>
         <h4 className="section-header">Segmenter</h4>
         <Link href="/segmentoversiktvisuell">
