@@ -4,6 +4,7 @@ import mkv2 from "../../../assets/linckblad/mkv3.8.jpg";
 import mkv3 from "../../../assets/linckblad/mkv4.0.jpg";
 import mkv4 from "../../../assets/linckblad/mkv4.2.jpg";
 import mkv5 from "../../../assets/linckblad/mkv4.4.jpg";
+import mkv6 from "../../../assets/linckblad/mkv4.6.jpg";
 import nBlad from "../../../assets/linckblad/nBlad.jpg";
 import vs66H from "../../../assets/linckblad/vs66H.jpg";
 import vs66V from "../../../assets/linckblad/vs66V.jpg";
@@ -71,7 +72,7 @@ const VisuellBladoversikt = () => {
             angle="25"
           />
           <VisualToolImageComponent
-            img={mkv5}
+            img={mkv6}
             title="Kanefusa 3.2-4.6 MKV"
             type="Kanefusa Hi-MAX"
             dim="Ø510x3,2-4,6 ø150"

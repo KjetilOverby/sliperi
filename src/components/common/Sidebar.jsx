@@ -15,6 +15,7 @@ const SideBar = () => {
   const [activateNewBlades, setActivateNewBlades] = useState();
   const [activate4, setActivate4] = useState();
   const [activate5, setActivate5] = useState();
+  const [activate6, setActivate6] = useState();
   const [activateSnippets, setActivateSnippets] = useState();
   const [activateAnimate, setActivateAnimate] = useState();
   const [activateHeader, setActivateHeader] = useState();
@@ -49,8 +50,8 @@ const SideBar = () => {
       setActivate4("tab-active");
     } else if (router.pathname === "/segmentoversiktvisuell") {
       setActivate5("tab-active");
-    } else if (router.pathname === "/#") {
-      setActivateSnippets("tab-active");
+    } else if (router.pathname === "/knivoversiktvisuell") {
+      setActivate6("tab-active");
     } else if (router.pathname === "/#") {
       setActivateAnimate("tab-active");
     } else if (router.pathname === "/#") {
@@ -69,8 +70,7 @@ const SideBar = () => {
       {openSidebar && isMobile && (
         <div
           onClick={openSidebarHandler}
-          className="menu-invisible-container"
-        ></div>
+          className="menu-invisible-container"></div>
       )}
       <div className={`container ${container}`}>
         <Link href="/">
@@ -95,17 +95,13 @@ const SideBar = () => {
         <Link href="/segmentoversiktvisuell">
           <p className={`section-tab ${activate5}`}>Visuell oversikt</p>
         </Link>
+
+        <h4 className="section-header">Kniver og motstål</h4>
+        <Link href="/knivoversiktvisuell">
+          <p className={`section-tab ${activate6}`}>Visuell oversikt</p>
+        </Link>
+
         {/* 
-        <Link href="/">
-          <p className={`section-tab ${activateHeader}`}>Oversikt</p>
-        </Link>{" "}
-        <Link href="/">
-          <p className={`section-tab ${activateFooter}`}>Nye blad</p>
-        </Link>
-        <h4 className="section-header">Color</h4>
-        <Link href="/">
-          <p className={`section-tab ${activateAnimate}`}>Green</p>
-        </Link>
         <h4 className="section-header">Support</h4>
         <Link href="">
           <p className={`section-tab ${activateSnippets}`}>Helpdesk</p>

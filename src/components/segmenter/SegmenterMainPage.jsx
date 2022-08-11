@@ -16,6 +16,7 @@ const SegmenterMainPage = () => {
   return (
     <>
       <div className="content-container">
+        <h1 className="main-header">SEGMENTER</h1>
         <h1 className="card-header">Reduserer segment (ZD1/ZD2)</h1>
         <hr
           style={{
@@ -178,6 +179,11 @@ const SegmenterMainPage = () => {
             grid-gap: 2rem;
             align-items: left;
             margin-bottom: 4rem;
+          }
+          .main-header {
+            margin-bottom: 5rem;
+            font-weight: 100;
+            color: #fff;
           }
         `}
       </style>
