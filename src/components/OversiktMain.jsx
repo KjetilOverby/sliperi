@@ -103,9 +103,13 @@ const OversiktMain = ({
                   })}
               </div>
               <div className="nom-container">
-                {nom.map((item) => (
-                  <p className="tabell-text">{item.ant}</p>
-                ))}
+                {nom.map((item) => {
+                  return (
+                    <p key={item.id} className="tabell-text">
+                      {item.ant}
+                    </p>
+                  );
+                })}
               </div>
             </div>
           </div>

@@ -1,6 +1,7 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import PageLayoutSidebar from "../src/components/common/PagelayoutSidebar";
 import SideBar from "../src/components/common/SideBar";
+
 import OversiktMain from "../src/components/OversiktMain";
 const axios = require("axios");
 const api = axios.create({
@@ -8,64 +9,59 @@ const api = axios.create({
 });
 
 const Oversikt = () => {
-const [wasteTab, setWasteTab] = useState();
-const [serviceTab, setServiceTab] = useState();
-const [newbladesTab, setNewbladesTab] = useState();
+  const [wasteTab, setWasteTab] = useState();
+  const [serviceTab, setServiceTab] = useState();
+  const [newbladesTab, setNewbladesTab] = useState();
 
-const [linckBladesSum, setLinckBladesSum] = useState();
-const [retipSum, setRetipSum] = useState();
-const [vrakSum, setVrakSum] = useState();
-const [newBladesSum, setNewBladesSum] = useState();
+  const [linckBladesSum, setLinckBladesSum] = useState();
+  const [retipSum, setRetipSum] = useState();
+  const [vrakSum, setVrakSum] = useState();
+  const [newBladesSum, setNewBladesSum] = useState();
 
-
-const yearRequest = '2022'
-const monthRequest = '09'
-const monthRequest2 = '05'
+  const yearRequest = "2022";
+  const monthRequest = "09";
+  const monthRequest2 = "05";
 
   useEffect(() => {
     (async () => {
       try {
-    const response = await api
-      .get(
-        `/api/oversikt/linckWasteTabell?year=${yearRequest}&month=${monthRequest}&month2=${monthRequest2}`
-      );
+        const response = await api.get(
+          `/api/oversikt/linckWasteTabell?year=${yearRequest}&month=${monthRequest}&month2=${monthRequest2}`
+        );
         setWasteTab(response.data.data);
-      } catch(error) {
+      } catch (error) {
         console.log(error);
       }
-     })();
+    })();
   }, []);
 
   useEffect(() => {
     (async () => {
       try {
-    const response = await api
-      .get(
-        `/api/oversikt/linckServiceTabell?year=${yearRequest}&month=${monthRequest}&month2=${monthRequest2}`
-      );
+        const response = await api.get(
+          `/api/oversikt/linckServiceTabell?year=${yearRequest}&month=${monthRequest}&month2=${monthRequest2}`
+        );
         setServiceTab(response.data.data);
-      } catch(error) {
+      } catch (error) {
         console.log(error);
       }
-     })();
+    })();
   }, []);
 
   useEffect(() => {
     (async () => {
       try {
-    const response = await api
-      .get(
-        `/api/oversikt/linckNewbladesTabell?year=${yearRequest}&month=${monthRequest}&month2=${monthRequest2}`
-      );
-      setNewbladesTab(response.data.data);
-      } catch(error) {
+        const response = await api.get(
+          `/api/oversikt/linckNewbladesTabell?year=${yearRequest}&month=${monthRequest}&month2=${monthRequest2}`
+        );
+        setNewbladesTab(response.data.data);
+      } catch (error) {
         console.log(error);
       }
-     })();
+    })();
   }, []);
 
-
- /*  useEffect(() => {
+  /*  useEffect(() => {
     if (linckBladesTab) {
       setLinckBladesSum(
         linckBladesTab.reduce(function (a, b) {
@@ -75,9 +71,7 @@ const monthRequest2 = '05'
     }
   }, []); */
 
- 
-
-   useEffect(() => {
+  useEffect(() => {
     if (serviceTab) {
       setRetipSum(
         serviceTab.reduce(function (a, b) {
@@ -87,7 +81,6 @@ const monthRequest2 = '05'
     }
   }, [serviceTab]);
 
- 
   useEffect(() => {
     if (wasteTab) {
       setVrakSum(
@@ -98,8 +91,6 @@ const monthRequest2 = '05'
     }
   }, [wasteTab]);
 
-  
-
   useEffect(() => {
     if (newbladesTab) {
       setNewBladesSum(
@@ -108,19 +99,19 @@ const monthRequest2 = '05'
         }, 0)
       );
     }
-  }, [newbladesTab]); 
+  }, [newbladesTab]);
 
   return (
     <>
       <PageLayoutSidebar>
         <SideBar />
-        <OversiktMain 
-        wasteTab={wasteTab} 
-        serviceTab={serviceTab} 
-        newbladesTab={newbladesTab} 
-        retipSum={retipSum} 
-        vrakSum={vrakSum} 
-        newBladesSum={newBladesSum} 
+        <OversiktMain
+          wasteTab={wasteTab}
+          serviceTab={serviceTab}
+          newbladesTab={newbladesTab}
+          retipSum={retipSum}
+          vrakSum={vrakSum}
+          newBladesSum={newBladesSum}
         />
       </PageLayoutSidebar>
       <style jsx>

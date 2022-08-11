@@ -69,7 +69,8 @@ const SideBar = () => {
       {openSidebar && isMobile && (
         <div
           onClick={openSidebarHandler}
-          className="menu-invisible-container"></div>
+          className="menu-invisible-container"
+        ></div>
       )}
       <div className={`container ${container}`}>
         <Link href="/">
