@@ -3,7 +3,7 @@ import { MyContext } from "../../contexts/MyContext";
 import ToolsOverviewCard from "../common/ToolsOverviewCard";
 import v40segmentH from "../../../assets/segmenter/v40segmentH.jpg";
 
-const SegmenterOversikt = () => {
+const VerktoyOversikt = () => {
   const { tools } = useContext(MyContext);
   return (
     <>
@@ -38,4 +38,4 @@ const SegmenterOversikt = () => {
   );
 };
 
-export default SegmenterOversikt;
+export default VerktoyOversikt;

@@ -1,7 +1,7 @@
 import React from "react";
 import PageLayoutSidebar from "../src/components/common/PagelayoutSidebar";
 import SideBar from "../src/components/common/Sidebar";
-import SegmenterOversikt from "../src/components/segmenter/SegmenterOversikt";
+import VerktoyOversikt from "../src/components/verktoy/VerktoyOversikt";
 
 const oversiktsegmenter = () => {
   return (
@@ -9,7 +9,7 @@ const oversiktsegmenter = () => {
       <div className="container">
         <PageLayoutSidebar>
           <SideBar />
-          <SegmenterOversikt />
+          <VerktoyOversikt />
         </PageLayoutSidebar>
       </div>
       <style jsx>

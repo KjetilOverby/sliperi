@@ -53,7 +53,7 @@ const SideBar = () => {
       setActivate5("tab-active");
     } else if (router.pathname === "/knivoversiktvisuell") {
       setActivate6("tab-active");
-    } else if (router.pathname === "/oversiktsegmenter") {
+    } else if (router.pathname === "/verktoyoversikt") {
       setActivate7("tab-active");
     } else if (router.pathname === "/#") {
       setActivateHeader("tab-active");
@@ -93,7 +93,7 @@ const SideBar = () => {
           <p className={`section-tab ${activate4}`}>Visuell oversikt</p>
         </Link>
         <h4 className="section-header">Segmenter og kniver</h4>
-        <Link href="/oversiktsegmenter">
+        <Link href="/verktoyoversikt">
           <p className={`section-tab ${activate7}`}>Oversikt</p>
         </Link>
         <h4 className="section-header">Segmenter</h4>
