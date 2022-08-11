@@ -1,6 +1,6 @@
 import React from "react";
 import PageLayoutSidebar from "../src/components/common/PagelayoutSidebar";
-import SideBar from "../src/components/common/SideBar";
+import SideBar from "../src/components/common/Sidebar";
 
 import SegmenterMainPage from "../src/components/segmenter/SegmenterMainPage";
 

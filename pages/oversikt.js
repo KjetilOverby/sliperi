@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import PageLayoutSidebar from "../src/components/common/PagelayoutSidebar";
-import SideBar from "../src/components/common/SideBar";
+import SideBar from "../src/components/common/Sidebar";
 
 import OversiktMain from "../src/components/OversiktMain";
 const axios = require("axios");

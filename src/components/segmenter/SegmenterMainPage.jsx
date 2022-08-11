@@ -8,7 +8,7 @@ import vpp32SegmentV from "../../../assets/segmenter/vpp32segmentV.jpg";
 import vpp32Bolt from "../../../assets/segmenter/vpp32Bolt.jpg";
 import vp32SegmentH from "../../../assets/segmenter/vp32segmentH.jpg";
 import vp32SegmentV from "../../../assets/segmenter/vp32segmentV.jpg";
-import vp34SegmentSkrue from "../../../assets/segmenter/vp34SegmentSkrue.jpg";
+import vp34SegmentSkrue from "../../../assets/segmenter/vp34segmentskrue.jpg";
 import vp48SegmentH from "../../../assets/segmenter/vp48segmentH.jpg";
 import vp48SegmentV from "../../../assets/segmenter/vp48segmentV.jpg";
 

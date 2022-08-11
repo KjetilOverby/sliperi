@@ -1,7 +1,7 @@
 import React from "react";
 import VisuellBladoversikt from "../src/components/bladoversiktvisuell/VisuellBladoversikt";
 import PageLayoutSidebar from "../src/components/common/PagelayoutSidebar";
-import SideBar from "../src/components/common/SideBar";
+import SideBar from "../src/components/common/Sidebar";
 
 const bladoversiktvisuell = () => {
   return (

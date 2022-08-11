@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import PageLayoutSidebar from "../src/components/common/PagelayoutSidebar";
-import SideBar from "../src/components/common/SideBar";
+import SideBar from "../src/components/common/Sidebar";
 
 import styles from "../styles/Home.module.css";
 
