@@ -1,7 +1,5 @@
 import React, { useContext } from "react";
 import { MyContext } from "../../contexts/MyContext";
-import ToolsOverviewCard from "../common/ToolsOverviewCard";
-import v40segmentH from "../../../assets/segmenter/v40segmentH.jpg";
 
 const VerktoyOversikt = () => {
   const { tools } = useContext(MyContext);
@@ -12,7 +10,7 @@ const VerktoyOversikt = () => {
         {tools &&
           tools.map((tool) => {
             return (
-              <div className="tool-container">
+              <div key={tool.type} className="tool-container">
                 <p className="type">{tool.type}</p>
                 <p className="number">{tool.antall}</p>
               </div>
