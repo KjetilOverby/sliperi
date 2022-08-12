@@ -13,7 +13,7 @@ import vpp34Bolt from "../../../assets/kniver/vpp34Bolt.jpg";
 import vpp34justSkrue from "../../../assets/kniver/vpp34justSkrue.jpg";
 import vp34kniv from "../../../assets/kniver/vp34kniv.jpg";
 import vp34motst from "../../../assets/kniver/vp34motst.jpg";
-import vp34Bolt from "../../../assets/kniver/vp34Bolt.jpg";
+import vp34Bolt from "../../../assets/kniver/vp34bolt.jpg";
 import vp34justSkrue from "../../../assets/kniver/vp34justSkrue.jpg";
 import vp48kniv from "../../../assets/kniver/vp48kniv.jpg";
 import vp48motstH from "../../../assets/kniver/vp48motstH.jpg";

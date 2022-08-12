@@ -16,7 +16,6 @@ const VerktoyOversikt = () => {
               </div>
             );
           })}
-        <div></div>
       </div>
       <style jsx>{`
         .tool-container {
