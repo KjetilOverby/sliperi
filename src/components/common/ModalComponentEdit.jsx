@@ -11,9 +11,9 @@ const ModalComponentEdit = ({
   actionHover,
   getSerial,
   actionBtn,
-  commentInput,
   setGetCommentInput,
   error,
+  commentInput,
 }) => {
   return (
     <>

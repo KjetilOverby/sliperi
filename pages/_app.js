@@ -17,7 +17,8 @@ function MyApp({ Component, pageProps }) {
   const [linckID, setLinckID] = useState();
   const [linckUpdateDatabase, setLinckUpdateDatabase] = useState(false);
 
-  useEffect(() => {
+ 
+   useEffect(() => {
     (async () => {
       try {
         const response = await api.get("/api/linck/linckblades");
@@ -26,7 +27,7 @@ function MyApp({ Component, pageProps }) {
         console.log(error.response.body);
       }
     })();
-  }, [linckUpdateDatabase]);
+  }, [linckUpdateDatabase]); 
 
 
 

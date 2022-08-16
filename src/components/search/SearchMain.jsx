@@ -10,6 +10,7 @@ import BladesListDelRetip from "./BladesListDelRetip";
 import dateFormat from "dateformat";
 const axios = require("axios");
 import { useAuth0 } from "@auth0/auth0-react";
+import { set } from "mongoose";
 
 const SearchMain = () => {
   const { user, isAuthenticated } = useAuth0();
@@ -151,15 +152,16 @@ const SearchMain = () => {
         })
         .then(function (res) {
           resolve(console.log(res));
+          setLinckUpdateDatabase(!linckUpdateDatabase);
         });
     });
   };
 
-  const commentUpdateHandler = () => {
+  const commentUpdateHandler = async () => {
     commentPromise().then(() => {
-      setLinckUpdateDatabase(!linckUpdateDatabase);
       setOpenCommentModal(false);
     });
+
     /*    api
       .post(`/api/linck/comment/?ids=${linckID}&user=${user.sub}`, {
         comment: getCommentInput,
@@ -216,6 +218,7 @@ const SearchMain = () => {
           title="Skriv kommentar på"
           getSerial={getSerial}
           setGetCommentInput={setGetCommentInput}
+          getCommentInput={getCommentInput}
           actionBtn={commentUpdateHandler}
         />
       )}
