@@ -28,6 +28,8 @@ function MyApp({ Component, pageProps }) {
     })();
   }, [linckUpdateDatabase]);
 
+
+
   const year = new Date().getFullYear();
   const month = new Date().getMonth() + 1;
   const month2 = new Date().getMonth() + 2;

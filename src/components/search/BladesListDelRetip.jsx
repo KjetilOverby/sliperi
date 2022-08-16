@@ -15,7 +15,7 @@ const BladesListDelRetip = () => {
           {linckBladesDeleted &&
             linckBladesDeleted.map((waste) => {
               return (
-                <div key={waste._id}>
+                <div key={waste._id} className="blade-container2">
                   <p className="text">{`${waste.serial}, ${waste.type}, oml: ${
                     waste.wasteNumberOfRetip
                   }, ${dateFormat(waste.wasteDate, "dd.mm.yyyy HH:MM")}`}</p>
@@ -31,7 +31,7 @@ const BladesListDelRetip = () => {
           {linckServiceBlades &&
             linckServiceBlades.map((retip) => {
               return (
-                <div key={retip._id}>
+                <div key={retip._id} className="blade-container2">
                   <p className="text">{`${retip.serial}, ${
                     retip.type
                   }, ${dateFormat(retip.retipDate, "dd.mm.yyyy HH:MM")}`}</p>

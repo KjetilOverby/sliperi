@@ -24,12 +24,14 @@ const ModalComponentEdit = ({
           <div className={styles.modal}>
             <div className={styles.header}>
               <h1 className={styles.header}>
-                {title} <span style={{ color: "orangered" }}>{getSerial}</span>?
+                {title} <span style={{ color: "orangered" }}>{getSerial}</span>
               </h1>
               {commentInput && (
-                <input
-                  type="text"
-                  placeholder="Skriv kommentar"
+                <textarea
+                  rows="8"
+                  cols="25"
+                  name="text"
+                  placeholder="Enter text"
                   onChange={(e) => setGetCommentInput(e.target.value)}
                 />
               )}
@@ -76,6 +78,9 @@ const ModalComponentEdit = ({
         .btn2:hover {
           background: #dadada;
           cursor: pointer;
+        }
+        .input {
+          height: 2rem;
         }
         .error {
           color: red;

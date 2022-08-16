@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 
 import { MyContext } from "../../contexts/MyContext";
 import ModalComponent from "../common/ModalComponent";
+import ModalComponentEdit from "../common/ModalComponentEdit";
 import LinckSearchCards from "./LinckSearchCards";
 import { GiRapidshareArrow } from "react-icons/gi";
 import { RiDeleteBin6Fill } from "react-icons/ri";
@@ -25,6 +26,7 @@ const SearchMain = () => {
   const [openDeleteModal, setOpenDeleteModal] = useState(false);
   const [openRetipModal, setOpenRetipModal] = useState(false);
   const [openCommentModal, setOpenCommentModal] = useState(false);
+
   const [getSerial, setGetSerial] = useState();
 
   const [deletedBlades, setDeletedBlades] = useState();
@@ -35,6 +37,7 @@ const SearchMain = () => {
   const currentYear = new Date().getFullYear();
   const [getType, setGetType] = useState();
   const [getNumberOfRetip, setGetNumberOfRetip] = useState();
+  const [getCommentInput, setGetCommentInput] = useState();
 
   const api = axios.create({
     baseURL: process.env.api,
@@ -137,6 +140,43 @@ const SearchMain = () => {
     });
   };
 
+  // COMMENTS
+
+  const commentPromise = () => {
+    return new Promise((resolve, reject) => {
+      api
+        .post(`/api/linck/comment/?ids=${linckID}&user=${user.sub}`, {
+          comment: getCommentInput,
+          commentDate: dateFormat(new Date(), "dd.mm.yyyy HH:MM"),
+        })
+        .then(function (res) {
+          resolve(console.log(res));
+        });
+    });
+  };
+
+  const commentUpdateHandler = () => {
+    commentPromise().then(() => {
+      setLinckUpdateDatabase(!linckUpdateDatabase);
+      setOpenCommentModal(false);
+    });
+    /*    api
+      .post(`/api/linck/comment/?ids=${linckID}&user=${user.sub}`, {
+        comment: getCommentInput,
+        commentDate: dateFormat(new Date(), "dd.mm.yyyy HH:MM"),
+      })
+      .then(function (res) {
+        if (res.status === 200) {
+          setOpenCommentModal(false);
+
+          setTimeout(() => {
+            setSearchInput("");
+            setSearchInput(getSerial);
+          }, 1600);
+        }
+      }); */
+  };
+
   return (
     <>
       {openRetipModal && (
@@ -169,10 +209,20 @@ const SearchMain = () => {
           action={deleteBladeHandler}
         />
       )}
+      {openCommentModal && (
+        <ModalComponentEdit
+          cancel={() => setOpenCommentModal(false)}
+          commentInput={true}
+          title="Skriv kommentar på"
+          getSerial={getSerial}
+          setGetCommentInput={setGetCommentInput}
+          actionBtn={commentUpdateHandler}
+        />
+      )}
 
       <div className="content-container main-container">
         <div>
-          <h1 className="header mb">Søk i lincksagblad</h1>
+          <h1 className="header mb">Søk i sagbladregisteret</h1>
         </div>
         <div className="container">
           <BladesListDelRetip />

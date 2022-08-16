@@ -118,7 +118,9 @@ const OversiktMain = ({
             {wasteTab &&
               wasteTab.map((item) => {
                 return (
-                  <div key={item._id.type} className="container">
+                  <div
+                    key={item._id.type}
+                    className="container blade-container">
                     <p className="type tabell-text">{item._id.type}</p>
                     <p className="tabell-text">{item.typeCount}</p>
                   </div>
@@ -130,7 +132,9 @@ const OversiktMain = ({
             {serviceTab &&
               serviceTab.map((item) => {
                 return (
-                  <div key={item._id.type} className="container">
+                  <div
+                    key={item._id.type}
+                    className="container blade-container">
                     <p className="type tabell-text">{item._id.type}</p>
                     <p className="tabell-text">{item.typeCount}</p>
                   </div>
@@ -142,7 +146,9 @@ const OversiktMain = ({
             {newbladesTab &&
               newbladesTab.map((item) => {
                 return (
-                  <div key={item._id.type} className="container">
+                  <div
+                    key={item._id.type}
+                    className="container blade-container">
                     <p className="type tabell-text">{item._id.type}</p>
                     <p className="tabell-text">{item.typeCount}</p>
                   </div>

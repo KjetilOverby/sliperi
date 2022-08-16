@@ -18,9 +18,11 @@ const Oversikt = () => {
   const [vrakSum, setVrakSum] = useState();
   const [newBladesSum, setNewBladesSum] = useState();
 
-  const yearRequest = "2022";
-  const monthRequest = "09";
-  const monthRequest2 = "05";
+  const yearRequest = new Date().getFullYear();
+  const monthRequest2 = new Date().getMonth() +1;
+  const monthRequest = new Date().getMonth() + 2;
+
+  
 
   useEffect(() => {
     (async () => {
@@ -34,6 +36,8 @@ const Oversikt = () => {
       }
     })();
   }, []);
+
+  console.log(wasteTab);
 
   useEffect(() => {
     (async () => {
@@ -70,6 +74,8 @@ const Oversikt = () => {
       );
     }
   }, []); */
+
+
 
   useEffect(() => {
     if (serviceTab) {
