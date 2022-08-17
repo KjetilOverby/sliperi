@@ -11,6 +11,7 @@ import dateFormat from "dateformat";
 const axios = require("axios");
 import { useAuth0 } from "@auth0/auth0-react";
 import { set } from "mongoose";
+import MessageComponent from "../common/MessageComponent";
 
 const SearchMain = () => {
   const { user, isAuthenticated } = useAuth0();
@@ -59,6 +60,8 @@ const SearchMain = () => {
 
   // Dont put searchresult inside useEffect it causes an infinite loop
 
+  const [deleteMessage, setDeleteMessage] = useState(false);
+
   const createDeletedBladeHandler = () => {
     return new Promise((resolve, reject) => {
       try {
@@ -96,8 +99,18 @@ const SearchMain = () => {
     createDeletedBladeHandler().then(() => {
       setLinckUpdateDatabase(!linckUpdateDatabase);
       setInput("");
+      setDeleteMessage(true);
+      setAnimate("move");
+      setTimeout(() => {
+        setDeleteMessage(false);
+        setAnimate("");
+      }, 5000);
     });
   };
+
+  // SERVICE
+
+  const [serviceMessage, setServiceMessage] = useState(false);
 
   const retipUpdatePromise = () => {
     return new Promise((resolve, reject) => {
@@ -138,10 +151,21 @@ const SearchMain = () => {
     retipUpdatePromise().then(() => {
       setLinckUpdateDatabase(!linckUpdateDatabase);
       setInput(getSerial);
+      setServiceMessage(true);
+      setAnimate("move");
+      setTimeout(() => {
+        setServiceMessage(false);
+        setAnimate("");
+      }, 5000);
     });
   };
 
   // COMMENTS
+
+  //*****************     */
+
+  const [animate, setAnimate] = useState("");
+  const [commentMessage, setCommentMessage] = useState(false);
 
   const commentPromise = () => {
     return new Promise((resolve, reject) => {
@@ -152,35 +176,50 @@ const SearchMain = () => {
         })
         .then(function (res) {
           resolve(console.log(res));
-          setLinckUpdateDatabase(!linckUpdateDatabase);
         });
     });
   };
 
   const commentUpdateHandler = async () => {
-    commentPromise().then(() => {
+    await commentPromise().then(() => {
       setOpenCommentModal(false);
+      setLinckUpdateDatabase(!linckUpdateDatabase);
+      setInput("");
+      setAnimate("move");
+      setCommentMessage(true);
+      setTimeout(() => {
+        setAnimate("");
+        setCommentMessage(false);
+      }, 5000);
     });
-
-    /*    api
-      .post(`/api/linck/comment/?ids=${linckID}&user=${user.sub}`, {
-        comment: getCommentInput,
-        commentDate: dateFormat(new Date(), "dd.mm.yyyy HH:MM"),
-      })
-      .then(function (res) {
-        if (res.status === 200) {
-          setOpenCommentModal(false);
-
-          setTimeout(() => {
-            setSearchInput("");
-            setSearchInput(getSerial);
-          }, 1600);
-        }
-      }); */
   };
 
   return (
     <>
+      {commentMessage && (
+        <MessageComponent
+          title={`Ny kommentar lagt til på`}
+          serial={getSerial}
+          message={getCommentInput}
+          animate={animate}
+        />
+      )}
+
+      {serviceMessage && (
+        <MessageComponent
+          title="Ny omlodding lagt til på"
+          serial={getSerial}
+          animate={animate}
+        />
+      )}
+      {deleteMessage && (
+        <MessageComponent
+          title="Slettet:"
+          serial={getSerial}
+          animate={animate}
+        />
+      )}
+
       {openRetipModal && (
         <ModalComponent
           icon={

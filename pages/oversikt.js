@@ -37,7 +37,7 @@ const Oversikt = () => {
     })();
   }, []);
 
-  console.log(wasteTab);
+ 
 
   useEffect(() => {
     (async () => {

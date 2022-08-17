@@ -49,8 +49,6 @@ const NewBladesMain = () => {
       });
   }, [updateNewblades]);
 
-  console.log(newBlades);
-
   const deleteCreatedBladeHandler = () => {
     deleteCreatedBladeHandler2();
     try {
