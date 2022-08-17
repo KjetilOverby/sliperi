@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import PageLayoutSidebar from "../src/components/common/PagelayoutSidebar";
 import SideBar from "../src/components/common/Sidebar";
+import StartPageMainComponent from "../src/components/startpage/StartPageMainComponent";
 
 import styles from "../styles/Home.module.css";
 
@@ -14,6 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <SideBar />
+      <StartPageMainComponent />
     </PageLayoutSidebar>
   );
 }

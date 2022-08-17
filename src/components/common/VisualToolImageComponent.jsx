@@ -19,8 +19,15 @@ const VisualToolImageComponent = ({ img, title, type, dim, zAnt, angle }) => {
           .container {
             width: 20rem;
             height: 25rem;
-            background: lightgrey;
             padding: 1rem;
+            border-radius: 15px;
+            background: -webkit-gradient(
+              linear,
+              left top,
+              left bottom,
+              from(#a95),
+              to(#fea)
+            );
           }
           .card-header {
             font-weight: 600;

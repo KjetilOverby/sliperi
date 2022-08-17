@@ -29,6 +29,7 @@ const ToolImageCard = ({
             background: lightgrey;
             padding: 1rem;
             margin-right: 2rem;
+            border-radius: 15px;
           }
           .card-header {
             font-weight: 600;
