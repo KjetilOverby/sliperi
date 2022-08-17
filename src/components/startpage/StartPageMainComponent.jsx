@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import ShortButtons from "./ShortButtons";
 import { MyContext } from "../../contexts/MyContext";
-import Link from "next/link";
 
 import { FcSearch } from "react-icons/fc";
 import { FcAddDatabase } from "react-icons/fc";

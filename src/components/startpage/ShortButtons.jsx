@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const ShortButtons = ({ title, text, icon, link }) => {
   return (
@@ -7,7 +8,8 @@ const ShortButtons = ({ title, text, icon, link }) => {
       <Link href={`${link}`}>
         <div className="container">
           <h4 className="title">{title}</h4>
-          {icon}
+          {icon && icon}
+
           <p className="text">{text}</p>
         </div>
       </Link>
