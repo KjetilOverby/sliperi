@@ -302,6 +302,17 @@ const LinckCards = ({
             .icon-btn-container {
               margin-top: 1rem;
             }
+            @media (max-width: 1000px) {
+              .container {
+                grid-template-columns: 15rem 5rem;
+                grid-template-rows: 2rem 2rem auto auto 1fr;
+                grid-template-areas:
+                  "top . "
+                  "middle  ."
+                  "bottom ."
+                  "comment comment"
+                  "button button";
+              }
           }
         `}
       </style>

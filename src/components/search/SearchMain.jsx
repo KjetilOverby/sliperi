@@ -267,7 +267,6 @@ const SearchMain = () => {
           <h1 className="header mb">Søk i sagbladregisteret</h1>
         </div>
         <div className="container">
-          <BladesListDelRetip />
           <div>
             <div className="input-container">
               <input
@@ -306,12 +305,13 @@ const SearchMain = () => {
                 );
               })}
           </div>
+          <BladesListDelRetip />
         </div>
       </div>
       <style jsx>{`
         .container {
           display: grid;
-          grid-template-columns: 30rem 1fr;
+          grid-template-columns: 40rem 1fr;
         }
 
         .input {
@@ -329,6 +329,9 @@ const SearchMain = () => {
         @media only screen and (max-width: 1000px) {
           .container {
             grid-template-columns: 1fr;
+          }
+          .input-container {
+            margin: 2rem 0;
           }
         }
       `}</style>

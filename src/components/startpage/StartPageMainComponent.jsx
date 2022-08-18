@@ -42,6 +42,14 @@ const StartPageMainComponent = () => {
             grid-template-columns: repeat(auto-fill, minmax(12rem, 12rem));
             margin-top: 5rem;
           }
+          @media only screen and (max-width: 1000px) {
+            .btn-container {
+              grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+              place-items: center;
+              grid-gap: 2rem;
+              padding: 2rem 0;
+            }
+          }
         `}
       </style>
     </>

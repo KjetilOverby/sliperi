@@ -43,6 +43,7 @@ const BladesListDelRetip = () => {
       <style jsx>
         {`
           .container {
+            margin-left: 5rem;
           }
           .text {
             font-size: 0.8rem;
@@ -50,6 +51,11 @@ const BladesListDelRetip = () => {
           }
           .header-search-component {
             font-size: 1.2rem;
+          }
+          @media only screen and (max-width: 1000px) {
+            .container {
+              margin: 0;
+            }
           }
         `}
       </style>
