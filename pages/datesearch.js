@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PageLayoutSidebar from "../src/components/common/PagelayoutSidebar";
 import SideBar from "../src/components/common/Sidebar";
 import DateSearchMain from "../src/components/datesearch/DateSearchMain";
-const datesearch = () => {
+const Datesearch = () => {
   const [startDate, setStartDate] = useState();
   const [endDate, setEndDate] = useState();
 
@@ -27,4 +27,4 @@ const datesearch = () => {
   );
 };
 
-export default datesearch;
+export default Datesearch;
