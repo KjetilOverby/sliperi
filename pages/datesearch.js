@@ -10,7 +10,12 @@ const datesearch = () => {
     <>
       <PageLayoutSidebar>
         <SideBar />
-        <DateSearchMain />
+        <DateSearchMain
+          setStartDate={setStartDate}
+          startDate={startDate}
+          setEndDate={setEndDate}
+          endDate={endDate}
+        />
       </PageLayoutSidebar>
       <style jsx>
         {`

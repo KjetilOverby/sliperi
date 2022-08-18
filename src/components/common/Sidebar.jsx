@@ -17,6 +17,7 @@ const SideBar = () => {
   const [activate5, setActivate5] = useState();
   const [activate6, setActivate6] = useState();
   const [activate7, setActivate7] = useState();
+  const [activate8, setActivate8] = useState();
   const [activateSnippets, setActivateSnippets] = useState();
   const [activateAnimate, setActivateAnimate] = useState();
   const [activateHeader, setActivateHeader] = useState();
@@ -55,8 +56,8 @@ const SideBar = () => {
       setActivate6("tab-active");
     } else if (router.pathname === "/verktoyoversikt") {
       setActivate7("tab-active");
-    } else if (router.pathname === "/#") {
-      setActivateHeader("tab-active");
+    } else if (router.pathname === "/datesearch") {
+      setActivate8("tab-active");
     } else if (router.pathname === "/#") {
       setActivateFooter("tab-active");
     }
@@ -71,7 +72,8 @@ const SideBar = () => {
       {openSidebar && isMobile && (
         <div
           onClick={openSidebarHandler}
-          className="menu-invisible-container"></div>
+          className="menu-invisible-container"
+        ></div>
       )}
       <div className={`container ${container}`}>
         <Link href="/">
@@ -85,6 +87,9 @@ const SideBar = () => {
         </Link>
         <Link href="/oversikt">
           <p className={`section-tab ${activateOversikt}`}>Oversikt</p>
+        </Link>
+        <Link href="/datesearch">
+          <p className={`section-tab ${activate8}`}>Datosøk</p>
         </Link>
         <Link href="/newblades">
           <p className={`section-tab ${activateNewBlades}`}>Nye Blad</p>
