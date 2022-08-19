@@ -8,6 +8,8 @@ const DateSearchMain = ({
   setEndDate,
   endDate,
   datePickerWaste,
+  datePickerNew,
+  datePickerService,
 }) => {
   const [monthConvert, setMonthConvert] = useState();
   const [monthConvert2, setMonthConvert2] = useState();
@@ -106,7 +108,12 @@ const DateSearchMain = ({
           )}
         </div>
         <div>
+          <h4 className="mt">Antall vrak:</h4>
           <DatePickerListComponent data={datePickerWaste} />
+          <h4 className="mt">Antall nye:</h4>
+          <DatePickerListComponent data={datePickerNew} />
+          <h4 className="mt">Antall service:</h4>
+          <DatePickerListComponent data={datePickerService} />
         </div>
       </div>
       <style jsx>
