@@ -16,7 +16,7 @@ export default async (req, res) => {
             $match: {
               wasteDate: {
                 $gte: new Date(
-                  `${req.query.yearRequest}-${req.query.month}-${req.query.day}`
+                  `${req.query.yearRequest}-${req.query.month}-${req.queryday}`
                 ),
                 $lte: new Date(
                   `${req.query.yearRequest2}-${req.query.month2}-${req.query.day2}`

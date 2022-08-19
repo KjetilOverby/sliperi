@@ -6,7 +6,7 @@ const DatePickerListComponent = ({ data }) => {
   return (
     <>
       <div className="container">
-        <h4 className="mb">Antall vrak: {data.length}</h4>
+        <h4 className="mb">Antall vrak: {data && data.length}</h4>
         <div>
           {data &&
             data.map((item) => {
