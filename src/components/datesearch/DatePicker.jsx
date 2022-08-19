@@ -24,6 +24,12 @@ const DatePicker = ({ setStartDate, startDate, setEndDate, endDate }) => {
           withPortal={true}
           readOnly={true}
           numberOfMonths={4}
+          withFullScreenPortal={false}
+          showClearDates={true}
+          showDefaultInputIcon={true}
+          noBorder={true}
+          startDatePlaceholderText="Startdato"
+          endDatePlaceholderText="Sluttdato"
         />
       </div>
       <style jsx>

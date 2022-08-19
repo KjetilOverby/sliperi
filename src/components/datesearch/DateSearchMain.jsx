@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from "react";
 import DatePicker from "./DatePicker";
+import DatePickerListComponent from "./DatePickerListComponent";
 
-const DateSearchMain = ({ setStartDate, startDate, setEndDate, endDate }) => {
+const DateSearchMain = ({
+  setStartDate,
+  startDate,
+  setEndDate,
+  endDate,
+  datePickerWaste,
+}) => {
   const [monthConvert, setMonthConvert] = useState();
   const [monthConvert2, setMonthConvert2] = useState();
 
@@ -78,18 +85,29 @@ const DateSearchMain = ({ setStartDate, startDate, setEndDate, endDate }) => {
             Klikk på Start Date og velg en periode i kalenderen.
           </p>
         </div>
-        {startDate && (
-          <p>{`${startDate && startDate._d.getDate()} ${monthConvert} ${
-            startDate && startDate._d.getFullYear()
-          }`}</p>
-        )}
-
-        {endDate && (
-          <p>{`${endDate && endDate._d.getDate()} ${monthConvert2} ${
-            endDate && endDate._d.getFullYear()
-          }`}</p>
-        )}
-        <p>{diffDays} dager</p>
+        <div className="month-container mt">
+          <div>
+            {startDate && (
+              <p>{`${startDate && startDate._d.getDate()} ${monthConvert} ${
+                startDate && startDate._d.getFullYear()
+              }`}</p>
+            )}
+          </div>
+          {diffDays !== NaN && diffDays > 1 && <p>-</p>}
+          <div>
+            {endDate && (
+              <p>{`${endDate && endDate._d.getDate()} ${monthConvert2} ${
+                endDate && endDate._d.getFullYear()
+              }`}</p>
+            )}
+          </div>
+          {diffDays !== NaN && diffDays > 1 && diffDays < 1000 && (
+            <p> ({diffDays} dager)</p>
+          )}
+        </div>
+        <div>
+          <DatePickerListComponent data={datePickerWaste} />
+        </div>
       </div>
       <style jsx>
         {`
@@ -102,6 +120,12 @@ const DateSearchMain = ({ setStartDate, startDate, setEndDate, endDate }) => {
           .date-picker-container {
             background-image: linear-gradient(120deg, #79c5fc 0%, #95ef3b 100%);
             padding: 2rem;
+          }
+          .month-container {
+            display: flex;
+            color: darkblue;
+            font-size: 1.2rem;
+            font-weight: 600;
           }
         `}
       </style>

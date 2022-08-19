@@ -5,6 +5,8 @@ import { MyContext } from "../../contexts/MyContext";
 import { FcSearch } from "react-icons/fc";
 import { FcAddDatabase } from "react-icons/fc";
 import { FcViewDetails } from "react-icons/fc";
+import { FcCalendar } from "react-icons/fc";
+import { FcNews } from "react-icons/fc";
 
 const StartPageMainComponent = () => {
   const { linckBlades } = useContext(MyContext);
@@ -26,10 +28,16 @@ const StartPageMainComponent = () => {
             link="/newblades"
           />
           <ShortButtons
-            icon={<FcViewDetails style={{ fontSize: "5rem" }} />}
+            icon={<FcNews style={{ fontSize: "5rem" }} />}
             title="OVERSIKT"
             text={`Oversikt over blader`}
-            link="oversikt"
+            link="/oversikt"
+          />
+          <ShortButtons
+            icon={<FcCalendar style={{ fontSize: "5rem" }} />}
+            title="DATOSØK"
+            text={`Søk på en gitt periode`}
+            link="/datesearch"
           />
         </div>
       </div>
