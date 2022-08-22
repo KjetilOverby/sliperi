@@ -1,8 +1,6 @@
 import React from "react";
-import dateFormat, { masks } from "dateformat";
 
 const DatePickerListComponent = ({ data }) => {
-  console.log(data);
   return (
     <>
       <div className="container">
@@ -11,14 +9,9 @@ const DatePickerListComponent = ({ data }) => {
           {data &&
             data.map((item) => {
               return (
-                <div key={item._id} className="list-container">
-                  <p className="serial">{item.serial}</p>
-                  <p className="retip">Oml: {item.wasteNumberOfRetip}, </p>
-                  <p className="date">
-                    {" "}
-                    d: {dateFormat(item.wasteDate, "dd.mm.yyyy")}
-                  </p>
-                  <p className="type">{item.type}</p>
+                <div key={data._id} className="list-container blade-container">
+                  <p className="count">{item.typeCount}</p>
+                  <p>{item._id.type}</p>
                 </div>
               );
             })}
@@ -29,13 +22,11 @@ const DatePickerListComponent = ({ data }) => {
           .container {
             margin-top: 2rem;
           }
-          .date {
-            margin-right: 0.5rem;
-          }
+
           .list-container {
             display: flex;
           }
-          .retip {
+          .count {
             margin-right: 0.5rem;
           }
           .serial {

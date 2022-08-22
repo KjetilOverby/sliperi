@@ -13,16 +13,60 @@ const Datesearch = () => {
   const [endDate, setEndDate] = useState();
 
   const [datePickerWaste, setDatePickerWaste] = useState();
-
- 
+  const [datePickerNew, setDatePickerNew] = useState();
+  const [datePickerService, setDatePickerService] = useState();
 
   useEffect(() => {
     (async () => {
       try {
         const response = await api.get(
-          `/api/datepicker/datepickerwaste?yearRequest=${startDate && startDate._d.getFullYear()}&month=${startDate && startDate._d.getMonth() + 1}&&day=${startDate && startDate._d.getDay()}&yearRequest2=${endDate && endDate._d.getFullYear()}&month2=${endDate && endDate._d.getMonth() + 2}&&day2=${endDate && endDate._d.getDay()}`
+          `/api/datepicker/datepickerwaste?yearRequest=${
+            startDate && startDate._d.getFullYear()
+          }&month=${startDate && startDate._d.getMonth() + 1}&&day=${
+            startDate && startDate._d.getDay()
+          }&yearRequest2=${endDate && endDate._d.getFullYear()}&month2=${
+            endDate && endDate._d.getMonth() + 2
+          }&&day2=${endDate && endDate._d.getDay()}`
         );
         setDatePickerWaste(response.data.data);
+      } catch (error) {
+        console.log(error);
+      }
+    })();
+  }, [startDate, endDate]);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const response = await api.get(
+          `/api/datepicker/datepickernew?yearRequest=${
+            startDate && startDate._d.getFullYear()
+          }&month=${startDate && startDate._d.getMonth() + 1}&&day=${
+            startDate && startDate._d.getDay()
+          }&yearRequest2=${endDate && endDate._d.getFullYear()}&month2=${
+            endDate && endDate._d.getMonth() + 2
+          }&&day2=${endDate && endDate._d.getDay()}`
+        );
+        setDatePickerNew(response.data.data);
+      } catch (error) {
+        console.log(error);
+      }
+    })();
+  }, [startDate, endDate]);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const response = await api.get(
+          `/api/datepicker/datepickerservice?yearRequest=${
+            startDate && startDate._d.getFullYear()
+          }&month=${startDate && startDate._d.getMonth() + 1}&&day=${
+            startDate && startDate._d.getDay()
+          }&yearRequest2=${endDate && endDate._d.getFullYear()}&month2=${
+            endDate && endDate._d.getMonth() + 2
+          }&&day2=${endDate && endDate._d.getDay()}`
+        );
+        setDatePickerService(response.data.data);
       } catch (error) {
         console.log(error);
       }
@@ -39,6 +83,8 @@ const Datesearch = () => {
           setEndDate={setEndDate}
           endDate={endDate}
           datePickerWaste={datePickerWaste}
+          datePickerNew={datePickerNew}
+          datePickerService={datePickerService}
         />
       </PageLayoutSidebar>
       <style jsx>
