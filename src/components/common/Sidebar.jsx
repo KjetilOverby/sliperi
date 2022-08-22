@@ -18,6 +18,7 @@ const SideBar = () => {
   const [activate6, setActivate6] = useState();
   const [activate7, setActivate7] = useState();
   const [activate8, setActivate8] = useState();
+  const [activate9, setActivate9] = useState();
   const [activateSnippets, setActivateSnippets] = useState();
   const [activateAnimate, setActivateAnimate] = useState();
   const [activateHeader, setActivateHeader] = useState();
@@ -58,8 +59,8 @@ const SideBar = () => {
       setActivate7("tab-active");
     } else if (router.pathname === "/datesearch") {
       setActivate8("tab-active");
-    } else if (router.pathname === "/#") {
-      setActivateFooter("tab-active");
+    } else if (router.pathname === "/datesearchtools") {
+      setActivate9("tab-active");
     }
   }, []);
   return (
@@ -72,8 +73,7 @@ const SideBar = () => {
       {openSidebar && isMobile && (
         <div
           onClick={openSidebarHandler}
-          className="menu-invisible-container"
-        ></div>
+          className="menu-invisible-container"></div>
       )}
       <div className={`container ${container}`}>
         <Link href="/">
@@ -100,6 +100,9 @@ const SideBar = () => {
         <h4 className="section-header">Segmenter og kniver</h4>
         <Link href="/verktoyoversikt">
           <p className={`section-tab ${activate7}`}>Oversikt</p>
+        </Link>
+        <Link href="/datesearchtools">
+          <p className={`section-tab ${activate9}`}>Datosøk</p>
         </Link>
         <h4 className="section-header">Segmenter</h4>
         <Link href="/segmentoversiktvisuell">
