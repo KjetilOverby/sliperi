@@ -25,22 +25,10 @@ const datesearchtools = () => {
   const [vp48segH, setVp48segH] = useState();
   const [vp48segV, setVp48segV] = useState();
   const [reduserKniv, setReduserKniv] = useState();
-  const [motstV40, setMotstV40] = useState();
-  const [motstV25, setMotstV25] = useState();
   const [vpp34Kniv, setVpp34Kniv] = useState();
-  const [vpp32Knivholder, setVpp32Knivholder] = useState();
-  const [vpp34motstH, setVpp34motstH] = useState();
-  const [vpp34motstV, setVpp34motstV] = useState();
   const [vp34Kniv, setVp34Kniv] = useState();
-  const [vp34motst, setVp34motst] = useState();
   const [vp48Kniv, setVp48Kniv] = useState();
-  const [vp48motstH, setVp48motstH] = useState();
-  const [vp48motstV, setVp48motstV] = useState();
   const [bruksKniv, setBruksKniv] = useState();
-  const [trimmerJust, setTrimmerJust] = useState();
-  const [eksaktKapp, setEksaktKapp] = useState();
-  const [endekapp, setEndekapp] = useState();
-  const [trimmerBord, setTrimmerBord] = useState();
 
   const [getRedSegmentH, setGetRedSegmentH] = useState();
   const [getRedSegmentV, setGetRedSegmentV] = useState();
@@ -51,22 +39,10 @@ const datesearchtools = () => {
   const [getVp48SegH, setGetVp48SegH] = useState();
   const [getVp48SegV, setGetVp48SegV] = useState();
   const [getReduserKniv, setgetReduserKniv] = useState();
-  const [getMotstV40, setGetMotstV40] = useState();
-  const [getMotstV25, setGetMotstV25] = useState();
   const [getVpp34Kniv, setGetVpp34Kniv] = useState();
-  const [getVpp34Knivholder, setGetVpp34Knivholder] = useState();
-  const [getVpp34motstH, setGetVpp34motstH] = useState();
-  const [getVpp34motstV, setGetVpp34motstV] = useState();
   const [getVp34Kniv, setGetVp34Kniv] = useState();
-  const [getVp34motst, setGetVp34motst] = useState();
   const [getVp48Kniv, setGetVp48Kniv] = useState();
-  const [getVp48motstH, setGetVp48motstH] = useState();
-  const [getVp48motstV, setGetVp48motstV] = useState();
   const [getBruksKniv, setGetBruksKniv] = useState();
-  const [getTrimmerJust, setGetTrimmerJust] = useState();
-  const [getEksaktKapp, setGetEksaktKapp] = useState();
-  const [getEndekapp, setGetEndekapp] = useState();
-  const [getTrimmerBord, setGetTrimmerBord] = useState();
 
   useEffect(() => {
     if (datePickerWaste) {
@@ -111,69 +87,25 @@ const datesearchtools = () => {
       setgetReduserKniv(
         datePickerWaste.filter((item) => item.type === "Reduserer kniv")
       );
-      setGetMotstV40(
-        datePickerWaste.filter(
-          (item) => item.type === "Reduserer motstål rekke 1"
-        )
-      );
-      setGetMotstV25(
-        datePickerWaste.filter(
-          (item) => item.type === "Reduserer motstål rekke 2 og 3"
-        )
-      );
+
       setGetVpp34Kniv(
         datePickerWaste.filter((item) => item.type === "Fres 1/4 kniv")
       );
-      setGetVpp34Knivholder(
-        datePickerWaste.filter((item) => item.type === "Fres 1/4 knivholder")
-      );
-      setGetVpp34motstH(
-        datePickerWaste.filter((item) => item.type === "Fres 1/4 motstål høyre")
-      );
-      setGetVpp34motstV(
-        datePickerWaste.filter(
-          (item) => item.type === "Fres 1/4 motstål venstre"
-        )
-      );
+
       setGetVp34Kniv(
         datePickerWaste.filter(
           (item) => item.type === "Fres 2/3 kniv (horizontal)"
         )
       );
-      setGetVp34motst(
-        datePickerWaste.filter(
-          (item) => item.type === "Fres 2/3 motstål (horizontal)"
-        )
-      );
+
       setGetVp48Kniv(
         datePickerWaste.filter((item) => item.type === "Fres 3 kniv (vertical)")
       );
-      setGetVp48motstH(
-        datePickerWaste.filter(
-          (item) => item.type === "Fres 3 motstål høyre (vertical)"
-        )
-      );
-      setGetVp48motstV(
-        datePickerWaste.filter(
-          (item) => item.type === "Fres 3 motstål venstre (vertical)"
-        )
-      );
+
       setGetBruksKniv(
         datePickerWaste.filter(
           (item) => item.type === "Råsortering/stikkhugger (Bruks)"
         )
-      );
-      setGetTrimmerJust(
-        datePickerWaste.filter((item) => item.type === "Trimmer justerverk")
-      );
-      setGetEksaktKapp(
-        datePickerWaste.filter((item) => item.type === "Eksaktkappe justerverk")
-      );
-      setGetEndekapp(
-        datePickerWaste.filter((item) => item.type === "Endekapp justerverk")
-      );
-      setGetTrimmerBord(
-        datePickerWaste.filter((item) => item.type === "Trimmer bordsortering")
       );
     }
   }, [datePickerWaste]);
@@ -224,83 +156,27 @@ const datesearchtools = () => {
           return a + b.input;
         }, 0)
       );
-      setMotstV40(
-        getMotstV40.reduce(function (a, b) {
-          return a + b.input;
-        }, 0)
-      );
-      setMotstV25(
-        getMotstV25.reduce(function (a, b) {
-          return a + b.input;
-        }, 0)
-      );
+
       setVpp34Kniv(
         getVpp34Kniv.reduce(function (a, b) {
           return a + b.input;
         }, 0)
       );
-      setVpp32Knivholder(
-        getVpp34Knivholder.reduce(function (a, b) {
-          return a + b.input;
-        }, 0)
-      );
-      setVpp34motstH(
-        getVpp34motstH.reduce(function (a, b) {
-          return a + b.input;
-        }, 0)
-      );
-      setVpp34motstV(
-        getVpp34motstV.reduce(function (a, b) {
-          return a + b.input;
-        }, 0)
-      );
+
       setVp34Kniv(
         getVp34Kniv.reduce(function (a, b) {
           return a + b.input;
         }, 0)
       );
-      setVp34motst(
-        getVp34motst.reduce(function (a, b) {
-          return a + b.input;
-        }, 0)
-      );
+
       setVp48Kniv(
         getVp48Kniv.reduce(function (a, b) {
           return a + b.input;
         }, 0)
       );
-      setVp48motstH(
-        getVp48motstH.reduce(function (a, b) {
-          return a + b.input;
-        }, 0)
-      );
-      setVp48motstV(
-        getVp48motstV.reduce(function (a, b) {
-          return a + b.input;
-        }, 0)
-      );
+
       setBruksKniv(
         getBruksKniv.reduce(function (a, b) {
-          return a + b.input;
-        }, 0)
-      );
-      setTrimmerJust(
-        getTrimmerJust.reduce(function (a, b) {
-          return a + b.input;
-        }, 0)
-      );
-      setEksaktKapp(
-        getEksaktKapp.reduce(function (a, b) {
-          return a + b.input;
-        }, 0)
-      );
-      setEndekapp(
-        getEndekapp.reduce(function (a, b) {
-          return a + b.input;
-        }, 0)
-      );
-      setTrimmerBord(
-        getTrimmerBord.reduce(function (a, b) {
           return a + b.input;
         }, 0)
       );
@@ -314,10 +190,10 @@ const datesearchtools = () => {
           `/api/tool/datepickertools/datepickertoolswaste?yearRequest=${
             startDate && startDate._d.getFullYear()
           }&month=${startDate && startDate._d.getMonth() + 1}&&day=${
-            startDate && startDate._d.getDay()
+            startDate && startDate._d.getDate()
           }&yearRequest2=${endDate && endDate._d.getFullYear()}&month2=${
-            endDate && endDate._d.getMonth() + 2
-          }&&day2=${endDate && endDate._d.getDay()}`
+            endDate && endDate._d.getMonth() + 1
+          }&&day2=${endDate && endDate._d.getDate()}`
         );
         setDatePickerWaste(response.data.data);
       } catch (error) {
@@ -338,6 +214,18 @@ const datesearchtools = () => {
           datePickerNew={datePickerNew}
           datePickerService={datePickerService}
           redSegmentH={redSegmentH}
+          redSegmentV={redSegmentV}
+          vpp34SegH={vpp34SegH}
+          vpp34SegV={vpp34SegV}
+          vp34SegH={vp34SegH}
+          vp34SegV={vp34SegV}
+          vp48segH={vp48segH}
+          vp48segV={vp48segV}
+          reduserKniv={reduserKniv}
+          vpp34Kniv={vpp34Kniv}
+          vp34Kniv={vp34Kniv}
+          vp48Kniv={vp48Kniv}
+          bruksKniv={bruksKniv}
         />
       </PageLayoutSidebar>
       <style jsx>

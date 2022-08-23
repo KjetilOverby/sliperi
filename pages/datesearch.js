@@ -23,10 +23,10 @@ const Datesearch = () => {
           `/api/datepicker/datepickerwaste?yearRequest=${
             startDate && startDate._d.getFullYear()
           }&month=${startDate && startDate._d.getMonth() + 1}&&day=${
-            startDate && startDate._d.getDay()
+            startDate && startDate._d.getDate()
           }&yearRequest2=${endDate && endDate._d.getFullYear()}&month2=${
-            endDate && endDate._d.getMonth() + 2
-          }&&day2=${endDate && endDate._d.getDay()}`
+            endDate && endDate._d.getMonth() + 1
+          }&&day2=${endDate && endDate._d.getDate()}`
         );
         setDatePickerWaste(response.data.data);
       } catch (error) {
@@ -42,10 +42,10 @@ const Datesearch = () => {
           `/api/datepicker/datepickernew?yearRequest=${
             startDate && startDate._d.getFullYear()
           }&month=${startDate && startDate._d.getMonth() + 1}&&day=${
-            startDate && startDate._d.getDay()
+            startDate && startDate._d.getDate()
           }&yearRequest2=${endDate && endDate._d.getFullYear()}&month2=${
-            endDate && endDate._d.getMonth() + 2
-          }&&day2=${endDate && endDate._d.getDay()}`
+            endDate && endDate._d.getMonth() + 1
+          }&&day2=${endDate && endDate._d.getDate()}`
         );
         setDatePickerNew(response.data.data);
       } catch (error) {
@@ -61,10 +61,10 @@ const Datesearch = () => {
           `/api/datepicker/datepickerservice?yearRequest=${
             startDate && startDate._d.getFullYear()
           }&month=${startDate && startDate._d.getMonth() + 1}&&day=${
-            startDate && startDate._d.getDay()
+            startDate && startDate._d.getDate()
           }&yearRequest2=${endDate && endDate._d.getFullYear()}&month2=${
-            endDate && endDate._d.getMonth() + 2
-          }&&day2=${endDate && endDate._d.getDay()}`
+            endDate && endDate._d.getMonth() + 1
+          }&&day2=${endDate && endDate._d.getDate()}`
         );
         setDatePickerService(response.data.data);
       } catch (error) {
