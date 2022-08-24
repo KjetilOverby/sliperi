@@ -8,7 +8,7 @@ const api = axios.create({
   baseURL: process.env.api,
 });
 
-const datesearchtools = () => {
+const Datesearchtools = () => {
   const [startDate, setStartDate] = useState();
   const [endDate, setEndDate] = useState();
 
@@ -238,4 +238,4 @@ const datesearchtools = () => {
   );
 };
 
-export default datesearchtools;
+export default Datesearchtools;
