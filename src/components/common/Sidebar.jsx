@@ -19,6 +19,7 @@ const SideBar = () => {
   const [activate7, setActivate7] = useState();
   const [activate8, setActivate8] = useState();
   const [activate9, setActivate9] = useState();
+  const [activate10, setActivate10] = useState();
   const [activateSnippets, setActivateSnippets] = useState();
   const [activateAnimate, setActivateAnimate] = useState();
   const [activateHeader, setActivateHeader] = useState();
@@ -61,6 +62,8 @@ const SideBar = () => {
       setActivate8("tab-active");
     } else if (router.pathname === "/datesearchtools") {
       setActivate9("tab-active");
+    } else if (router.pathname === "/redigersegmenter") {
+      setActivate10("tab-active");
     }
   }, []);
   return (
@@ -105,6 +108,9 @@ const SideBar = () => {
           <p className={`section-tab ${activate9}`}>Datosøk</p>
         </Link>
         <h4 className="section-header">Segmenter</h4>
+        <Link href="/redigersegmenter">
+          <p className={`section-tab ${activate10}`}>Rediger</p>
+        </Link>
         <Link href="/segmentoversiktvisuell">
           <p className={`section-tab ${activate5}`}>Visuell oversikt</p>
         </Link>
