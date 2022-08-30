@@ -150,7 +150,7 @@ const SearchMain = () => {
     setOpenRetipModal(false);
     retipUpdatePromise().then(() => {
       setLinckUpdateDatabase(!linckUpdateDatabase);
-      setInput(getSerial);
+      setInput("");
       setServiceMessage(true);
       setAnimate("move");
       setTimeout(() => {

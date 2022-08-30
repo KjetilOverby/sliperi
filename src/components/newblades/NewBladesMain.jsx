@@ -173,12 +173,14 @@ const NewBladesMain = () => {
                 <div
                   key={item.newid}
                   onClick={openDeleteNewbladesHandler}
-                  className="newblade-container"
-                >
+                  className="blade-container2">
                   <p key={item.serial} className="serial">
                     {item.serial}
                   </p>
                   <p key={item.serial}>{item.type}</p>
+                  <p className="date">
+                    {dateFormat(item.updated, "dd.mm.yyyy")}
+                  </p>
                 </div>
               );
             })}
@@ -208,6 +210,9 @@ const NewBladesMain = () => {
           }
           .serial {
             width: 5rem;
+          }
+          .date {
+            margin-left: 1rem;
           }
         `}
       </style>
