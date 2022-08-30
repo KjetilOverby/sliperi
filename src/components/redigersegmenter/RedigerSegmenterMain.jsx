@@ -14,7 +14,7 @@ const RedigerSegmenterMain = () => {
     <>
       {openEdit && <ToolEditComponent setOpenEdit={setOpenEdit} img={getIMG} />}
       <div className="content-container">
-        <h1>Rediger segmenter</h1>
+        <h1 className="header">Rediger segmenter</h1>
         <Toolcard
           img={tools && tools[0].img}
           title={tools && tools[0].type}
