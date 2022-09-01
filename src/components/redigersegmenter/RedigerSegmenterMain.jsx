@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { MyContext } from "../../contexts/MyContext";
 import Toolcard from "../common/Toolcard";
 import ToolEditComponent from "../common/ToolEditComponent";
@@ -21,6 +21,7 @@ const RedigerSegmenterMain = () => {
   const [getType, setGetType] = useState();
   const [getAntall, setGetAntall] = useState();
   const [previousCount, setPreviousCount] = useState();
+  const [antallCalcs, setAntallCalcs] = useState();
 
   // EDIT ANTALL
   const editAntallPromise = () => {
@@ -38,14 +39,13 @@ const RedigerSegmenterMain = () => {
       }
     });
   };
+
   const editAntall = async () => {
     await editAntallPromise().then(function () {
       setOpenEdit(false);
       setToolUpdateDatabase(!toolUpdateDatabase);
     });
   };
-
-  // DELETE TOOLS
 
   const createDeleteDataPromise = () => {
     return new Promise((resolve, reject) => {
@@ -64,9 +64,33 @@ const RedigerSegmenterMain = () => {
       } catch (error) {}
     });
   };
+  useEffect(() => {
+    setAntallCalcs(previousCount - getAntall);
+  });
+
+  const newAntallPromise = () => {
+    return new Promise((resolve, reject) => {
+      try {
+        api
+          .patch(`/api/tool/editTool?ids=${toolID}&user=${user.sub}`, {
+            antall: antallCalcs,
+          })
+          .then(function (res) {
+            resolve(res);
+          });
+      } catch (error) {
+        reject(console.log(error));
+      }
+    });
+  };
 
   const deleteToolsHandler = async () => {
-    await createDeleteDataPromise();
+    await createDeleteDataPromise().then(async function () {
+      await newAntallPromise().then(function () {
+        setToolUpdateDatabase(!toolUpdateDatabase);
+        setOpenEdit(false);
+      });
+    });
   };
 
   return (
