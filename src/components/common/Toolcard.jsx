@@ -10,12 +10,14 @@ const Toolcard = ({
   setGetIMG,
   setGetType,
   type,
+  setPreviousCount,
 }) => {
   const openEditModal = () => {
     setOpenEdit(true);
     setToolID(ID);
     setGetIMG(img);
     setGetType(type);
+    setPreviousCount(ant);
   };
 
   return (

@@ -16,10 +16,13 @@ const RedigerSegmenterMain = () => {
 
   const [toolID, setToolID] = useState();
   const [openEdit, setOpenEdit] = useState(false);
+  const [openDelete, setOpenDelete] = useState(false);
   const [getIMG, setGetIMG] = useState();
   const [getType, setGetType] = useState();
   const [getAntall, setGetAntall] = useState();
+  const [previousCount, setPreviousCount] = useState();
 
+  // EDIT ANTALL
   const editAntallPromise = () => {
     return new Promise((resolve, reject) => {
       try {
@@ -42,7 +45,29 @@ const RedigerSegmenterMain = () => {
     });
   };
 
-  console.log(getType);
+  // DELETE TOOLS
+
+  const createDeleteDataPromise = () => {
+    return new Promise((resolve, reject) => {
+      try {
+        api
+          .post(`/api/tool/wastecreate?user=${user.sub}`, {
+            type: getType,
+            antall: previousCount,
+            input: getAntall,
+            img: getIMG,
+            date: new Date(),
+          })
+          .then(function (res) {
+            resolve(res);
+          });
+      } catch (error) {}
+    });
+  };
+
+  const deleteToolsHandler = async () => {
+    await createDeleteDataPromise();
+  };
 
   return (
     <>
@@ -53,6 +78,7 @@ const RedigerSegmenterMain = () => {
           setGetAntall={setGetAntall}
           editAntall={editAntall}
           type={getType}
+          deleteToolsHandler={deleteToolsHandler}
         />
       )}
       <div className="content-container">
@@ -68,6 +94,7 @@ const RedigerSegmenterMain = () => {
           setGetIMG={setGetIMG}
           getAntall={getAntall}
           setGetType={setGetType}
+          setPreviousCount={setPreviousCount}
         />
         <Toolcard
           img={tools && tools[1].img}
@@ -80,6 +107,7 @@ const RedigerSegmenterMain = () => {
           setGetIMG={setGetIMG}
           getAntall={getAntall}
           setGetType={setGetType}
+          setPreviousCount={setPreviousCount}
         />
       </div>
       <style jsx>

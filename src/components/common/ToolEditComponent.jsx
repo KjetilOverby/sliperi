@@ -12,6 +12,7 @@ const ToolEditComponent = ({
   setGetAntall,
   editAntall,
   type,
+  deleteToolsHandler,
 }) => {
   const { user, isAuthenticated } = useAuth0();
   const [openDeleteInput, setOpenDeleteInput] = useState(false);
@@ -66,7 +67,11 @@ const ToolEditComponent = ({
             <div className="input-container delete">
               <h4 className="header mb">Slett</h4>
               <InputComponent setGetAntall={setGetAntall} />
-              <ButtonComponent type="outline" title="Slett" />
+              <ButtonComponent
+                func={deleteToolsHandler}
+                type="outline"
+                title="Slett"
+              />
             </div>
           )}
           {openAddInput && (
