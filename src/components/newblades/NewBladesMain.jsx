@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import AddBladesInputComponent from "../addblades/AddbladesSelectorInput";
 import { v4 as uuidv4 } from "uuid";
 import dateFormat, { masks } from "dateformat";
@@ -6,12 +6,14 @@ const axios = require("axios");
 import { useAuth0 } from "@auth0/auth0-react";
 import ModalComponentEdit from "../common/ModalComponentEdit";
 import { FaTrashAlt } from "react-icons/fa";
+import { MyContext } from "../../contexts/MyContext";
 
 const api = axios.create({
   baseURL: process.env.api,
 });
 
 const NewBladesMain = () => {
+  const { year, month, month2 } = useContext(MyContext);
   const [selectorValue, setSelectorValue] = useState();
   const [serialInput, setSerialInput] = useState();
   const [uuid, setUuid] = useState();
@@ -23,9 +25,9 @@ const NewBladesMain = () => {
   const [updateNewblades, setUpdateNewblades] = useState(false);
 
   const { user, isAuthenticated } = useAuth0();
-  const monthRequest = "08";
-  const monthRequest2 = "09";
-  const yearRequest = "2022";
+  const monthRequest = month;
+  const monthRequest2 = month2;
+  const yearRequest = year;
 
   useEffect(() => {
     setUuid(uuidv4());

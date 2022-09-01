@@ -1,35 +1,85 @@
 import React, { useState } from "react";
 import { RiDeleteBin5Fill } from "react-icons/ri";
 import { BiAddToQueue } from "react-icons/bi";
+import { BiEdit } from "react-icons/bi";
+import ButtonComponent from "./ButtonComponent";
 
 const ToolEditComponent = ({ setOpenEdit, img }) => {
   const [openDeleteInput, setOpenDeleteInput] = useState(false);
   const [openAddInput, setOpenAddInput] = useState(false);
+  const [openEditInput, setOpenEditInput] = useState(false);
+
+  const openDeleteInputHandler = () => {
+    setOpenDeleteInput(true);
+    setOpenAddInput(false);
+    setOpenEditInput(false);
+  };
+
+  const openAddInputHandler = () => {
+    setOpenDeleteInput(false);
+    setOpenAddInput(true);
+    setOpenEditInput(false);
+  };
+  const openEditInputHandler = () => {
+    setOpenEditInput(true);
+    setOpenAddInput(false);
+    setOpenDeleteInput(false);
+  };
   return (
     <>
       <div className="container">
         <div className="edit-box">
           <img className="img" src={img} alt="" />
           <div className="button-container">
-            <div className="button button-delete">
+            <div
+              onClick={openDeleteInputHandler}
+              className="button button-delete">
               <RiDeleteBin5Fill
                 style={{ fontSize: "1.8rem", color: "darkred" }}
               />
             </div>
-            <div className="button button-add">
+            <div onClick={openAddInputHandler} className="button button-add">
               <BiAddToQueue
                 style={{ fontSize: "1.8rem", color: "darkgreen" }}
               />
             </div>
+            <div onClick={openEditInputHandler} className="button button-edit">
+              <BiEdit style={{ fontSize: "1.8rem", color: "darkblue" }} />
+            </div>
           </div>
-          <button onClick={() => setOpenEdit(false)}>Close</button>
-          <div>
-            <input className="input" type="number" />
-          </div>
+          {openDeleteInput && (
+            <div className="input-container delete">
+              <h4 className="header mb">Slett</h4>
+              <input className="input" type="number" />
+              <ButtonComponent type="outline" title="Slett" />
+            </div>
+          )}
+          {openAddInput && (
+            <div className="input-container add">
+              <h4 className="header mb">Legg til</h4>
+              <input className="input" type="number" />
+              <ButtonComponent type="outline" title="Legg til" />
+            </div>
+          )}
+          {openEditInput && (
+            <div className="input-container edit">
+              <h4 className="header mb">Rediger antall</h4>
+              <input className="input" type="number" />
+              <ButtonComponent type="outline" title="Lagre endringer" />
+            </div>
+          )}
+          <ButtonComponent
+            title="Lukk"
+            type="outline"
+            func={() => setOpenEdit(false)}
+          />
         </div>
       </div>
       <style jsx>
         {`
+          .add {
+            background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+          }
           .container {
             position: absolute;
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
@@ -38,6 +88,20 @@ const ToolEditComponent = ({ setOpenEdit, img }) => {
             z-index: 5000;
             display: grid;
             place-items: center;
+          }
+          .delete {
+            background-image: linear-gradient(
+              to right,
+              #feada6 0%,
+              #f5efef 100%
+            );
+          }
+          .edit {
+            background-image: linear-gradient(
+              to right,
+              #accbee 0%,
+              #e7f0fd 100%
+            );
           }
           .edit-box {
             width: 40rem;
@@ -50,6 +114,17 @@ const ToolEditComponent = ({ setOpenEdit, img }) => {
           .img {
             width: 100%;
           }
+          .input {
+            font-size: 1.5rem;
+            width: 4.5rem;
+          }
+          .input-container {
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+          }
           .button {
             width: 4rem;
             height: 4rem;
@@ -57,14 +132,21 @@ const ToolEditComponent = ({ setOpenEdit, img }) => {
             display: grid;
             place-items: center;
           }
+          .button:hover {
+            cursor: pointer;
+          }
           .button-container {
-            width: 9rem;
+            width: 14rem;
             display: flex;
             justify-content: space-between;
             margin: 1rem 0;
           }
+
           .button-delete {
             background: indianred;
+          }
+          .button-edit {
+            background: dodgerblue;
           }
           .button-add {
             background: seagreen;

@@ -117,7 +117,11 @@ console.log(tools);
           linckUpdateDatabase,
           linckServiceBlades,
           tabellLinckBlad,
-          tools
+          tools,
+          year,
+          month,
+          month2
+
         }}
       >
         <Component {...pageProps} />
