@@ -8,7 +8,7 @@ const api = axios.create({
   baseURL: process.env.api,
 });
 
-// test
+
 
 function MyApp({ Component, pageProps }) {
   const domain = process.env.REACT_APP_AUTH0_DOMAIN;
@@ -18,6 +18,9 @@ function MyApp({ Component, pageProps }) {
   const [linckServiceBlades, setLinckServiceBlades] = useState();
   const [linckID, setLinckID] = useState();
   const [linckUpdateDatabase, setLinckUpdateDatabase] = useState(false);
+  const [toolUpdateDatabase, setToolUpdateDatabase] = useState(false);
+
+
 
  
    useEffect(() => {
@@ -37,7 +40,7 @@ function MyApp({ Component, pageProps }) {
   const month = new Date().getMonth() + 1;
   const month2 = new Date().getMonth() + 2;
 
-  console.log(month);
+  
   useEffect(() => {
     (async () => {
       try {
@@ -97,9 +100,9 @@ function MyApp({ Component, pageProps }) {
     }
     })();
     
-}, []);
+}, [toolUpdateDatabase]);
 
-console.log(tools);
+
 
   return (
     <Auth0Provider
@@ -120,8 +123,9 @@ console.log(tools);
           tools,
           year,
           month,
-          month2
-
+          month2,
+          setToolUpdateDatabase,
+          toolUpdateDatabase
         }}
       >
         <Component {...pageProps} />

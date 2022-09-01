@@ -8,11 +8,14 @@ const Toolcard = ({
   setToolID,
   setOpenEdit,
   setGetIMG,
+  setGetType,
+  type,
 }) => {
   const openEditModal = () => {
     setOpenEdit(true);
     setToolID(ID);
     setGetIMG(img);
+    setGetType(type);
   };
 
   return (

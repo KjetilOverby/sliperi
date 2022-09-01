@@ -3,8 +3,17 @@ import { RiDeleteBin5Fill } from "react-icons/ri";
 import { BiAddToQueue } from "react-icons/bi";
 import { BiEdit } from "react-icons/bi";
 import ButtonComponent from "./ButtonComponent";
+import InputComponent from "./InputComponent";
+import { useAuth0 } from "@auth0/auth0-react";
 
-const ToolEditComponent = ({ setOpenEdit, img }) => {
+const ToolEditComponent = ({
+  setOpenEdit,
+  img,
+  setGetAntall,
+  editAntall,
+  type,
+}) => {
+  const { user, isAuthenticated } = useAuth0();
   const [openDeleteInput, setOpenDeleteInput] = useState(false);
   const [openAddInput, setOpenAddInput] = useState(false);
   const [openEditInput, setOpenEditInput] = useState(false);
@@ -25,47 +34,57 @@ const ToolEditComponent = ({ setOpenEdit, img }) => {
     setOpenAddInput(false);
     setOpenDeleteInput(false);
   };
+
   return (
     <>
       <div className="container">
         <div className="edit-box">
           <img className="img" src={img} alt="" />
-          <div className="button-container">
-            <div
-              onClick={openDeleteInputHandler}
-              className="button button-delete">
-              <RiDeleteBin5Fill
-                style={{ fontSize: "1.8rem", color: "darkred" }}
-              />
+          <h2 className="header">{type}</h2>
+          {user && user.sub === process.env.USER_SUB && (
+            <div className="button-container">
+              <div
+                onClick={openDeleteInputHandler}
+                className="button button-delete">
+                <RiDeleteBin5Fill
+                  style={{ fontSize: "1.8rem", color: "darkred" }}
+                />
+              </div>
+              <div onClick={openAddInputHandler} className="button button-add">
+                <BiAddToQueue
+                  style={{ fontSize: "1.8rem", color: "darkgreen" }}
+                />
+              </div>
+              <div
+                onClick={openEditInputHandler}
+                className="button button-edit">
+                <BiEdit style={{ fontSize: "1.8rem", color: "darkblue" }} />
+              </div>
             </div>
-            <div onClick={openAddInputHandler} className="button button-add">
-              <BiAddToQueue
-                style={{ fontSize: "1.8rem", color: "darkgreen" }}
-              />
-            </div>
-            <div onClick={openEditInputHandler} className="button button-edit">
-              <BiEdit style={{ fontSize: "1.8rem", color: "darkblue" }} />
-            </div>
-          </div>
+          )}
           {openDeleteInput && (
             <div className="input-container delete">
               <h4 className="header mb">Slett</h4>
-              <input className="input" type="number" />
+              <InputComponent setGetAntall={setGetAntall} />
               <ButtonComponent type="outline" title="Slett" />
             </div>
           )}
           {openAddInput && (
             <div className="input-container add">
               <h4 className="header mb">Legg til</h4>
-              <input className="input" type="number" />
+              <InputComponent setGetAntall={setGetAntall} />
               <ButtonComponent type="outline" title="Legg til" />
             </div>
           )}
           {openEditInput && (
             <div className="input-container edit">
               <h4 className="header mb">Rediger antall</h4>
-              <input className="input" type="number" />
-              <ButtonComponent type="outline" title="Lagre endringer" />
+              <InputComponent setGetAntall={setGetAntall} />
+              <ButtonComponent
+                func={editAntall}
+                type="outline"
+                title="Lagre endringer"
+              />
             </div>
           )}
           <ButtonComponent
@@ -114,10 +133,7 @@ const ToolEditComponent = ({ setOpenEdit, img }) => {
           .img {
             width: 100%;
           }
-          .input {
-            font-size: 1.5rem;
-            width: 4.5rem;
-          }
+
           .input-container {
             padding: 1rem;
             margin: 0.5rem 0;
