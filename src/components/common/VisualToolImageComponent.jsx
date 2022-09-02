@@ -21,12 +21,7 @@ const VisualToolImageComponent = ({ img, title, type, dim, zAnt, angle }) => {
             height: 25rem;
             padding: 1rem;
             border-radius: 15px;
-            background: -webkit-gradient(
-              linear,
-              left top,
-              left bottom,
-              from(#a95),
-              to(#fea)
+            background:var(--middle)
             );
           }
           .card-header {

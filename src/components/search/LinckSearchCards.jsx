@@ -5,6 +5,7 @@ import { FaComments } from "react-icons/fa";
 import { MyContext } from "../../contexts/MyContext";
 import dateFormat, { masks } from "dateformat";
 import { useAuth0 } from "@auth0/auth0-react";
+import Colors from "../../Colors";
 
 const LinckCards = ({
   keyID,
@@ -104,7 +105,8 @@ const LinckCards = ({
                   <>
                     <p
                       style={{ marginRight: "1rem", width: "8rem" }}
-                      className="comment-text container-text">
+                      className="comment-text container-text"
+                    >
                       {item}
                     </p>
                   </>
@@ -132,12 +134,14 @@ const LinckCards = ({
             </div>
             <div
               onClick={openRetipModalHandler}
-              className="icon-container retip-btn-container">
+              className="icon-container retip-btn-container"
+            >
               <BsArrowRepeat style={{ fontSize: "1.2rem" }} />
             </div>
             <div
               onClick={openDeleteModalHandler}
-              className="icon-container delete-container">
+              className="icon-container delete-container"
+            >
               <RiDeleteBin6Line style={{ fontSize: "1.2rem" }} />
             </div>
           </div>
@@ -150,18 +154,19 @@ const LinckCards = ({
             margin: 0.5rem;
             display: grid;
             border-radius: 5px;
-            grid-template-columns: 20rem 15rem 1fr;
+            grid-template-columns: 23rem 15rem 1fr;
             grid-template-rows: 2rem 2rem auto 1fr;
             grid-template-areas:
               "top button button"
               "middle middle ."
               "bottom bottom ."
               "comment comment .";
-            background: linear-gradient(120deg, #79c5fc 0%, #95ef3b 100%);
+            background: var(--middle);
             box-shadow: 1px 1px 10px lightgrey;
           }
           .container:hover {
-            background: #95ef3b;
+            background: ${Colors.primary};
+            cursor: pointer
           }
           .container-text {
             height: auto;
@@ -172,7 +177,7 @@ const LinckCards = ({
             display: flex;
           }
           .comment-text {
-            color: #2d694d;
+            color: ${Colors.text2};
             font-style: italic;
             font-size: 0.9rem;
           }
@@ -264,21 +269,21 @@ const LinckCards = ({
             margin: 1rem 0;
           }
           .retip-text {
-            color: #1982d8;
+            color: ${Colors.text};
             font-style: italic;
             font-size: 0.9rem;
           }
           .serial {
             margin: 0 0.5rem 0 0;
-            color: indianred;
+            color: ${Colors.primary};
           }
           .type {
             margin: 0;
-            color: indianred;
+            color: ${Colors.text2};
             font-style: italic;
           }
           .regist {
-            color: grey;
+            color: ${Colors.secondary};
             font-style: italic;
             font-size: 0.9rem;
             margin-top: 0.5rem;

@@ -185,9 +185,9 @@ const DatesearchToolsMain = ({
           .date-picker-container {
             background-image: linear-gradient(
               to right,
-              #d5dee7 0%,
-              #ffafbd 0%,
-              #c9ffbf 100%
+              var(--primary) 0%,
+              var(--middle) 0%,
+              var(--text2) 100%
             );
             padding: 2rem;
             margin-bottom: 3rem;

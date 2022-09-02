@@ -125,7 +125,11 @@ const DateSearchMain = ({
           .container {
           }
           .date-picker-container {
-            background-image: linear-gradient(120deg, #79c5fc 0%, #95ef3b 100%);
+            background-image: linear-gradient(
+              120deg,
+              var(--primary) 0%,
+              var(--text) 100%
+            );
             padding: 2rem;
           }
           .month-container {

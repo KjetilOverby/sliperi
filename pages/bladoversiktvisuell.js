@@ -1,4 +1,5 @@
 import React from "react";
+import Colors from "../src/Colors";
 import VisuellBladoversikt from "../src/components/bladoversiktvisuell/VisuellBladoversikt";
 import PageLayoutSidebar from "../src/components/common/PagelayoutSidebar";
 import SideBar from "../src/components/common/Sidebar";
@@ -15,7 +16,7 @@ const bladoversiktvisuell = () => {
       <style jsx>
         {`
           .container {
-            background: grey;
+            background: var(--text);
           }
         `}
       </style>

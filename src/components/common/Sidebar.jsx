@@ -76,7 +76,8 @@ const SideBar = () => {
       {openSidebar && isMobile && (
         <div
           onClick={openSidebarHandler}
-          className="menu-invisible-container"></div>
+          className="menu-invisible-container"
+        ></div>
       )}
       <div className={`container ${container}`}>
         <Link href="/">
@@ -128,7 +129,7 @@ const SideBar = () => {
       <style jsx>{`
         .container {
           grid-area: sideBar;
-          background: #333;
+          background: ${Colors.primary};
           padding: 1rem;
           width: 15rem;
           transform: ${isMobile && "translateX(-15rem)"};
@@ -161,7 +162,7 @@ const SideBar = () => {
           color: #dadada;
         }
         .logo {
-          color: ${user ? `${Colors.login}` : "indianred"};
+          color: ${user ? `var(--text)` : "var(--secondary)"};
 
           font-size: 3rem;
           margin-bottom: 2rem;
@@ -173,7 +174,7 @@ const SideBar = () => {
           position: fixed;
           right: 2rem;
           top: 2rem;
-          background: ${Colors.login};
+          background: var(--middle);
           width: 3rem;
           height: 3rem;
           z-index: 1500;
@@ -182,12 +183,12 @@ const SideBar = () => {
           place-items: center;
         }
         .section-header {
-          color: grey;
+          color: var(--text);
           margin: 1rem 0;
           font-weight: bold;
         }
         .section-tab {
-          color: white;
+          color: var(--text2);
           margin-left: 1rem;
           margin-bottom: 1.5rem;
           font-weight: 300;
@@ -200,8 +201,8 @@ const SideBar = () => {
           content: "🁢 ";
           position: absolute;
           left: 0;
-          background: ${Colors.login};
-          color: ${Colors.login};
+          background: var(--middle);
+          color: var(--middle);
         }
 
         @keyframes openContainer {

@@ -1,4 +1,5 @@
 import React from "react";
+import Colors from "../../Colors";
 
 const Toolcard = ({
   title,
@@ -25,27 +26,31 @@ const Toolcard = ({
       <div onClick={openEditModal} className="container">
         <img className="img" src={img} alt="" />
         <div>
-          <h4>{title}</h4>
-          <p>Antall: {ant}</p>
+          <h4 className="title">{title}</h4>
+          <p className="ant">Antall: {ant}</p>
         </div>
       </div>
       <style jsx>
         {`
+          .ant {
+            font-weight: 600;
+            margin-top: 0.5rem;
+            color: var(--text2);
+          }
+          .title {
+            color: var(--text);
+          }
           .container {
             display: grid;
             grid-template-columns: 8rem 1fr;
-            width: 50%;
+            width: 100%;
             margin: 0.5rem 0;
-            background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+            background: var(--secondary);
             padding: 0.2rem;
             transition: 0.5s;
           }
           .container:hover {
-            background-image: linear-gradient(
-              to right,
-              #74ebd5 0%,
-              #9face6 100%
-            );
+            background: var(--primary);
             cursor: pointer;
           }
           .img {
