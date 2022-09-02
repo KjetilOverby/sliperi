@@ -16,7 +16,7 @@ const bladoversiktvisuell = () => {
       <style jsx>
         {`
           .container {
-            background: var(--text);
+            background: var(--secondary);
           }
         `}
       </style>

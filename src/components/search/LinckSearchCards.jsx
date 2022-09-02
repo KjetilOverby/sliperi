@@ -165,7 +165,7 @@ const LinckCards = ({
             box-shadow: 1px 1px 10px lightgrey;
           }
           .container:hover {
-            background: ${Colors.primary};
+            background: var(--text);
             cursor: pointer
           }
           .container-text {

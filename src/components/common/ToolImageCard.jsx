@@ -26,7 +26,7 @@ const ToolImageCard = ({
           .container {
             width: 20rem;
             height: 25rem;
-            background: var(--middle);
+            background: var(--primary);
             padding: 1rem;
             margin-right: 2rem;
             border-radius: 15px;
@@ -35,10 +35,11 @@ const ToolImageCard = ({
             font-weight: 600;
             margin: 0.5rem 0;
             font-size: 1rem;
+            color: var(--text2);
           }
           .text {
             font-style: italic;
-            color: grey;
+            color: var(--text);
           }
         `}
       </style>

@@ -95,7 +95,7 @@ const OversiktMain = ({
                 {tabellLinckBlad &&
                   tabellLinckBlad.map((item) => {
                     return (
-                      <div key={item._id.type} className="container">
+                      <div key={item._id.type} className="blade-container">
                         <p className="type tabell-text">{item._id.type}</p>
                         <p className="tabell-text">{item.typeCount}</p>
                       </div>
@@ -105,7 +105,10 @@ const OversiktMain = ({
               <div className="nom-container">
                 {nom.map((item) => {
                   return (
-                    <p key={item.id} className="tabell-text">
+                    <p
+                      key={item.id}
+                      className="tabell-text nom-single-container"
+                    >
                       {item.ant}
                     </p>
                   );
@@ -171,6 +174,16 @@ const OversiktMain = ({
           .nom-container {
             padding-left: 1rem;
             color: blue;
+          }
+          .nom-single-container {
+            display: flex;
+            padding: 0.2rem;
+            font-size: 0.8rem;
+            background: var(--secondary);
+            margin-bottom: 0.2rem;
+            width: 1.5rem;
+            border-radius: 5px;
+            color: var(--text2);
           }
           .table-container {
           }

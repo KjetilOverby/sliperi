@@ -21,16 +21,17 @@ const VisualToolImageComponent = ({ img, title, type, dim, zAnt, angle }) => {
             height: 25rem;
             padding: 1rem;
             border-radius: 15px;
-            background:var(--middle)
+            background:var(--primary)
             );
           }
           .card-header {
             font-weight: 600;
             margin: 0.5rem 0;
+            color: var(--text2)
           }
           .text {
             font-style: italic;
-            color: grey;
+            color: var(--text);
           }
         `}
       </style>

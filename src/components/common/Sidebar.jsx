@@ -129,7 +129,7 @@ const SideBar = () => {
       <style jsx>{`
         .container {
           grid-area: sideBar;
-          background: ${Colors.primary};
+          background: var(--primary);
           padding: 1rem;
           width: 15rem;
           transform: ${isMobile && "translateX(-15rem)"};

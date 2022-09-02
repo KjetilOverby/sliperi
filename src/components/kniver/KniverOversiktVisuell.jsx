@@ -299,7 +299,7 @@ const KniverOversiktVisuell = () => {
         {`
           .card-header {
             font-weight: 300;
-            color: lightgrey;
+            color: var(--text2);
             margin-bottom: 2rem;
           }
           .container {
@@ -312,7 +312,7 @@ const KniverOversiktVisuell = () => {
           .main-header {
             margin-bottom: 5rem;
             font-weight: 100;
-            color: #fff;
+            color: var(--text);
           }
         `}
       </style>
