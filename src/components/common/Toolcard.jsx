@@ -34,10 +34,10 @@ const Toolcard = ({
           .container {
             display: grid;
             grid-template-columns: 8rem 1fr;
-            width: 30rem;
-            margin: 2rem 0;
+            width: 50%;
+            margin: 0.5rem 0;
             background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
-            padding: 1rem;
+            padding: 0.2rem;
             transition: 0.5s;
           }
           .container:hover {
@@ -49,7 +49,7 @@ const Toolcard = ({
             cursor: pointer;
           }
           .img {
-            width: 7rem;
+            width: 5rem;
           }
         `}
       </style>

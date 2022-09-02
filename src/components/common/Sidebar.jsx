@@ -107,17 +107,16 @@ const SideBar = () => {
         <Link href="/datesearchtools">
           <p className={`section-tab ${activate9}`}>Datosøk</p>
         </Link>
-        <h4 className="section-header">Segmenter</h4>
+
         <Link href="/redigersegmenter">
           <p className={`section-tab ${activate10}`}>Rediger</p>
         </Link>
         <Link href="/segmentoversiktvisuell">
-          <p className={`section-tab ${activate5}`}>Visuell oversikt</p>
+          <p className={`section-tab ${activate5}`}>Bilder Segmenter</p>
         </Link>
 
-        <h4 className="section-header">Kniver og motstål</h4>
         <Link href="/knivoversiktvisuell">
-          <p className={`section-tab ${activate6}`}>Visuell oversikt</p>
+          <p className={`section-tab ${activate6}`}>Bilder Kniver og Motstål</p>
         </Link>
 
         {/* 
