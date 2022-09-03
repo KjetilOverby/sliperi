@@ -337,6 +337,9 @@ const SearchMain = () => {
           margin-bottom: 2rem;
           color: var(--secondary);
         }
+        .main-container {
+          background: var(--text);
+        }
 
         @media only screen and (max-width: 1000px) {
           .container {

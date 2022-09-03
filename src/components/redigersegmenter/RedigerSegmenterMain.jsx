@@ -159,7 +159,7 @@ const RedigerSegmenterMain = () => {
           addToolsHandler={addToolsHandler}
         />
       )}
-      <div className="content-container">
+      <div className="content-container main-container">
         <h1 className="header mb">Rediger segmenter og kniver</h1>
         <Toolcard
           img={tools && tools[0].img}
@@ -334,6 +334,9 @@ const RedigerSegmenterMain = () => {
       <style jsx>
         {`
           .container {
+          }
+          .main-container {
+            background: var(--text);
           }
         `}
       </style>

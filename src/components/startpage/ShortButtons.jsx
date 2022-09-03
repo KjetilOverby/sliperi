@@ -16,43 +16,34 @@ const ShortButtons = ({ title, text, icon, link }) => {
       <style jsx>
         {`
           .container {
-            width: 10rem;
-            height: 10rem;
+            width: 12rem;
+            height: 12rem;
             border: 1px solid lightslategrey;
             border-radius: 15px;
             display: grid;
             place-items: center;
             border-color: #7c7c7c;
-            background: linear-gradient(
-              top,
-              rgba(38, 38, 38, 0.8),
-              #e6e6e6 25%,
-              #ffffff 38%,
-              #c5c5c5 63%,
-              #f7f7f7 87%,
-              rgba(38, 38, 38, 0.8)
-            );
-            background: -webkit-linear-gradient(
-              top,
-              rgba(38, 38, 38, 0.5),
-              #e6e6e6 25%,
-              #ffffff 38%,
-              rgba(0, 0, 0, 0.25) 63%,
-              #e6e6e6 87%,
-              rgba(38, 38, 38, 0.4)
-            );
+            background: var(--primary);
+
             transition: 0.2s;
+            transition: background 0.3s, color 0.3s;
+            background: linear-gradient(
+              120deg,
+              var(--primary) 50%,
+              var(--secondary) 50%
+            );
+            background-size: 255%;
           }
           .container:hover {
-            box-shadow: 5px 5px 10px grey;
             cursor: pointer;
+            background-position: 100%;
           }
           .title {
-            color: #385668;
+            color: var(--text);
             font-weight: 300;
           }
           .text {
-            color: #385668;
+            color: var(--text);
             font-weight: 300;
           }
         `}

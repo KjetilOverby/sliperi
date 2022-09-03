@@ -225,10 +225,10 @@ const LinckCards = ({
             width: 9rem;
           }
           .delete-container {
-            border: 1px solid red;
+            border: 1px solid #b85656;
             transition: 0.5s;
             background: rgba(255, 0, 0, 0.192);
-            color: red;
+            color: #b85656;
           }
           .delete-container:hover {
             background: #9b3e3e;

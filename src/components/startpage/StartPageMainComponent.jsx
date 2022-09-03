@@ -12,8 +12,8 @@ const StartPageMainComponent = () => {
   const { linckBlades } = useContext(MyContext);
   return (
     <>
-      <div className="content-container">
-        <h1 className="header">Verktøyregister</h1>
+      <div className="content-container main-container">
+        <h1 className="header main-header">Verktøyregister</h1>
         <div className="btn-container">
           <ShortButtons
             icon={<FcSearch style={{ fontSize: "5rem" }} />}
@@ -47,8 +47,16 @@ const StartPageMainComponent = () => {
           }
           .btn-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(12rem, 12rem));
+            grid-template-columns: repeat(auto-fill, minmax(14rem, 12rem));
             margin-top: 5rem;
+          }
+          .main-container {
+            background: var(--middle);
+            background: url("https://wallpaperaccess.com/full/4153443.jpg");
+            background-size: cover;
+          }
+          .main-header {
+            color: var(--text);
           }
           @media only screen and (max-width: 1000px) {
             .btn-container {
