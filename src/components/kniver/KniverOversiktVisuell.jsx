@@ -176,7 +176,7 @@ const KniverOversiktVisuell = () => {
           />
         </div>
         <h1 className="card-header">Fres 3 Vertical (VP48)</h1>
-        />
+
         <div className="container">
           <ToolImageCard
             img={vp48kniv}
@@ -225,7 +225,6 @@ const KniverOversiktVisuell = () => {
           />
         </div>
         <h1 className="card-header">Råsortering/stikkhugger (Bruks)</h1>
-        />
         <div className="container">
           <ToolImageCard
             img={bruks}
