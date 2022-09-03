@@ -8,6 +8,8 @@ const ModalComponent = ({
   titleRightBtn,
   cancel,
   action,
+  type,
+  serial,
 }) => {
   return (
     <>
@@ -16,8 +18,9 @@ const ModalComponent = ({
           <div className="modal-inner-container">
             <div className="icon-container">{icon}</div>
             <div className="title-text-container">
-              <h4>{title}</h4>
-              <p>{text}</p>
+              <h3 className="header">{type}</h3>
+              <h3 className="header">{serial}</h3>
+              <p className="sub-text">{text}</p>
             </div>
             <div>
               <button onClick={action} className="btn">
@@ -35,7 +38,7 @@ const ModalComponent = ({
           .container {
             height: 100vh;
             width: 100vw;
-            background: black;
+            background: rgba(0, 0, 0, 0.8);
             z-index: 2000;
             position: fixed;
             top: 0;
@@ -47,7 +50,7 @@ const ModalComponent = ({
           .modal-container {
             width: 20rem;
             height: 20rem;
-            background: lightgrey;
+            background: var(--primary);
             border-radius: 10px;
             display: grid;
             place-items: center;
@@ -56,7 +59,7 @@ const ModalComponent = ({
           .modal-inner-container {
             width: 16rem;
             height: 17rem;
-            background: #fff;
+            background: var(--text);
             border-radius: 10px;
             position: relative;
             padding: 0.5rem;
@@ -69,7 +72,7 @@ const ModalComponent = ({
             width: 5.5rem;
             height: 5.5rem;
             border-radius: 50%;
-            background: lightgrey;
+            background: var(--primary);
             position: absolute;
             top: -3rem;
             left: 50%;
@@ -82,13 +85,24 @@ const ModalComponent = ({
             padding: 0.5rem;
             width: 6.5rem;
             margin-right: 1rem;
+            background: transparent;
+            border: 1px solid var(--primary);
+            border-radius: 5px;
+            color: var(--primary);
+          }
+          .btn:hover {
+            background: var(--secondary);
+            cursor: pointer;
+          }
+          .sub-text {
+            color: var(--secondary);
           }
           .title-text-container {
             margin-top: 3rem;
           }
           @keyframes fadeInUpBig {
             0% {
-              opacity: 0;
+              opacity: 1;
               -webkit-transform: translate3d(0, 2000px, 0);
               transform: translate3d(0, 2000px, 0);
             }
@@ -100,10 +114,10 @@ const ModalComponent = ({
           }
           @keyframes background {
             0% {
-              opacity: 0;
+              opacity: 1;
             }
             100% {
-              opacity: 0.9;
+              opacity: 1;
             }
           }
         `}

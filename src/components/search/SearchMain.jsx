@@ -5,6 +5,7 @@ import ModalComponent from "../common/ModalComponent";
 import ModalComponentEdit from "../common/ModalComponentEdit";
 import LinckSearchCards from "./LinckSearchCards";
 import { GiRapidshareArrow } from "react-icons/gi";
+import { FaComments } from "react-icons/fa";
 import { RiDeleteBin6Fill } from "react-icons/ri";
 import BladesListDelRetip from "./BladesListDelRetip";
 import dateFormat from "dateformat";
@@ -229,7 +230,7 @@ const SearchMain = () => {
           }
           title="Omlodding"
           text="Omlodde med dagens dato fra stridsbergs?"
-          titleLeftBtn="OK"
+          titleLeftBtn="OMLODD"
           titleRightBtn="AVBRYT"
           cancel={() => setOpenRetipModal(false)}
           action={retipUpdateHandler}
@@ -244,10 +245,12 @@ const SearchMain = () => {
           }
           title="Slett"
           text="Slette dette bladet?"
-          titleLeftBtn="OK"
+          titleLeftBtn="SLETT"
           titleRightBtn="AVBRYT"
           cancel={() => setOpenDeleteModal(false)}
           action={deleteBladeHandler}
+          type={getType}
+          serial={getSerial}
         />
       )}
       {openCommentModal && (
@@ -259,6 +262,12 @@ const SearchMain = () => {
           setGetCommentInput={setGetCommentInput}
           getCommentInput={getCommentInput}
           actionBtn={commentUpdateHandler}
+          type={getType}
+          serial={getSerial}
+          actionBtnTxt="Legg til"
+          icon={
+            <FaComments style={{ color: "var(--text)", fontSize: "2rem" }} />
+          }
         />
       )}
 
@@ -319,11 +328,14 @@ const SearchMain = () => {
           border-radius: 5px;
           border: none;
           outline: none;
-          background: #dedede;
+          background: var(--secondary);
           font-size: 1.5rem;
+          color: var(--text);
+          margin-bottom: 0.5rem;
         }
         .input-container {
           margin-bottom: 2rem;
+          color: var(--secondary);
         }
 
         @media only screen and (max-width: 1000px) {

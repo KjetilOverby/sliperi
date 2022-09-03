@@ -23,7 +23,7 @@ const VerktoyOversikt = () => {
         }
         .type {
           width: 12rem;
-          color: grey;
+          color: var(--text);
           font-size: 0.8rem;
           font-style: italic;
         }

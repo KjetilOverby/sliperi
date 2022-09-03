@@ -36,8 +36,8 @@ const LinckCards = ({
       setColor("#52b149");
       setInnerColor("#52b14960");
     } else if (performer.length === 2) {
-      setColor("#b4ab27");
-      setInnerColor("#b1a74986");
+      setColor("#ccce56");
+      setInnerColor("#aca14385");
     } else {
       setColor("#d14242");
       setInnerColor("#b149495f");
@@ -177,7 +177,7 @@ const LinckCards = ({
             display: flex;
           }
           .comment-text {
-            color: ${Colors.text2};
+            color: var(--text2);
             font-style: italic;
             font-size: 0.9rem;
           }
@@ -269,21 +269,21 @@ const LinckCards = ({
             margin: 1rem 0;
           }
           .retip-text {
-            color: ${Colors.text};
+            color: var(--primary);
             font-style: italic;
             font-size: 0.9rem;
           }
           .serial {
             margin: 0 0.5rem 0 0;
-            color: ${Colors.primary};
+            color: var(--primary);
           }
           .type {
             margin: 0;
-            color: ${Colors.text2};
+            color: var(--text2);
             font-style: italic;
           }
           .regist {
-            color: ${Colors.secondary};
+            color: var(--secondary);
             font-style: italic;
             font-size: 0.9rem;
             margin-top: 0.5rem;

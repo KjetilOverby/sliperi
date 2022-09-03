@@ -5,21 +5,21 @@
   --text: #83677b;
   --text2: #adadad;
 } */
-/* :root {
+:root {
   --primary: #05386b;
   --secondary: #379683;
   --middle: #5cdb95;
   --text: #8ee4af;
   --text2: #edf5e1;
-} */
+}
 
-:root {
+/* :root {
   --primary: #0b0c10;
   --secondary: #1f2833;
   --middle: #c5c6c7;
   --text: #66fcf1;
   --text2: #45a29e;
-}
+} */
 /* :root {
   --primary: #2c3531;
   --secondary: #116466;
@@ -85,6 +85,7 @@ h6 {
 }
 .header {
   font-weight: 400;
+  color: var(--primary);
 }
 .mb {
   margin-bottom: 1.5rem;
