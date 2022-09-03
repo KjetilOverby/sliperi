@@ -13,7 +13,8 @@ const AddBladesInputComponent = ({
           onChange={(e) => setSelectorValue(e.target.value)}
           name="sagblad"
           id="sagblad"
-          className="select">
+          className="select"
+        >
           <option value="">Velg sagblad</option>
           <option value="Kanefusa 2.2-3.6">Kanefusa 2.2-3.6</option>
           <option value="Kanefusa 2.4-3.8">Kanefusa 2.4-3.8</option>
@@ -78,14 +79,16 @@ const AddBladesInputComponent = ({
             margin: 0.5rem 0;
             border-radius: 5px;
             width: 12.5rem;
-            background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+            background: var(--secondary);
+
+            color: var(--text);
           }
           .select {
             border: none;
             padding: 0.5rem;
             margin: 0.5rem 0;
             border-radius: 5px;
-            background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+            background: var(--secondary);
             color: #3f3f3f;
             width: 12.5rem;
           }

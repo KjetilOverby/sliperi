@@ -46,7 +46,7 @@ const Toolcard = ({
             width: 100%;
             margin: 0.5rem 0;
             background: var(--secondary);
-            padding: 0.2rem;
+            padding: 0.5rem;
             transition: 0.5s;
           }
           .container:hover {

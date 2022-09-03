@@ -83,7 +83,7 @@ const OversiktMain = ({
 
   return (
     <>
-      <div className="content-container">
+      <div className="content-container main-container">
         <h1 className="mb header">Oversikt</h1>
         <div className="tab-container">
           <div className="table-container">
@@ -165,6 +165,9 @@ const OversiktMain = ({
       </div>
       <style jsx>
         {`
+          .main-container {
+            background: var(--text);
+          }
           .ant-container {
             display: flex;
           }
@@ -173,7 +176,6 @@ const OversiktMain = ({
           }
           .nom-container {
             padding-left: 1rem;
-            color: blue;
           }
           .nom-single-container {
             display: flex;
@@ -185,11 +187,11 @@ const OversiktMain = ({
             border-radius: 5px;
             color: var(--text2);
           }
-          .table-container {
-          }
+
           .table-header {
             font-weight: 600;
             margin-bottom: 1rem;
+            color: var(--secondary);
           }
           .tab-container {
             display: grid;

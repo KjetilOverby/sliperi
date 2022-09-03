@@ -175,7 +175,8 @@ const NewBladesMain = () => {
                 <div
                   key={item.newid}
                   onClick={openDeleteNewbladesHandler}
-                  className="blade-container2">
+                  className="blade-container2"
+                >
                   <p key={item.serial} className="serial">
                     {item.serial}
                   </p>
@@ -199,7 +200,6 @@ const NewBladesMain = () => {
             display: flex;
             padding: 0.2rem;
             font-size: 0.8rem;
-            background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
             margin-bottom: 0.2rem;
             width: 20rem;
             border-radius: 5px;
