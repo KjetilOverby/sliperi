@@ -24,8 +24,8 @@ const ToolImageCard = ({
       <style jsx>
         {`
           .container {
-            width: 20rem;
-            height: 25rem;
+            width: 18rem;
+            height: 23rem;
             background: var(--primary);
             padding: 1rem;
             margin-right: 2rem;

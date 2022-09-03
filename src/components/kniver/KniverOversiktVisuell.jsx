@@ -29,13 +29,7 @@ const KniverOversiktVisuell = () => {
       <div className="content-container">
         <h1 className="main-header">Kniver og motstål</h1>
         <h1 className="card-header">Reduser kniver (ZD1/ZD2)</h1>
-        <hr
-          style={{
-            color: "lightgrey",
-            marginTop: "-1.8rem",
-            marginBottom: "2rem",
-          }}
-        />
+        <hr />
         <div className="container">
           <ToolImageCard
             img={v40kniv}
@@ -84,13 +78,7 @@ const KniverOversiktVisuell = () => {
           />
         </div>
         <h1 className="card-header">Fres 1/4 (VP34/VPP34 ombygd)</h1>
-        <hr
-          style={{
-            color: "lightgrey",
-            marginTop: "-1.8rem",
-            marginBottom: "2rem",
-          }}
-        />
+        <hr />
         <div className="container">
           <ToolImageCard
             img={vpp34kniv}
@@ -148,13 +136,7 @@ const KniverOversiktVisuell = () => {
           />
         </div>
         <h1 className="card-header">Fres 2/3 horizontal (VP34)</h1>
-        <hr
-          style={{
-            color: "lightgrey",
-            marginTop: "-1.8rem",
-            marginBottom: "2rem",
-          }}
-        />
+        <hr />
         <div className="container">
           <ToolImageCard
             img={vp34kniv}
@@ -194,12 +176,6 @@ const KniverOversiktVisuell = () => {
           />
         </div>
         <h1 className="card-header">Fres 3 Vertical (VP48)</h1>
-        <hr
-          style={{
-            color: "lightgrey",
-            marginTop: "-1.8rem",
-            marginBottom: "2rem",
-          }}
         />
         <div className="container">
           <ToolImageCard
@@ -249,12 +225,6 @@ const KniverOversiktVisuell = () => {
           />
         </div>
         <h1 className="card-header">Råsortering/stikkhugger (Bruks)</h1>
-        <hr
-          style={{
-            color: "lightgrey",
-            marginTop: "-1.8rem",
-            marginBottom: "2rem",
-          }}
         />
         <div className="container">
           <ToolImageCard
@@ -301,6 +271,7 @@ const KniverOversiktVisuell = () => {
             font-weight: 300;
             color: var(--text2);
             margin-bottom: 2rem;
+            font-size: 1.2rem;
           }
           .container {
             display: grid;

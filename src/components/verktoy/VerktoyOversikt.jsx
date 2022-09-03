@@ -7,6 +7,7 @@ const VerktoyOversikt = () => {
     <>
       <div className="content-container main-container">
         <h1 className="header mb">Oversikt over segmenter og kniver</h1>
+        <hr />
         {tools &&
           tools.map((tool) => {
             return (

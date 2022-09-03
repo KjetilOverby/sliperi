@@ -56,11 +56,12 @@ const BladesListDelRetip = () => {
             padding: 1rem;
             min-height: 50rem;
           }
-          hr {
+          .hr {
             border-top: solid 1px var(--secondary);
             border-bottom: none;
             border-right: none;
             border-left: none;
+            margin-top: 0.5rem;
           }
 
           .text {

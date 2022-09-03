@@ -17,8 +17,8 @@ const VisualToolImageComponent = ({ img, title, type, dim, zAnt, angle }) => {
       <style jsx>
         {`
           .container {
-            width: 20rem;
-            height: 25rem;
+            width: 18rem;
+            height: 23rem;
             padding: 1rem;
             border-radius: 15px;
             background:var(--primary)
@@ -27,7 +27,7 @@ const VisualToolImageComponent = ({ img, title, type, dim, zAnt, angle }) => {
           .card-header {
             font-weight: 600;
             margin: 0.5rem 0;
-            color: var(--text2)
+            color: var(--text2);
           }
           .text {
             font-style: italic;

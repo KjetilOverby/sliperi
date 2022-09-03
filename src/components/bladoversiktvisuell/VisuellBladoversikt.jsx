@@ -23,13 +23,7 @@ const VisuellBladoversikt = () => {
     <>
       <div className="content-container">
         <h1 className="visuell-header">MKV delingssag</h1>
-        <hr
-          style={{
-            color: "lightgrey",
-            marginTop: "-1.8rem",
-            marginBottom: "2rem",
-          }}
-        />
+        <hr />
         <div className="container">
           <VisualToolImageComponent
             img={mkv1}
@@ -81,13 +75,7 @@ const VisuellBladoversikt = () => {
           />
         </div>
         <h1 className="visuell-header">VS-66 bordsag</h1>
-        <hr
-          style={{
-            color: "lightgrey",
-            marginTop: "-1.8rem",
-            marginBottom: "2rem",
-          }}
-        />
+        <hr />
         <div className="container">
           <VisualToolImageComponent
             img={nBlad}
@@ -147,13 +135,7 @@ const VisuellBladoversikt = () => {
           />
         </div>
         <h1 className="visuell-header">Trimmer Justerverk/råsortering</h1>
-        <hr
-          style={{
-            color: "lightgrey",
-            marginTop: "-1.8rem",
-            marginBottom: "2rem",
-          }}
-        />
+        <hr />
         <div className="container">
           <VisualToolImageComponent
             img={trimmerJusterverk}
@@ -200,6 +182,7 @@ const VisuellBladoversikt = () => {
             margin: 2rem 0;
             color: lightgrey;
             font-weight: 300;
+            font-size: 1.3rem;
           }
         `}
       </style>

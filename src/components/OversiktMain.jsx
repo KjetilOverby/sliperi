@@ -85,6 +85,7 @@ const OversiktMain = ({
     <>
       <div className="content-container main-container">
         <h1 className="mb header">Oversikt</h1>
+        <hr />
         <div className="tab-container">
           <div className="table-container">
             <h4 className="table-header">

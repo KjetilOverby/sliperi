@@ -18,13 +18,7 @@ const SegmenterMainPage = () => {
       <div className="content-container">
         <h1 className="main-header">SEGMENTER</h1>
         <h1 className="card-header">Reduserer segment (ZD1/ZD2)</h1>
-        <hr
-          style={{
-            color: "lightgrey",
-            marginTop: "-1.8rem",
-            marginBottom: "2rem",
-          }}
-        />
+        <hr />
         <div className="container">
           <ToolImageCard
             img={v40segmentH}
@@ -55,13 +49,7 @@ const SegmenterMainPage = () => {
           />
         </div>
         <h1 className="card-header">Fres 1/4 segmenter (VPS)</h1>
-        <hr
-          style={{
-            color: "lightgrey",
-            marginTop: "-1.8rem",
-            marginBottom: "2rem",
-          }}
-        />
+        <hr />
         <div className="container">
           <ToolImageCard
             img={vpp32SegmentH}
@@ -92,13 +80,7 @@ const SegmenterMainPage = () => {
           />
         </div>
         <h1 className="card-header">Fres 2</h1>
-        <hr
-          style={{
-            color: "lightgrey",
-            marginTop: "-1.8rem",
-            marginBottom: "2rem",
-          }}
-        />
+        <hr />
         <div className="container">
           <ToolImageCard
             img={vp32SegmentH}
@@ -129,13 +111,7 @@ const SegmenterMainPage = () => {
           />
         </div>
         <h1 className="card-header">Fres 3 (vertical/horisontal)</h1>
-        <hr
-          style={{
-            color: "lightgrey",
-            marginTop: "-1.8rem",
-            marginBottom: "2rem",
-          }}
-        />
+        <hr />
         <div className="container">
           <ToolImageCard
             img={vp48SegmentH}
@@ -172,6 +148,7 @@ const SegmenterMainPage = () => {
             font-weight: 300;
             color: var(--text2);
             margin-bottom: 2rem;
+            font-size: 1.2rem;
           }
           .container {
             display: grid;
