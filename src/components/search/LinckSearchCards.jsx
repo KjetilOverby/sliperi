@@ -5,7 +5,6 @@ import { FaComments } from "react-icons/fa";
 import { MyContext } from "../../contexts/MyContext";
 import dateFormat, { masks } from "dateformat";
 import { useAuth0 } from "@auth0/auth0-react";
-import Colors from "../../Colors";
 
 const LinckCards = ({
   keyID,
@@ -105,8 +104,7 @@ const LinckCards = ({
                   <>
                     <p
                       style={{ marginRight: "1rem", width: "8rem" }}
-                      className="comment-text container-text"
-                    >
+                      className="comment-text container-text">
                       {item}
                     </p>
                   </>
@@ -134,14 +132,12 @@ const LinckCards = ({
             </div>
             <div
               onClick={openRetipModalHandler}
-              className="icon-container retip-btn-container"
-            >
+              className="icon-container retip-btn-container">
               <BsArrowRepeat style={{ fontSize: "1.2rem" }} />
             </div>
             <div
               onClick={openDeleteModalHandler}
-              className="icon-container delete-container"
-            >
+              className="icon-container delete-container">
               <RiDeleteBin6Line style={{ fontSize: "1.2rem" }} />
             </div>
           </div>
@@ -165,7 +161,6 @@ const LinckCards = ({
             box-shadow: 1px 1px 10px lightgrey;
           }
           .container:hover {
-            background: var(--text);
             cursor: pointer
           }
           .container-text {

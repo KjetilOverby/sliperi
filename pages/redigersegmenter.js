@@ -4,6 +4,7 @@ import SideBar from "../src/components/common/Sidebar";
 import RedigerSegmenterMain from "../src/components/redigersegmenter/RedigerSegmenterMain";
 
 const redigersegmenter = () => {
+  
   return (
     <>
       <PageLayoutSidebar>

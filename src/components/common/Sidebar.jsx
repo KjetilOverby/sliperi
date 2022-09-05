@@ -20,7 +20,7 @@ const SideBar = () => {
   const [activate8, setActivate8] = useState();
   const [activate9, setActivate9] = useState();
   const [activate10, setActivate10] = useState();
-  const [activateSnippets, setActivateSnippets] = useState();
+  const [activate11, setActivate11] = useState();
   const [activateAnimate, setActivateAnimate] = useState();
   const [activateHeader, setActivateHeader] = useState();
   const [activateFooter, setActivateFooter] = useState();
@@ -64,6 +64,8 @@ const SideBar = () => {
       setActivate9("tab-active");
     } else if (router.pathname === "/redigersegmenter") {
       setActivate10("tab-active");
+    } else if (router.pathname === "/redigertools") {
+      setActivate11("tab-active");
     }
   }, []);
   return (
@@ -76,8 +78,7 @@ const SideBar = () => {
       {openSidebar && isMobile && (
         <div
           onClick={openSidebarHandler}
-          className="menu-invisible-container"
-        ></div>
+          className="menu-invisible-container"></div>
       )}
       <div className={`container ${container}`}>
         <Link href="/">
@@ -110,7 +111,10 @@ const SideBar = () => {
         </Link>
 
         <Link href="/redigersegmenter">
-          <p className={`section-tab ${activate10}`}>Rediger</p>
+          <p className={`section-tab ${activate10}`}>Slett/legg til</p>
+        </Link>
+        <Link href="/redigertools">
+          <p className={`section-tab ${activate11}`}>Rediger input</p>
         </Link>
         <Link href="/segmentoversiktvisuell">
           <p className={`section-tab ${activate5}`}>Bilder Segmenter</p>
