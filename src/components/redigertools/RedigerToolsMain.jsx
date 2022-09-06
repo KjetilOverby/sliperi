@@ -84,6 +84,7 @@ const RedigerToolsMain = ({
   return (
     <>
       <div className="content-container">
+        <h1 className="header mb">Rediger slettede data</h1>
         {openDeleteModal && (
           <ModalComponent
             text="Slett input"
@@ -131,9 +132,12 @@ const RedigerToolsMain = ({
             grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
             background: var(--text);
             place-items: center;
+            padding: 0.5rem;
+            border-radius: 10px;
           }
           .img {
             width: 100%;
+            border-radius: 10px;
           }
           .img-container {
             width: 8rem;
