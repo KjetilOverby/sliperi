@@ -51,9 +51,7 @@ const StartPageMainComponent = () => {
             margin-top: 5rem;
           }
           .main-container {
-            background: var(--middle);
-            background: url("https://wallpaperaccess.com/full/4153443.jpg");
-            background-size: cover;
+            background: linear-gradient(var(--middle), var(--primary));
           }
           .main-header {
             color: var(--text);
