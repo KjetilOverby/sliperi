@@ -18,12 +18,9 @@ const ShortButtons = ({ title, text, icon, link }) => {
           .container {
             width: 12rem;
             height: 12rem;
-            border: 1px solid lightslategrey;
             border-radius: 15px;
             display: grid;
             place-items: center;
-            border-color: #7c7c7c;
-            background: var(--primary);
 
             transition: 0.2s;
             transition: background 0.3s, color 0.3s;

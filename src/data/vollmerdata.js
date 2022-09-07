@@ -27,7 +27,7 @@ const vollmer = [
     date: "20.08.2020",
     title: "Installering av ny slipemaskin",
     description:
-      "En fra Vollmer kommer å installerer den nye slipemaskinen og kurser oss i å bruke den. Han kommer hit i 2 dager. Vi har ikke fått kjøleoljen til maskinene enda så vi får ikke slipt blader enda.",
+      "En fra Vollmer kommer å installerer den nye slipemaskinen og kurser oss i å bruke den. Han kommer hit i 2 dager. Vi har ikke fått kjøleoljen til maskinene enda så vi får ikke slipt blader.",
   },
   {
     date: "16.11.2020",
