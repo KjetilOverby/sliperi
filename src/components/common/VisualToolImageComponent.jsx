@@ -33,6 +33,11 @@ const VisualToolImageComponent = ({ img, title, type, dim, zAnt, angle }) => {
             font-style: italic;
             color: var(--text);
           }
+          @media only screen and (max-width: 600px) {
+            .container {
+             height: auto
+            }
+          }
         `}
       </style>
     </>

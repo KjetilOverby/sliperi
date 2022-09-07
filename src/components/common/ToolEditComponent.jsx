@@ -214,6 +214,16 @@ const ToolEditComponent = ({
               transform: translate3d(0, 0, 0);
             }
           }
+          @media only screen and (max-width: 1000px) {
+            .edit-box {
+              width: 100vw;
+              height: 30rem;
+              background: #fff;
+              padding: 2rem;
+              height: auto;
+              animation: bounceInUp 1s;
+            }
+          }
         `}
       </style>
     </>

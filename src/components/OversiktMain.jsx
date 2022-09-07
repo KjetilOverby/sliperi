@@ -108,8 +108,7 @@ const OversiktMain = ({
                   return (
                     <p
                       key={item.id}
-                      className="tabell-text nom-single-container"
-                    >
+                      className="tabell-text nom-single-container">
                       {item.ant}
                     </p>
                   );
@@ -124,8 +123,7 @@ const OversiktMain = ({
                 return (
                   <div
                     key={item._id.type}
-                    className="container blade-container"
-                  >
+                    className="container blade-container">
                     <p className="type tabell-text">{item._id.type}</p>
                     <p className="tabell-text">{item.typeCount}</p>
                   </div>
@@ -139,8 +137,7 @@ const OversiktMain = ({
                 return (
                   <div
                     key={item._id.type}
-                    className="container blade-container"
-                  >
+                    className="container blade-container">
                     <p className="type tabell-text">{item._id.type}</p>
                     <p className="tabell-text">{item.typeCount}</p>
                   </div>
@@ -154,8 +151,7 @@ const OversiktMain = ({
                 return (
                   <div
                     key={item._id.type}
-                    className="container blade-container"
-                  >
+                    className="container blade-container">
                     <p className="type tabell-text">{item._id.type}</p>
                     <p className="tabell-text">{item.typeCount}</p>
                   </div>
@@ -205,6 +201,10 @@ const OversiktMain = ({
             font-style: italic;
           }
           .waste-container {
+          }
+          @media only screen and (max-width: 1000px) {
+            .container {
+            }
           }
         `}
       </style>

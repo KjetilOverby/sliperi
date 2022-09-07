@@ -21,6 +21,7 @@ const SideBar = () => {
   const [activate9, setActivate9] = useState();
   const [activate10, setActivate10] = useState();
   const [activate11, setActivate11] = useState();
+  const [activate12, setActivate12] = useState();
   const [activateAnimate, setActivateAnimate] = useState();
   const [activateHeader, setActivateHeader] = useState();
   const [activateFooter, setActivateFooter] = useState();
@@ -66,6 +67,8 @@ const SideBar = () => {
       setActivate10("tab-active");
     } else if (router.pathname === "/redigertools") {
       setActivate11("tab-active");
+    } else if (router.pathname === "/slipemaskinhistorikk") {
+      setActivate12("tab-active");
     }
   }, []);
   return (
@@ -123,6 +126,15 @@ const SideBar = () => {
         <Link href="/knivoversiktvisuell">
           <p className={`section-tab ${activate6}`}>Bilder Kniver og Motstål</p>
         </Link>
+
+        {user && user.sub === process.env.USER_SUB && (
+          <>
+            <h4 className="section-header">Vollmer 1300</h4>
+            <Link href="/slipemaskinhistorikk">
+              <p className={`section-tab ${activate12}`}>Historikk</p>
+            </Link>
+          </>
+        )}
 
         {/* 
         <h4 className="section-header">Support</h4>

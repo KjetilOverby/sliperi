@@ -162,6 +162,13 @@ const SegmenterMainPage = () => {
             font-weight: 100;
             color: var(--text);
           }
+          @media only screen and (max-width: 1000px) {
+            .container {
+              place-items: center;
+              grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+              width: 100vw;
+            }
+          }
         `}
       </style>
     </>

@@ -184,6 +184,11 @@ const VisuellBladoversikt = () => {
             font-weight: 300;
             font-size: 1.3rem;
           }
+          @media only screen and (max-width: 600px) {
+            .container {
+              place-items: center;
+            }
+          }
         `}
       </style>
     </>

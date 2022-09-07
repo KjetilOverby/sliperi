@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { DateRangePicker } from "react-dates";
 import "react-dates/lib/css/_datepicker.css";
 import "react-dates/initialize";
+import { useMediaQuery } from "react-responsive";
 
 const DatePicker = ({ setStartDate, startDate, setEndDate, endDate }) => {
   const [focusedInput, setFocusedInput] = useState(null);
@@ -9,6 +10,8 @@ const DatePicker = ({ setStartDate, startDate, setEndDate, endDate }) => {
     setStartDate(startDate);
     setEndDate(endDate);
   };
+
+  const isMobile = useMediaQuery({ query: `(max-width: 1000px)` });
   return (
     <>
       <div className="container">
@@ -23,7 +26,7 @@ const DatePicker = ({ setStartDate, startDate, setEndDate, endDate }) => {
           isOutsideRange={() => false}
           withPortal={true}
           readOnly={true}
-          numberOfMonths={4}
+          numberOfMonths={isMobile ? 1 : 4}
           withFullScreenPortal={false}
           showClearDates={true}
           showDefaultInputIcon={true}

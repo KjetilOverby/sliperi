@@ -284,6 +284,13 @@ const KniverOversiktVisuell = () => {
             font-weight: 100;
             color: var(--text);
           }
+          @media only screen and (max-width: 1000px) {
+            .container {
+              height: auto;
+              place-items: center;
+              width: 100%;
+            }
+          }
         `}
       </style>
     </>
