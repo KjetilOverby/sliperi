@@ -15,6 +15,7 @@ const HistorikkCard = ({ data }) => {
                   <img className="img" src={item.img2} alt="" />
                   <img className="img" src={item.img3} alt="" />
                   <img className="img" src={item.img4} alt="" />
+                  <img className="img" src={item.img5} alt="" />
                 </div>
                 <p className=" mt">{item.description}</p>
               </div>
