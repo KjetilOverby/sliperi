@@ -99,6 +99,7 @@ const DatesearchToolsMain = ({
             Klikk på Start Date og velg en periode i kalenderen.
           </p>
         </div>
+        <h4 className="mb">Antall vrak:</h4>
         <div>
           {redSegmentH < 0 && (
             <p className="blade-container">
@@ -191,6 +192,7 @@ const DatesearchToolsMain = ({
             );
             padding: 2rem;
             margin-bottom: 3rem;
+            border-radius: 10px;
           }
           .span {
             width: 2rem;

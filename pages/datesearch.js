@@ -15,6 +15,8 @@ const Datesearch = () => {
   const [datePickerWaste, setDatePickerWaste] = useState();
   const [datePickerNew, setDatePickerNew] = useState();
   const [datePickerService, setDatePickerService] = useState();
+  const [updateDatePicker, setUpdateDatePicker] = useState(false);
+
 
   useEffect(() => {
     (async () => {
@@ -27,8 +29,12 @@ const Datesearch = () => {
           }&yearRequest2=${endDate && endDate._d.getFullYear()}&month2=${
             endDate && endDate._d.getMonth() + 1
           }&&day2=${endDate && endDate._d.getDate()}`
-        );
+        )
         setDatePickerWaste(response.data.data);
+        setTimeout(() => {
+          
+          setUpdateDatePicker(!updateDatePicker)
+        }, 1500);
       } catch (error) {
         console.log(error);
       }
@@ -48,6 +54,10 @@ const Datesearch = () => {
           }&&day2=${endDate && endDate._d.getDate()}`
         );
         setDatePickerNew(response.data.data);
+        setTimeout(() => {
+          
+          setUpdateDatePicker(!updateDatePicker)
+        }, 1500);
       } catch (error) {
         console.log(error);
       }
@@ -67,6 +77,7 @@ const Datesearch = () => {
           }&&day2=${endDate && endDate._d.getDate()}`
         );
         setDatePickerService(response.data.data);
+        setUpdateDatePicker(!updateDatePicker)
       } catch (error) {
         console.log(error);
       }
@@ -85,6 +96,7 @@ const Datesearch = () => {
           datePickerWaste={datePickerWaste}
           datePickerNew={datePickerNew}
           datePickerService={datePickerService}
+          updateDatePicker={updateDatePicker}
         />
       </PageLayoutSidebar>
       <style jsx>

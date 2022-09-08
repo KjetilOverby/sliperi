@@ -161,6 +161,7 @@ const NewBladesMain = () => {
           )}
         </div>
         <div className="newblades-main-container">
+          <p className="mb">Antall nye blad: {newBlades && newBlades.length}</p>
           {newBlades &&
             newBlades.map((item) => {
               const openDeleteNewbladesHandler = () => {
@@ -175,8 +176,7 @@ const NewBladesMain = () => {
                 <div
                   key={item.newid}
                   onClick={openDeleteNewbladesHandler}
-                  className="blade-container2"
-                >
+                  className="blade-container2">
                   <p key={item.serial} className="serial">
                     {item.serial}
                   </p>

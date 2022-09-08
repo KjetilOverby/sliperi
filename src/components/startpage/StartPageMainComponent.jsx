@@ -46,22 +46,33 @@ const StartPageMainComponent = () => {
           .container {
           }
           .btn-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(14rem, 12rem));
-            margin-top: 5rem;
+            display: flex;
+            width: 70%;
+            justify-content: space-around;
+            flex-wrap: wrap;
           }
           .main-container {
-            background: linear-gradient(var(--middle), var(--primary));
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url("https://wallpaperaccess.com/full/1303182.jpg");
+            display: grid;
+            place-items: center;
+            background-size: cover;
           }
           .main-header {
             color: var(--text);
+            font-size: 6rem;
           }
           @media only screen and (max-width: 1000px) {
             .btn-container {
+              display: grid;
               grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
               place-items: center;
               grid-gap: 2rem;
               padding: 2rem 0;
+              width: auto;
+            }
+            .main-header {
+              font-size: 3rem;
             }
           }
         `}

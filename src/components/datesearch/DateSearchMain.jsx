@@ -10,6 +10,7 @@ const DateSearchMain = ({
   datePickerWaste,
   datePickerNew,
   datePickerService,
+  updateDatePicker,
 }) => {
   const [monthConvert, setMonthConvert] = useState();
   const [monthConvert2, setMonthConvert2] = useState();
@@ -72,6 +73,48 @@ const DateSearchMain = ({
       setMonthConvert2("desember");
     }
   }, [endDate]);
+
+  const [wasteCount, setWasteCount] = useState();
+  const [wasteCountSum, setWasteCountSum] = useState();
+
+  const [newCount, setNewCount] = useState();
+  const [newCountSum, setNewCountSum] = useState();
+
+  const [serviceCount, setServiceCount] = useState();
+  const [serviceCountSum, setServiceCountSum] = useState();
+
+  useEffect(() => {
+    if (datePickerWaste && datePickerNew && datePickerService) {
+      setNewCount(datePickerNew && datePickerNew.map((item) => item.typeCount));
+      setWasteCount(
+        datePickerWaste && datePickerWaste.map((item) => item.typeCount)
+      );
+      setServiceCount(
+        datePickerService && datePickerService.map((item) => item.typeCount)
+      );
+    }
+  }, [updateDatePicker]);
+
+  useEffect(() => {
+    if (wasteCount && newCount && serviceCount) {
+      setNewCountSum(
+        newCount.reduce(function (a, b) {
+          return a + b;
+        }, 0)
+      );
+      setWasteCountSum(
+        wasteCount.reduce(function (a, b) {
+          return a + b;
+        }, 0)
+      );
+      setServiceCountSum(
+        serviceCount.reduce(function (a, b) {
+          return a + b;
+        }, 0)
+      );
+    }
+  }, [wasteCount, newCount, serviceCount]);
+
   return (
     <>
       <div className="content-container">
@@ -90,39 +133,50 @@ const DateSearchMain = ({
         <div className="month-container mt">
           <div>
             {startDate && (
-              <p>{`${startDate && startDate._d.getDate()} ${monthConvert} ${
-                startDate && startDate._d.getFullYear()
-              }`}</p>
+              <p className="duration-text">{`${
+                startDate && startDate._d.getDate()
+              } ${monthConvert} ${startDate && startDate._d.getFullYear()}`}</p>
             )}
           </div>
-          {diffDays !== NaN && diffDays > 1 && <p>-</p>}
+          {diffDays !== NaN && diffDays > 1 && (
+            <p className="duration-text">-</p>
+          )}
           <div>
             {endDate && (
-              <p>{`${endDate && endDate._d.getDate()} ${monthConvert2} ${
-                endDate && endDate._d.getFullYear()
-              }`}</p>
+              <p className="duration-text">{`${
+                endDate && endDate._d.getDate()
+              } ${monthConvert2} ${endDate && endDate._d.getFullYear()}`}</p>
             )}
           </div>
           {diffDays !== NaN && diffDays > 1 && diffDays < 1000 && (
-            <p> ({diffDays} dager)</p>
+            <p className="duration-text"> ({diffDays} dager)</p>
           )}
         </div>
+
         <div>
-          <h4 className="mt">Antall vrak:</h4>
+          <h4 className="mt count-text">Antall vrak: {wasteCountSum}</h4>
+          <hr />
           <DatePickerListComponent data={datePickerWaste} />
-          <h4 className="mt">Antall nye:</h4>
+
+          <h4 className="mt count-text">Antall nye: {newCountSum}</h4>
+          <hr />
           <DatePickerListComponent data={datePickerNew} />
-          <h4 className="mt">Antall service:</h4>
+
+          <h4 className="mt count-text">Antall service: {serviceCountSum}</h4>
+          <hr />
           <DatePickerListComponent data={datePickerService} />
         </div>
       </div>
       <style jsx>
         {`
           .calendar-text {
-            color: #69949e;
+            color: var(--text);
             font-style: italic;
           }
           .container {
+          }
+          .count-text {
+            color: var(--middle);
           }
           .date-picker-container {
             background-image: linear-gradient(
@@ -131,6 +185,10 @@ const DateSearchMain = ({
               var(--text) 100%
             );
             padding: 2rem;
+            border-radius: 10px;
+          }
+          .duration-text {
+            color: var(--primary);
           }
           .month-container {
             display: flex;

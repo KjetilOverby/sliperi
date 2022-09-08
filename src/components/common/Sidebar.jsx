@@ -129,7 +129,7 @@ const SideBar = () => {
 
         {user && user.sub === process.env.USER_SUB && (
           <>
-            <h4 className="section-header">Vollmer 1300</h4>
+            <h4 className="section-header">Vollmer CHC 1300</h4>
             <Link href="/slipemaskinhistorikk">
               <p className={`section-tab ${activate12}`}>Historikk</p>
             </Link>
