@@ -38,6 +38,14 @@ const vollmer = [
     img: "https://lh3.googleusercontent.com/pw/AL9nZEVyW4IrOxZUBG0KJH6QBFxJeTxLTwH7LyOuyobg9b1DF4XKl_Vm9Uw0saTtE8NfM2eQLjr6ApPc88tLp8oJFBJbw82dt-eF4TyHDb-SoC9nVx8pHBRLXsTVv70f0bfETjhTal5sRSw8ooZCgzu2PZ0o=w763-h1080-no?authuser=0",
   },
   {
+    date: "26.08.2020",
+    title: "Kjøleolje fra Vollmer har ankommet",
+    description:
+      "Endelig kom oljen så vi får startet med å slipe med den nye maskinen.",
+    img: "https://lh3.googleusercontent.com/pw/AL9nZEUfxIRpph_8djVqCWf3ZDvrM3uzKZ8bLjflurPt4bYg22ZCpyOLJ2gAFL7PmycPQVrN_9sQ8eMrLpaU8P7Y7uuc5XEucrX8cy5u2SHil3g-UhApAFj6quZqxmFJDzrP_abur42iRUs2WgePfD_TUPea=w1024-h768-no?authuser=0",
+    img2: "https://lh3.googleusercontent.com/pw/AL9nZEXcgPN5P8TJoKcZFG8WkcQCEMuh5IMwsmxwuLfF2e89-h_rVvGNfiYSSVScN8Ek_H0nrpDv7PvYRmiIdfh7_skKJ1MQ7APjTG-chXvLwyKw_cLdUihWj6i5ygpV8dF54Ifo6EbXn7kO97BgX9Fw1UnM=w1024-h768-no?authuser=0",
+  },
+  {
     date: "16.11.2020",
     title: "Filteranlegg til slipemaskin",
     description:

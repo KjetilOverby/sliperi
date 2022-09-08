@@ -10,6 +10,7 @@ const HistorikkCard = ({ data }) => {
               <p className="date">{item.date}</p>
               <div className="text-container">
                 <h2 className="header mb card-header">{item.title}</h2>
+                <p className="mt mb">{item.description}</p>
                 <div className="img-container">
                   <img className="img" src={item.img} alt="" />
                   <img className="img" src={item.img2} alt="" />
@@ -17,7 +18,6 @@ const HistorikkCard = ({ data }) => {
                   <img className="img" src={item.img4} alt="" />
                   <img className="img" src={item.img5} alt="" />
                 </div>
-                <p className=" mt">{item.description}</p>
               </div>
             </div>
           );
@@ -33,13 +33,14 @@ const HistorikkCard = ({ data }) => {
           }
           .card-header {
             color: var(--text);
+            font-style: normal;
           }
           .container {
           }
           .date {
             margin-bottom: 0.5rem;
             font-weight: bold;
-            color: orangered;
+            color: var(--text2);
           }
           .img {
             width: 100%;
@@ -56,7 +57,7 @@ const HistorikkCard = ({ data }) => {
 
           .text-container {
             width: 55rem;
-            color: var(--text2);
+            color: var(--text);
             font-style: italic;
           }
           @media only screen and (max-width: 1000px) {
