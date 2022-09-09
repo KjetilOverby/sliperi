@@ -4,24 +4,25 @@ const HistorikkCard = ({ data }) => {
   return (
     <>
       <div className="container">
-        {data.map((item) => {
-          return (
-            <div key={item.title} className="card">
-              <p className="date">{item.date}</p>
-              <div className="text-container">
-                <h2 className="header mb card-header">{item.title}</h2>
-                <p className="mt mb">{item.description}</p>
-                <div className="img-container">
-                  <img className="img" src={item.img} alt="" />
-                  <img className="img" src={item.img2} alt="" />
-                  <img className="img" src={item.img3} alt="" />
-                  <img className="img" src={item.img4} alt="" />
-                  <img className="img" src={item.img5} alt="" />
+        {data &&
+          data.map((item) => {
+            return (
+              <div key={item.title} id={item.title} className="card">
+                <p className="date">{item.date}</p>
+                <div className="text-container">
+                  <h2 className="header mb card-header">{item.title}</h2>
+                  <p className="mt mb">{item.description}</p>
+                  <div className="img-container">
+                    <img className="img" src={item.img} alt="" />
+                    <img className="img" src={item.img2} alt="" />
+                    <img className="img" src={item.img3} alt="" />
+                    <img className="img" src={item.img4} alt="" />
+                    <img className="img" src={item.img5} alt="" />
+                  </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
       </div>
       <style jsx>
         {`

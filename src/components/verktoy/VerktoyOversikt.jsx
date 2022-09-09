@@ -71,7 +71,8 @@ const VerktoyOversikt = () => {
                 return (
                   <div
                     key={tool.type}
-                    className="tool-container blade-container">
+                    className="tool-container blade-container"
+                  >
                     <p className="type">{tool.type}</p>
                     <p className="number">{tool.antall}</p>
                   </div>
@@ -82,7 +83,7 @@ const VerktoyOversikt = () => {
           <div>
             {nom.map((item) => {
               return (
-                <div className="nom-single-container">
+                <div key={item.id} className="nom-single-container">
                   <p>{item.ant}</p>
                 </div>
               );
