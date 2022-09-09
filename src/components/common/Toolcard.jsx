@@ -48,6 +48,7 @@ const Toolcard = ({
             background: var(--secondary);
             padding: 0.5rem;
             transition: 0.5s;
+            border-radius: 5px;
           }
           .container:hover {
             background: var(--primary);
@@ -55,6 +56,7 @@ const Toolcard = ({
           }
           .img {
             width: 5rem;
+            border-radius: 5px;
           }
         `}
       </style>

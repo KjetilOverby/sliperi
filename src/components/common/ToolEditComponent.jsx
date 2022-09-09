@@ -47,7 +47,8 @@ const ToolEditComponent = ({
             <div className="button-container">
               <div
                 onClick={openDeleteInputHandler}
-                className="button button-delete">
+                className="button button-delete"
+              >
                 <RiDeleteBin5Fill
                   style={{ fontSize: "1.8rem", color: "darkred" }}
                 />
@@ -59,7 +60,8 @@ const ToolEditComponent = ({
               </div>
               <div
                 onClick={openEditInputHandler}
-                className="button button-edit">
+                className="button button-edit"
+              >
                 <BiEdit style={{ fontSize: "1.8rem", color: "darkblue" }} />
               </div>
             </div>
@@ -139,9 +141,11 @@ const ToolEditComponent = ({
             padding: 2rem;
             height: auto;
             animation: bounceInUp 1s;
+            border-radius: 5px;
           }
           .img {
             width: 100%;
+            border-radius: 5px;
           }
 
           .input-container {

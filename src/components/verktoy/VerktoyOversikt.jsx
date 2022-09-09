@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { MyContext } from "../../contexts/MyContext";
 
 const VerktoyOversikt = () => {
-  const { tools } = useContext(MyContext);
+  const { tools, toolsDeleted, toolsNew } = useContext(MyContext);
 
   const nom = [
     {
@@ -65,34 +65,65 @@ const VerktoyOversikt = () => {
         <h1 className="header mb">Oversikt over segmenter og kniver</h1>
         <hr />
         <div className="list-container">
-          <div>
-            {tools &&
-              tools.map((tool) => {
+          <div className="tool-count-container">
+            <div>
+              <h4 className="mb header">Oversikt antall:</h4>
+              {tools &&
+                tools.map((tool) => {
+                  return (
+                    <div
+                      key={tool.type}
+                      className="tool-container blade-container"
+                    >
+                      <p className="type">{tool.type}</p>
+                      <p className="number">{tool.antall}</p>
+                    </div>
+                  );
+                })}
+            </div>
+
+            <div>
+              <h4 className="mb header">-</h4>
+              {nom.map((item) => {
                 return (
-                  <div
-                    key={tool.type}
-                    className="tool-container blade-container"
-                  >
-                    <p className="type">{tool.type}</p>
-                    <p className="number">{tool.antall}</p>
+                  <div key={item.id} className="nom-single-container">
+                    <p>{item.ant}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+          <div>
+            <h4 className="mb header">Vrak denne måneden:</h4>
+            {toolsDeleted &&
+              toolsDeleted.map((item) => {
+                return (
+                  <div key={item._id} className="blade-container">
+                    <p className="type">{item.type}</p>
+                    <p className="number">{item.input}</p>
                   </div>
                 );
               })}
           </div>
-
           <div>
-            {nom.map((item) => {
-              return (
-                <div key={item.id} className="nom-single-container">
-                  <p>{item.ant}</p>
-                </div>
-              );
-            })}
+            <h4 className="mb header">Nye denne måneden:</h4>
+            {toolsNew &&
+              toolsNew.map((item) => {
+                return (
+                  <div key={item._id} className="blade-container">
+                    <p className="type">{item.type}</p>
+                    <p className="number">{item.input}</p>
+                  </div>
+                );
+              })}
           </div>
         </div>
       </div>
       <style jsx>{`
         .tool-container {
+          display: flex;
+        }
+        .tool-count-container {
           display: flex;
         }
         .type {
@@ -102,7 +133,9 @@ const VerktoyOversikt = () => {
           font-style: italic;
         }
         .list-container {
-          display: flex;
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+          grid-gap: 5rem;
         }
         .nom-single-container {
           display: flex;

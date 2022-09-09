@@ -8,8 +8,6 @@ const api = axios.create({
   baseURL: process.env.api,
 });
 
-
-
 function MyApp({ Component, pageProps }) {
   const domain = process.env.REACT_APP_AUTH0_DOMAIN;
   const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
@@ -20,10 +18,7 @@ function MyApp({ Component, pageProps }) {
   const [linckUpdateDatabase, setLinckUpdateDatabase] = useState(false);
   const [toolUpdateDatabase, setToolUpdateDatabase] = useState(false);
 
-
-
- 
-   useEffect(() => {
+  useEffect(() => {
     (async () => {
       try {
         const response = await api.get("/api/linck/linckblades");
@@ -32,15 +27,12 @@ function MyApp({ Component, pageProps }) {
         console.log(error.response.body);
       }
     })();
-  }, [linckUpdateDatabase]); 
-
-
+  }, [linckUpdateDatabase]);
 
   const year = new Date().getFullYear();
   const month = new Date().getMonth() + 1;
   const month2 = new Date().getMonth() + 2;
 
-  
   useEffect(() => {
     (async () => {
       try {
@@ -84,25 +76,50 @@ function MyApp({ Component, pageProps }) {
     })();
   }, []);
 
- //TOOLS
- const [tools, setTools] = useState();
+  //TOOLS
+  const [tools, setTools] = useState();
 
- useEffect(() => {
-  (async () => {
-    try {
-  const response = await api
-    .get("/api/tool/getToolregist")
-   
-      setTools(response.data.data);
-    } catch(error) {
-      // handle error
-      console.log(error);
-    }
+  useEffect(() => {
+    (async () => {
+      try {
+        const response = await api.get("/api/tool/getToolregist");
+
+        setTools(response.data.data);
+      } catch (error) {
+        // handle error
+        console.log(error);
+      }
     })();
-    
-}, [toolUpdateDatabase]);
+  }, [toolUpdateDatabase]);
 
+  const [toolsDeleted, setToolsDeleted] = useState();
 
+  useEffect(() => {
+    (async () => {
+      try {
+        const response = await api.get(
+          `/api/tool/datepickertools/datepickertoolswaste?yearRequest=${year}&month=${month}&&day=01&yearRequest2=${year}&month2=${month2}&&day2=01`
+        );
+        setToolsDeleted(response.data.data);
+      } catch (error) {
+        console.log(error);
+      }
+    })();
+  }, []);
+
+  const [toolsNew, setToolsNew] = useState();
+  useEffect(() => {
+    (async () => {
+      try {
+        const response = await api.get(
+          `/api/tool/getToolNewByDate?yearRequest=${year}&month=${month}&&day=01&yearRequest2=${year}&month2=${month2}&&day2=01`
+        );
+        setToolsNew(response.data.data);
+      } catch (error) {
+        console.log(error);
+      }
+    })();
+  }, []);
 
   return (
     <Auth0Provider
@@ -125,7 +142,9 @@ function MyApp({ Component, pageProps }) {
           month,
           month2,
           setToolUpdateDatabase,
-          toolUpdateDatabase
+          toolUpdateDatabase,
+          toolsDeleted,
+          toolsNew,
         }}
       >
         <Component {...pageProps} />
