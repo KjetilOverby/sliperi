@@ -81,7 +81,8 @@ const SideBar = () => {
       {openSidebar && isMobile && (
         <div
           onClick={openSidebarHandler}
-          className="menu-invisible-container"></div>
+          className="menu-invisible-container"
+        ></div>
       )}
       <div className={`container ${container}`}>
         <Link href="/">
@@ -199,8 +200,8 @@ const SideBar = () => {
           place-items: center;
         }
         .section-header {
-          color: var(--text);
-          margin: 1rem 0;
+          color: var(--middle);
+          margin: 1rem 0 1.5rem 0;
           font-weight: bold;
         }
         .section-tab {
@@ -209,6 +210,8 @@ const SideBar = () => {
           margin-bottom: 1.5rem;
           font-weight: 300;
           font-size: 0.9rem;
+          display: flex;
+          align-items: center;
         }
         .section-tab:hover {
           cursor: pointer;
@@ -219,6 +222,9 @@ const SideBar = () => {
           left: 0;
           background: var(--middle);
           color: var(--middle);
+          width: 15rem;
+          height: 3rem;
+          opacity: 0.4;
         }
 
         @keyframes openContainer {

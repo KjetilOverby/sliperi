@@ -68,7 +68,7 @@ const vollmer = [
   },
   {
     date: "15.09.2021",
-    title: "Service Vollmer",
+    title: "Service (Vollmer)",
     description:
       "Det kom en servicemann fra Tyskland som tok en service på slipemaskinen. Han har vært hos Stridsbergs men han måtte vente på noen deler så han kombinerte det med å ta service på vår maskin mens han venter på deler.",
     img: "https://lh3.googleusercontent.com/pw/AL9nZEVaahBZW-8nsaP7LxF4txYWcF2fJkdrO_PJuiKCjjMO2d-uXTI_qt4kCq5DGAGC8V3IfyeFEbqncKJT_Ny539eQQl4EMMf7GkmxdOETWw4Q_G1zd-Cs0RIfJuq_EWMBj-2NgYNyXgbkLszb53gY0y2c=w763-h1080-no?authuser=0",

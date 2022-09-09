@@ -19,7 +19,7 @@ const FilterComponent = ({ input, title }) => {
           }
           .header {
             margin-top: 1rem;
-            font-size: 3rem;
+            font-size: 2rem;
           }
           .select {
             background: var(--primary);
