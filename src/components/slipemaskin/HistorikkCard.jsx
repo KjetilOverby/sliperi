@@ -12,12 +12,24 @@ const HistorikkCard = ({ data }) => {
                 <div className="text-container">
                   <h2 className="header mb card-header">{item.title}</h2>
                   <p className="mt mb">{item.description}</p>
+                  <div className="list-container">
+                    {item.list &&
+                      item.list.map((listItem) => {
+                        return (
+                          <ul>
+                            <li>{listItem}</li>
+                          </ul>
+                        );
+                      })}
+                  </div>
                   <div className="img-container">
                     <img className="img" src={item.img} alt="" />
                     <img className="img" src={item.img2} alt="" />
                     <img className="img" src={item.img3} alt="" />
                     <img className="img" src={item.img4} alt="" />
                     <img className="img" src={item.img5} alt="" />
+                    <img className="img" src={item.img6} alt="" />
+                    <img className="img" src={item.img7} alt="" />
                   </div>
                 </div>
               </div>
@@ -55,12 +67,15 @@ const HistorikkCard = ({ data }) => {
             grid-gap: 1rem;
             width: 70vw;
           }
-
+          .list-container {
+            margin-bottom: 1rem;
+          }
           .text-container {
             width: 55rem;
             color: var(--text);
             font-style: italic;
           }
+
           @media only screen and (max-width: 1000px) {
             .text-container {
               width: 100%;

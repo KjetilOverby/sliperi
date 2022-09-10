@@ -76,6 +76,25 @@ const vollmer = [
     img3: "https://lh3.googleusercontent.com/pw/AL9nZEUnc1H88titeHs2I8Lb_GHD1_XI0OwE59Vvo3lAqrnnsiKP9ANL37zHDNQFeU8ZiCZLsIb-PlrlByPLpQmx-lqLw45BCC7XmJjE5kGZxQQ_OvkhW_X0MCfdkdGHf5icdg4O73FDtnW6Uy1mvZUgPFTd=w763-h1080-no?authuser=0",
     tag: "Service",
   },
+  {
+    date: "10.09.2022",
+    title: "Olje og filterskift (Sliperi)",
+    description: "Kjetil og Ove Johnny har tatt en service på maskinen idag. ",
+    list: [
+      "Skiftet Olje",
+      "Skiftet filtrer i filtermaskin (4stk)",
+      "Gjort rent filterhus og kar",
+      "Skiftet filtre og ionfilter i slipemaskinen",
+    ],
+    img: "https://lh3.googleusercontent.com/pw/AL9nZEXsDmIj_lkI95sJWx8ov2Xs3b2XN5Vzdzu2hPKgAWLZAe3Q-BTNS7xxmmtwY2P8Gc3frU5AlS7nqY0vK0W4jMgjfI6DFftlYasjlbovHgwvNxxKe9VQR3ua2j0VIMF1Rp59HF1Nv1Ly_8dNgooF-ax6=w1024-h768-no?authuser=0",
+    img2: "https://lh3.googleusercontent.com/pw/AL9nZEW8GCV5hpPtXauB8kdfGNSwdOcjoZPv1Z2YUvBs3HMXjSIabbSGpBG0q9RIgT7UXg329M7Zj3zBcCb1JbkIieZUdptR_Raq63IaAHQouKMmTsNtLTp037skNug9_2uL-ETBgRdYVJEDHjUTwWE4Vkg3=w1024-h768-no?authuser=0",
+    img3: "https://lh3.googleusercontent.com/pw/AL9nZEXDflwdPr9TU8UC_W5fFM0DNshgk5ZZ90ky4rXZNMxBJCHIqQlGhMWTqJQlDaoMCPdjyn1x8pojSAAJ3lo3JdO9cPTC1TQo4pIcfpYh7lsM0tCbPyoWwCcjkvjaQkLO5AFnY1OPDdkNppQLXwJrokaO=w1024-h768-no?authuser=0",
+    img4: "https://lh3.googleusercontent.com/pw/AL9nZEXlUEtahF4e2hpwr35vRwd5jNJHjB7_T7oAyq6REEncGRFNFCdXYdb7RdBt1rx4F4sZGltMOJiSrpH6Jvvfy8auMBx3haeIrpZhNM81K1BVaYzfmfJzzxtSmZEu_s_j_CgpuwA0asZiXv_afYRUef0a=w1024-h768-no?authuser=0",
+    img5: "https://lh3.googleusercontent.com/pw/AL9nZEUHhgL8Xoh6aEeTxAs6rTqSn0t2wBXM9qQwN7ajyFKLoZYfSnQnLGgu8KA9k0m8q4cLqwFNrgiLMOU_XlFTPcRh21ZImYrHKS_w5dNZOlXFbn0eLrG1z_FN1aWEF0ndLVVs3ie2ZuS0j7kdQJmE6vDH=w1024-h768-no?authuser=0",
+    img6: "https://lh3.googleusercontent.com/pw/AL9nZEVJ5eG6whhjBYOAO0FCVFgAgxgOdNRx1O8xSoxVVG7TyGx27a21tqCpVe67vQZj5oKW4aUGnqxKCtkDKTBOf-SbdJYDR8X8EV6FKi-7mEx_sqc7AM4qDmdVyqbpHbzdU-55AW5dhF4nH10_WnMGWrOP=w1024-h768-no?authuser=0",
+    img7: "https://lh3.googleusercontent.com/pw/AL9nZEUtt9IS7RFkZMvBFOiXecGPxa8T-FrDdj8e6N4FQSbMQ2PkTTNpl22QEExApaaTbu226UgDNbzuiqCd0YBK5g4yKmbpyj-Akvr3jem9PjdtFso6XzLClETB5HEDx-X0Ksh-b-aVQ0BWamPG2HcLN1ZZ=w1024-h768-no?authuser=0",
+    tag: "Service",
+  },
 ];
 
 export default vollmer;
