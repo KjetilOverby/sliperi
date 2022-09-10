@@ -16,7 +16,7 @@ const HistorikkCard = ({ data }) => {
                     {item.list &&
                       item.list.map((listItem) => {
                         return (
-                          <ul>
+                          <ul key={item}>
                             <li>{listItem}</li>
                           </ul>
                         );
