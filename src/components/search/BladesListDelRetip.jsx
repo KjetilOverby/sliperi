@@ -37,11 +37,12 @@ const BladesListDelRetip = () => {
           </p>
           {linckServiceBlades &&
             linckServiceBlades.map((retip) => {
+              console.log(retip);
               return (
                 <div key={retip._id} className="blade-container2">
                   <p className="text">{`${retip.serial}, ${
                     retip.type
-                  }, ${dateFormat(retip.retipDate, "dd.mm.yyyy HH:MM")}`}</p>
+                  }, ${dateFormat(retip.serviceDate, "dd.mm.yyyy HH:MM")}`}</p>
                 </div>
               );
             })}
