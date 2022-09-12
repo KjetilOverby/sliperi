@@ -53,7 +53,7 @@ const SlipemaskinMainPage = () => {
           }
           .img-container {
             width: 40rem;
-            margin: 5rem 0;
+            margin: 2rem 0;
           }
           .span {
             color: var(--middle);
