@@ -11,6 +11,7 @@ const DateSearchMain = ({
   datePickerNew,
   datePickerService,
   updateDatePicker,
+  commentsByDate,
 }) => {
   const [monthConvert, setMonthConvert] = useState();
   const [monthConvert2, setMonthConvert2] = useState();
@@ -165,6 +166,23 @@ const DateSearchMain = ({
           <h4 className="mt count-text">Antall service: {serviceCountSum}</h4>
           <hr />
           <DatePickerListComponent data={datePickerService} />
+
+          <h4 className="mt count-text">
+            Kommentarer: {commentsByDate && commentsByDate.length}
+          </h4>
+          <hr />
+          {commentsByDate &&
+            commentsByDate.map((item) => {
+              return (
+                <div className="comment-container">
+                  <p>
+                    {item.serial} {item.type}
+                  </p>
+                  <p>{item.comment.map((com) => com)}</p>
+                  <p>{item.commentDate.map((comd) => comd)}</p>
+                </div>
+              );
+            })}
         </div>
       </div>
       <style jsx>
@@ -177,6 +195,9 @@ const DateSearchMain = ({
           }
           .count-text {
             color: var(--middle);
+          }
+          .comment-container {
+            padding: 1rem;
           }
           .date-picker-container {
             background-image: linear-gradient(

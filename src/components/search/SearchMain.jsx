@@ -173,7 +173,7 @@ const SearchMain = () => {
       api
         .post(`/api/linck/comment/?ids=${linckID}&user=${user.sub}`, {
           comment: getCommentInput,
-          commentDate: dateFormat(new Date(), "dd.mm.yyyy HH:MM"),
+          commentDate: new Date(),
         })
         .then(function (res) {
           resolve(console.log(res));

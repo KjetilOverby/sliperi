@@ -9,6 +9,8 @@ const api = axios.create({
 });
 
 const Datesearch = () => {
+ 
+   
   const [startDate, setStartDate] = useState();
   const [endDate, setEndDate] = useState();
 
@@ -86,6 +88,32 @@ const Datesearch = () => {
     })();
   }, [startDate, endDate]);
 
+  const [commentsByDate, setCommentsByDate] = useState();
+
+  
+  useEffect(() => {
+    (async () => {
+      try {
+        const response = await api.get(
+          `/api/linck/commentsbydate?yearRequest=${
+            startDate && startDate._d.getFullYear()
+          }&month=${startDate && startDate._d.getMonth() + 1}&&day=${
+            startDate && startDate._d.getDate()
+          }&yearRequest2=${endDate && endDate._d.getFullYear()}&month2=${
+            endDate && endDate._d.getMonth() + 1
+          }&&day2=${endDate && endDate._d.getDate()}`
+        )
+        setCommentsByDate(response.data.data);
+        setTimeout(() => {
+          
+          setUpdateDatePicker(!updateDatePicker)
+        }, 1500);
+      } catch (error) {
+        console.log(error);
+      }
+    })();
+  }, [startDate, endDate]);
+
   return (
     <>
       <PageLayoutSidebar>
@@ -99,6 +127,7 @@ const Datesearch = () => {
           datePickerNew={datePickerNew}
           datePickerService={datePickerService}
           updateDatePicker={updateDatePicker}
+          commentsByDate={commentsByDate}
         />
       </PageLayoutSidebar>
       <style jsx>

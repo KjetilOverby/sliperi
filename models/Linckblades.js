@@ -22,7 +22,7 @@ const BladesSchema = new mongoose.Schema({
     type: [String],
   },
   commentDate: {
-    type: [String],
+    type: Date,
   },
   updated: {
     type: Date,
