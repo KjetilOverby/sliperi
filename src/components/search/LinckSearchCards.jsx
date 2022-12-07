@@ -97,20 +97,21 @@ const LinckCards = ({
           </div>
         </div>
         <div className="comment-input-container">
-          <div>
+          {/* <div>
             {commentDate &&
               commentDate.map((item) => {
                 return (
                   <>
                     <p
                       style={{ marginRight: "1rem", width: "8rem" }}
-                      className="comment-text container-text">
+                      className="comment-text container-text"
+                    >
                       {item}
                     </p>
                   </>
                 );
               })}
-          </div>
+          </div> */}
           <div>
             {comment &&
               comment.map((item) => {
@@ -132,12 +133,14 @@ const LinckCards = ({
             </div>
             <div
               onClick={openRetipModalHandler}
-              className="icon-container retip-btn-container">
+              className="icon-container retip-btn-container"
+            >
               <BsArrowRepeat style={{ fontSize: "1.2rem" }} />
             </div>
             <div
               onClick={openDeleteModalHandler}
-              className="icon-container delete-container">
+              className="icon-container delete-container"
+            >
               <RiDeleteBin6Line style={{ fontSize: "1.2rem" }} />
             </div>
           </div>
