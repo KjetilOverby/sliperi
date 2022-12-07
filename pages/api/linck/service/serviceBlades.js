@@ -6,6 +6,7 @@ dbConnect();
 const currentYear = new Date().getFullYear();
 // const currentMonth = new Date().getMonth() + 1;
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default async (req, res) => {
   const { method } = req;
   const date = new Date();
