@@ -44,6 +44,7 @@ function MyApp({ Component, pageProps }) {
         console.log(error.response.body);
       }
     })();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [linckUpdateDatabase]);
 
   // SERVICE
@@ -59,6 +60,7 @@ function MyApp({ Component, pageProps }) {
         console.log(error.response.body);
       }
     })();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [linckUpdateDatabase]);
 
   // Tabell Data
@@ -105,6 +107,7 @@ function MyApp({ Component, pageProps }) {
         console.log(error);
       }
     })();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const [toolsNew, setToolsNew] = useState();
@@ -119,6 +122,7 @@ function MyApp({ Component, pageProps }) {
         console.log(error);
       }
     })();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
