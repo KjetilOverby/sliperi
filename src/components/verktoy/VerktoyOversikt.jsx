@@ -6,11 +6,11 @@ const VerktoyOversikt = () => {
 
   const nom = [
     {
-      ant: 100,
+      ant: 60,
       id: 1,
     },
     {
-      ant: 100,
+      ant: 60,
       id: 2,
     },
     {
@@ -38,7 +38,7 @@ const VerktoyOversikt = () => {
       id: 8,
     },
     {
-      ant: 160,
+      ant: 180,
       id: 9,
     },
     {
@@ -73,8 +73,7 @@ const VerktoyOversikt = () => {
                   return (
                     <div
                       key={tool.type}
-                      className="tool-container blade-container"
-                    >
+                      className="tool-container blade-container">
                       <p className="type">{tool.type}</p>
                       <p className="number">{tool.antall}</p>
                     </div>
