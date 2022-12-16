@@ -174,7 +174,7 @@ const DateSearchMain = ({
           {commentsByDate &&
             commentsByDate.map((item) => {
               return (
-                <div className="comment-container">
+                <div key={item.comment} className="comment-container">
                   <p>
                     {item.serial} {item.type}
                   </p>
