@@ -94,6 +94,7 @@ const DateSearchMain = ({
         datePickerService && datePickerService.map((item) => item.typeCount)
       );
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [updateDatePicker]);
 
   useEffect(() => {
