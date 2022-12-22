@@ -62,7 +62,7 @@ const KniverOversiktVisuell = () => {
             img={v40Bolt}
             title="Bolt"
             type=""
-            dim="M20x45 32 mm pipe"
+            dim="M20x45 30 mm pipe"
             antTenner=""
             antMaskin="30"
             maskin="V40 (ZD1/ZD2)"
@@ -208,7 +208,7 @@ const KniverOversiktVisuell = () => {
           <ToolImageCard
             img={vp34Bolt}
             title="Bolt"
-            type="Unbraco"
+            type="Unbraco 12mm lavt hode"
             dim="M16x45"
             antTenner=""
             antMaskin="16"

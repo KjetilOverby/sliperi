@@ -42,7 +42,7 @@ const SegmenterMainPage = () => {
             img={v40segmentBolt}
             title="Bolt til V40 segmenter"
             type=""
-            dim="M12x30"
+            dim="M12x30 19mm pipe"
             antTenner=""
             antMaskin="30"
             maskin="V40"
@@ -73,7 +73,7 @@ const SegmenterMainPage = () => {
             img={vpp32Bolt}
             title="Bolt til Fres 1/4 segmenter"
             type=""
-            dim="M10x20"
+            dim="M10x20 17mm pipe"
             antTenner=""
             antMaskin="36"
             maskin=" VP34/VPP34"
@@ -104,7 +104,7 @@ const SegmenterMainPage = () => {
             img={vp34SegmentSkrue}
             title="Skrue til fres2 segmenter"
             type=""
-            dim="M10x20"
+            dim="M10x20 6mm unbraco"
             antTenner=""
             antMaskin="32"
             maskin=" VP34"
@@ -135,7 +135,7 @@ const SegmenterMainPage = () => {
             img={vp34SegmentSkrue}
             title="Skrue til fres 3 segmenter"
             type=""
-            dim="M10x20"
+            dim="M10x20 6mm unbraco"
             antTenner=""
             antMaskin="32"
             maskin=" VP48"
