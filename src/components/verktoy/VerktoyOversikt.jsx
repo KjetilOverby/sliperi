@@ -73,7 +73,8 @@ const VerktoyOversikt = () => {
                   return (
                     <div
                       key={tool.type}
-                      className="tool-container blade-container">
+                      className="tool-container blade-container"
+                    >
                       <p className="type">{tool.type}</p>
                       <p className="number">{tool.antall}</p>
                     </div>
@@ -119,6 +120,9 @@ const VerktoyOversikt = () => {
         </div>
       </div>
       <style jsx>{`
+        .header {
+          color: var(--middle);
+        }
         .tool-container {
           display: flex;
         }
@@ -151,7 +155,7 @@ const VerktoyOversikt = () => {
           font-size: 0.8rem;
         }
         .main-container {
-          background: var(--text);
+          background: var(--secondary);
         }
       `}</style>
     </>

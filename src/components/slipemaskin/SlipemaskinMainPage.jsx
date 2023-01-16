@@ -45,7 +45,7 @@ const SlipemaskinMainPage = () => {
       <style jsx>
         {`
           .container {
-            background: var(--text);
+            background: var(--secondary);
             scroll-behavior: smooth;
           }
           .img {

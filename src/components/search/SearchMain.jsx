@@ -57,6 +57,7 @@ const SearchMain = () => {
       linckBlades &&
         linckBlades.filter((blades) => blades.serial.includes(input))
     );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [input, linckUpdateDatabase]);
 
   // Dont put searchresult inside useEffect it causes an infinite loop
@@ -328,17 +329,17 @@ const SearchMain = () => {
           border-radius: 5px;
           border: none;
           outline: none;
-          background: var(--secondary);
+          background: var(--primary);
           font-size: 1.5rem;
           color: var(--text);
           margin-bottom: 0.5rem;
         }
         .input-container {
           margin-bottom: 2rem;
-          color: var(--secondary);
+          color: var(--text);
         }
         .main-container {
-          background: var(--text);
+          background: var(--secondary);
         }
 
         @media only screen and (max-width: 1000px) {

@@ -56,20 +56,20 @@
   --text2: #edeae5;
 } */
 /* ************************************* */
-:root {
+/* :root {
   --primary: #003b46;
   --secondary: #07575b;
   --middle: #66a5ad;
   --text: #c4dfe6;
   --text2: #edeae5;
-}
-/* :root {
+} */
+:root {
   --primary: #011a27;
   --secondary: #063852;
   --middle: #f0810f;
   --text: #e6df44;
   --text2: #edeae5;
-} */
+}
 /* :root {
   --primary: #af4425;
   --secondary: #662e1c;
@@ -77,13 +77,13 @@
   --text: #c9a66b;
   --text2: #edeae5;
 } */
- :root {
+/* :root {
   --primary: #301b28;
   --secondary: #523634;
   --middle: #b6452c;
   --text: #ddc5a2;
   --text2: #edeae5;
-} 
+} */
 /* :root {
   --primary: #04202c;
   --secondary: #304040;
@@ -127,7 +127,7 @@ h6 {
 }
 .header {
   font-weight: 400;
-  color: var(--primary);
+  color: var(--middle);
 }
 .mb {
   margin-bottom: 1.5rem;

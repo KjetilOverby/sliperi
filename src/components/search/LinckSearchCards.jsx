@@ -161,7 +161,6 @@ const LinckCards = ({
               "bottom bottom ."
               "comment comment .";
             background: var(--middle);
-            box-shadow: 1px 1px 10px lightgrey;
           }
           .container:hover {
             cursor: pointer

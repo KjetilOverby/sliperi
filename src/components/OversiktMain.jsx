@@ -108,7 +108,8 @@ const OversiktMain = ({
                   return (
                     <p
                       key={item.id}
-                      className="tabell-text nom-single-container">
+                      className="tabell-text nom-single-container"
+                    >
                       {item.ant}
                     </p>
                   );
@@ -123,7 +124,8 @@ const OversiktMain = ({
                 return (
                   <div
                     key={item._id.type}
-                    className="container blade-container">
+                    className="container blade-container"
+                  >
                     <p className="type tabell-text">{item._id.type}</p>
                     <p className="tabell-text">{item.typeCount}</p>
                   </div>
@@ -137,7 +139,8 @@ const OversiktMain = ({
                 return (
                   <div
                     key={item._id.type}
-                    className="container blade-container">
+                    className="container blade-container"
+                  >
                     <p className="type tabell-text">{item._id.type}</p>
                     <p className="tabell-text">{item.typeCount}</p>
                   </div>
@@ -151,7 +154,8 @@ const OversiktMain = ({
                 return (
                   <div
                     key={item._id.type}
-                    className="container blade-container">
+                    className="container blade-container"
+                  >
                     <p className="type tabell-text">{item._id.type}</p>
                     <p className="tabell-text">{item.typeCount}</p>
                   </div>
@@ -162,8 +166,11 @@ const OversiktMain = ({
       </div>
       <style jsx>
         {`
+          .header {
+            color: var(--middle);
+          }
           .main-container {
-            background: var(--text);
+            background: var(--secondary);
           }
           .ant-container {
             display: flex;
@@ -182,13 +189,13 @@ const OversiktMain = ({
             margin-bottom: 0.2rem;
             width: 1.5rem;
             border-radius: 5px;
-            color: var(--text2);
+            color: var(--text);
           }
 
           .table-header {
             font-weight: 600;
             margin-bottom: 1rem;
-            color: var(--secondary);
+            color: var(--middle);
           }
           .tab-container {
             display: grid;

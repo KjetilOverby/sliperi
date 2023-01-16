@@ -45,7 +45,7 @@ const Toolcard = ({
             grid-template-columns: 8rem 1fr;
             width: 100%;
             margin: 0.5rem 0;
-            background: var(--secondary);
+            background: var(--primary);
             padding: 0.5rem;
             transition: 0.5s;
             border-radius: 5px;

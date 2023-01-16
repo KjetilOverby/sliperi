@@ -336,7 +336,7 @@ const RedigerSegmenterMain = () => {
           .container {
           }
           .main-container {
-            background: var(--text);
+            background: var(--secondary);
           }
         `}
       </style>
