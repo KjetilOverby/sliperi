@@ -78,6 +78,8 @@ function MyApp({ Component, pageProps }) {
     })();
   }, []);
 
+  
+
   //TOOLS
   const [tools, setTools] = useState();
 
@@ -93,6 +95,8 @@ function MyApp({ Component, pageProps }) {
       }
     })();
   }, [toolUpdateDatabase]);
+
+  
 
   const [toolsDeleted, setToolsDeleted] = useState();
 

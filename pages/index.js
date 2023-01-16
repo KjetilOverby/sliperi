@@ -6,7 +6,7 @@ import StartPageMainComponent from "../src/components/startpage/StartPageMainCom
 
 import styles from "../styles/Home.module.css";
 
-export default function Home() {
+export default function Home({}) {
   return (
     <PageLayoutSidebar>
       <Head>
@@ -15,7 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <SideBar />
-      <StartPageMainComponent />
+      <StartPageMainComponent  />
     </PageLayoutSidebar>
   );
 }
