@@ -1,7 +1,16 @@
 import React from "react";
 import Image from "next/image";
 
-const VisualToolImageComponent = ({ img, title, type, dim, zAnt, angle }) => {
+const VisualToolImageComponent = ({
+  img,
+  title,
+  type,
+  dim,
+  zAnt,
+  angle,
+  dataName,
+  antall,
+}) => {
   return (
     <>
       <div className="container">
@@ -12,13 +21,15 @@ const VisualToolImageComponent = ({ img, title, type, dim, zAnt, angle }) => {
           <p className="text">Dimmensjon: {dim}</p>
           <p className="text">Antall tenner: {zAnt}</p>
           <p className="text">Brystvinkel: {angle} grader</p>
+          <p className="text">Antall lager: {antall} stk</p>
+          <p className="text">Datanavn: {dataName}</p>
         </div>
       </div>
       <style jsx>
         {`
           .container {
             width: 18rem;
-            height: 23rem;
+            height: auto;
             padding: 1rem;
             border-radius: 15px;
             background:var(--primary)

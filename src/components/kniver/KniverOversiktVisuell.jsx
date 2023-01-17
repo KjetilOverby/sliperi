@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { MyContext } from "../../contexts/MyContext";
 import ToolImageCard from "../common/ToolImageCard";
 import v40kniv from "../../../assets/kniver/v40kniv.jpg";
 import v40motsl from "../../../assets/kniver/v40motsl.jpg";
@@ -24,6 +25,7 @@ import bruksmotst44 from "../../../assets/kniver/bruksmotst44.jpg";
 import bruksJust from "../../../assets/kniver/bruksJust.jpg";
 
 const KniverOversiktVisuell = () => {
+  const { tools } = useContext(MyContext);
   return (
     <>
       <div className="content-container">
@@ -39,6 +41,8 @@ const KniverOversiktVisuell = () => {
             antTenner=""
             antMaskin="30"
             maskin="V40 (ZD1/ZD2)"
+            dName={tools[8].type}
+            antall={tools[8].antall}
           />
           <ToolImageCard
             img={v40motsl}
@@ -88,6 +92,8 @@ const KniverOversiktVisuell = () => {
             antTenner=""
             antMaskin="48"
             maskin="VP34/VPP34"
+            dName={tools[9].type}
+            antall={tools[9].antall}
           />
           <ToolImageCard
             img={vpp34holder}
@@ -146,6 +152,8 @@ const KniverOversiktVisuell = () => {
             antTenner=""
             antMaskin="8"
             maskin="VP34"
+            dName={tools[10].type}
+            antall={tools[10].antall}
           />
           <ToolImageCard
             img={vp34motst}
@@ -186,6 +194,8 @@ const KniverOversiktVisuell = () => {
             antTenner=""
             antMaskin="8"
             maskin="VP48"
+            dName={tools[11].type}
+            antall={tools[11].antall}
           />
           <ToolImageCard
             img={vp48motstH}
@@ -234,6 +244,8 @@ const KniverOversiktVisuell = () => {
             antTenner=""
             antMaskin="2"
             maskin="Bruks 820 CS"
+            dName={tools[12].type}
+            antall={tools[12].antall}
           />
           <ToolImageCard
             img={bruksmotst15}

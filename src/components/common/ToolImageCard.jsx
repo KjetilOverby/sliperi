@@ -9,6 +9,8 @@ const ToolImageCard = ({
   antTenner,
   antMaskin,
   maskin,
+  dName,
+  antall,
 }) => {
   return (
     <>
@@ -20,12 +22,14 @@ const ToolImageCard = ({
         {antTenner && <p className="text">antall tenner: {antTenner}</p>}
         {antMaskin && <p className="text">Antall i maskin: {antMaskin}</p>}
         {maskin && <p className="text">Maskin: {maskin}</p>}
+        {antall && <p className="text">Antall lager: {antall}</p>}
+        {dName && <p className="text">Datanavn: {dName}</p>}
       </div>
       <style jsx>
         {`
           .container {
             width: 18rem;
-            height: 23rem;
+            height: auto;
             background: var(--primary);
             padding: 1rem;
             margin-right: 2rem;
