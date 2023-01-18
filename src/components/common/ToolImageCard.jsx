@@ -11,6 +11,7 @@ const ToolImageCard = ({
   maskin,
   dName,
   antall,
+  art,
 }) => {
   return (
     <>
@@ -24,6 +25,7 @@ const ToolImageCard = ({
         {maskin && <p className="text">Maskin: {maskin}</p>}
         {antall && <p className="text">Antall lager: {antall}</p>}
         {dName && <p className="text">Datanavn: {dName}</p>}
+        {art && <p className="text">Art.nr: {art}</p>}
       </div>
       <style jsx>
         {`

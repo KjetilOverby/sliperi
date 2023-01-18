@@ -120,79 +120,79 @@ const StartPageMainComponent = () => {
 
           {tools && tools[0].antall < 60 && (
             <p className="bestill-tools">
-              {tools[0].type}, {60 - tools[0].antall}
+              Art.nr: {tools[0].art}, {tools[0].type}, {60 - tools[0].antall}
               stk
             </p>
           )}
           {tools && tools[1].antall < 60 && (
             <p className="bestill-tools">
-              {tools[1].type}, {60 - tools[1].antall}
+              Art.nr: {tools[1].art}, {tools[1].type}, {60 - tools[1].antall}
               stk
             </p>
           )}
           {tools && tools[2].antall < 65 && (
             <p className="bestill-tools">
-              {tools[2].type}, {65 - tools[2].antall}
+              Art.nr: {tools[2].art}, {tools[2].type}, {65 - tools[2].antall}
               stk
             </p>
           )}
           {tools && tools[3].antall < 65 && (
             <p className="bestill-tools">
-              {tools[3].type}, {65 - tools[3].antall}
+              Art.nr: {tools[3].art}, {tools[3].type}, {65 - tools[3].antall}
               stk
             </p>
           )}
           {tools && tools[4].antall < 25 && (
             <p className="bestill-tools">
-              {tools[4].type}, {25 - tools[4].antall}
+              Art.nr: {tools[4].art}, {tools[4].type}, {25 - tools[4].antall}
               stk
             </p>
           )}
           {tools && tools[5].antall < 25 && (
             <p className="bestill-tools">
-              {tools[5].type}, {25 - tools[5].antall}
+              Art.nr: {tools[5].art}, {tools[5].type}, {25 - tools[5].antall}
               stk
             </p>
           )}
           {tools && tools[6].antall < 25 && (
             <p className="bestill-tools">
-              {tools[6].type}, {25 - tools[6].antall}
+              Art.nr: {tools[6].art}, {tools[6].type}, {25 - tools[6].antall}
               stk
             </p>
           )}
           {tools && tools[7].antall < 25 && (
             <p className="bestill-tools">
-              {tools[7].type}, {25 - tools[7].antall}
+              Art.nr: {tools[7].art}, {tools[7].type}, {25 - tools[7].antall}
               stk
             </p>
           )}
           {tools && tools[8].antall < 180 && (
             <p className="bestill-tools">
-              {tools[8].type}, {180 - tools[8].antall}
+              Art.nr: {tools[8].art}, {tools[8].type}, {180 - tools[8].antall}
               stk
             </p>
           )}
           {tools && tools[9].antall < 240 && (
             <p className="bestill-tools">
-              {tools[9].type}, {240 - tools[9].antall}
+              Art.nr: {tools[9].art}, {tools[9].type}, {240 - tools[9].antall}
               stk
             </p>
           )}
           {tools && tools[10].antall < 40 && (
             <p className="bestill-tools">
-              {tools[10].type}, {40 - tools[10].antall}
+              Art.nr: {tools[10].art}, {tools[10].type}, {40 - tools[10].antall}
               stk
             </p>
           )}
           {tools && tools[11].antall < 30 && (
             <p className="bestill-tools">
-              {tools[11].type}, {30 - tools[11].antall}
+              Art.nr: {tools[11].art}, {tools[11].type}, {30 - tools[11].antall}
               stk
             </p>
           )}
           {tools && tools[12].antall < 16 && (
             <p className="bestill-tools">
-              {tools[12].type}, {16 - tools[12].antall}
+              Art.nr: {tools[12].art}, {tools[12].type}, {16 - tools[12].antall}
               stk
             </p>
           )}

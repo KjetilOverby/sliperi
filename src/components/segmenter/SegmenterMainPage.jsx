@@ -31,8 +31,9 @@ const SegmenterMainPage = () => {
             antTenner="14"
             antMaskin="5"
             maskin="V40"
-            dName={tools[0].type}
-            antall={tools[0].antall}
+            dName={tools && tools[0].type}
+            antall={tools && tools[0].antall}
+            art={tools && tools[0].art}
           />
           <ToolImageCard
             img={v40segmentV}
@@ -42,8 +43,9 @@ const SegmenterMainPage = () => {
             antTenner="14"
             antMaskin="5"
             maskin="V40"
-            dName={tools[1].type}
-            antall={tools[1].antall}
+            dName={tools && tools[1].type}
+            antall={tools && tools[1].antall}
+            art={tools && tools[1].art}
           />
           <ToolImageCard
             img={v40segmentBolt}
@@ -66,8 +68,9 @@ const SegmenterMainPage = () => {
             antTenner="10"
             antMaskin="6"
             maskin=" VP34/VPP34"
-            dName={tools[2].type}
-            antall={tools[2].antall}
+            dName={tools && tools[2].type}
+            antall={tools && tools[2].antall}
+            art={tools && tools[2].art}
           />
           <ToolImageCard
             img={vpp32SegmentV}
@@ -77,8 +80,9 @@ const SegmenterMainPage = () => {
             antTenner="10"
             antMaskin="6"
             maskin=" VP34/VPP34"
-            dName={tools[3].type}
-            antall={tools[3].antall}
+            dName={tools && tools[3].type}
+            antall={tools && tools[3].antall}
+            art={tools && tools[3].art}
           />
           <ToolImageCard
             img={vpp32Bolt}
@@ -101,8 +105,9 @@ const SegmenterMainPage = () => {
             antTenner="8"
             antMaskin="4"
             maskin="VP34"
-            dName={tools[4].type}
-            antall={tools[4].antall}
+            dName={tools && tools[4].type}
+            antall={tools && tools[4].antall}
+            art={tools && tools[4].art}
           />
           <ToolImageCard
             img={vp32SegmentV}
@@ -112,8 +117,9 @@ const SegmenterMainPage = () => {
             antTenner="8"
             antMaskin="4"
             maskin="VP34"
-            dName={tools[5].type}
-            antall={tools[5].antall}
+            dName={tools && tools[5].type}
+            antall={tools && tools[5].antall}
+            art={tools && tools[5].art}
           />
           <ToolImageCard
             img={vp34SegmentSkrue}
@@ -130,25 +136,27 @@ const SegmenterMainPage = () => {
         <div className="container">
           <ToolImageCard
             img={vp48SegmentH}
-            title="Fres 2 segment høyre"
+            title="Fres 3 segment høyre"
             type="VP34-08-056"
             dim="ø403/305-3,5/2,5/5,00"
             antTenner="8"
             antMaskin="4"
             maskin="VP48"
-            dName={tools[6].type}
-            antall={tools[6].antall}
+            dName={tools && tools[6].type}
+            antall={tools && tools[6].antall}
+            art={tools && tools[6].art}
           />
           <ToolImageCard
             img={vp48SegmentV}
-            title="Fres 2 segment venstre"
+            title="Fres 3 segment venstre"
             type="VP34-08-056"
             dim="ø403/305-3,5/2,5/5,00"
             antTenner="8"
             antMaskin="4"
             maskin="VP48"
-            dName={tools[7].type}
-            antall={tools[7].antall}
+            dName={tools && tools[7].type}
+            antall={tools && tools[7].antall}
+            art={tools && tools[7].art}
           />
           <ToolImageCard
             img={vp34SegmentSkrue}

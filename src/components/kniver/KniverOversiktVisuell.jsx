@@ -41,8 +41,9 @@ const KniverOversiktVisuell = () => {
             antTenner=""
             antMaskin="30"
             maskin="V40 (ZD1/ZD2)"
-            dName={tools[8].type}
-            antall={tools[8].antall}
+            dName={tools && tools[8].type}
+            antall={tools && tools[8].antall}
+            art={tools && tools[8].art}
           />
           <ToolImageCard
             img={v40motsl}
@@ -92,8 +93,9 @@ const KniverOversiktVisuell = () => {
             antTenner=""
             antMaskin="48"
             maskin="VP34/VPP34"
-            dName={tools[9].type}
-            antall={tools[9].antall}
+            dName={tools && tools[9].type}
+            antall={tools && tools[9].antall}
+            art={tools && tools[9].art}
           />
           <ToolImageCard
             img={vpp34holder}
@@ -152,8 +154,9 @@ const KniverOversiktVisuell = () => {
             antTenner=""
             antMaskin="8"
             maskin="VP34"
-            dName={tools[10].type}
-            antall={tools[10].antall}
+            dName={tools && tools[10].type}
+            antall={tools && tools[10].antall}
+            art={tools && tools[10].art}
           />
           <ToolImageCard
             img={vp34motst}
@@ -194,8 +197,9 @@ const KniverOversiktVisuell = () => {
             antTenner=""
             antMaskin="8"
             maskin="VP48"
-            dName={tools[11].type}
-            antall={tools[11].antall}
+            dName={tools && tools[11].type}
+            antall={tools && tools[11].antall}
+            art={tools && tools[11].art}
           />
           <ToolImageCard
             img={vp48motstH}
@@ -244,8 +248,9 @@ const KniverOversiktVisuell = () => {
             antTenner=""
             antMaskin="2"
             maskin="Bruks 820 CS"
-            dName={tools[12].type}
-            antall={tools[12].antall}
+            dName={tools && tools[12].type}
+            antall={tools && tools[12].antall}
+            art={tools && tools[12].art}
           />
           <ToolImageCard
             img={bruksmotst15}
