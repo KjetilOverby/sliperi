@@ -10,11 +10,12 @@ const VisualToolImageComponent = ({
   angle,
   dataName,
   antall,
+  art,
 }) => {
   return (
     <>
       <div className="container">
-        <Image src={img} />
+        <Image src={img} alt="" />
         <div>
           <h3 className="card-header">{title}</h3>
           <p className="text">Type: {type}</p>
@@ -23,6 +24,7 @@ const VisualToolImageComponent = ({
           <p className="text">Brystvinkel: {angle} grader</p>
           <p className="text">Antall lager: {antall} stk</p>
           <p className="text">Datanavn: {dataName}</p>
+          <p className="text">Art. nr: {art}</p>
         </div>
       </div>
       <style jsx>
@@ -32,8 +34,7 @@ const VisualToolImageComponent = ({
             height: auto;
             padding: 1rem;
             border-radius: 15px;
-            background:var(--primary)
-            );
+            background: var(--primary);
           }
           .card-header {
             font-weight: 600;
@@ -42,11 +43,13 @@ const VisualToolImageComponent = ({
           }
           .text {
             font-style: italic;
-            color: var(--text);
+            color: var(--middle);
+            font-size: 0.8rem;
+            font-weight: 300;
           }
           @media only screen and (max-width: 600px) {
             .container {
-             height: auto
+              height: auto;
             }
           }
         `}

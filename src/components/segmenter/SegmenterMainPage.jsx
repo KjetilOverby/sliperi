@@ -33,6 +33,7 @@ const SegmenterMainPage = () => {
             maskin="V40"
             dName={tools && tools[0].type}
             antall={tools && tools[0].antall}
+            art={tools && tools[0].art}
           />
           <ToolImageCard
             img={v40segmentV}
@@ -44,6 +45,7 @@ const SegmenterMainPage = () => {
             maskin="V40"
             dName={tools && tools[1].type}
             antall={tools && tools[1].antall}
+            art={tools && tools[1].art}
           />
           <ToolImageCard
             img={v40segmentBolt}
@@ -68,6 +70,7 @@ const SegmenterMainPage = () => {
             maskin=" VP34/VPP34"
             dName={tools && tools[2].type}
             antall={tools && tools[2].antall}
+            art={tools && tools[2].art}
           />
           <ToolImageCard
             img={vpp32SegmentV}
@@ -79,6 +82,7 @@ const SegmenterMainPage = () => {
             maskin=" VP34/VPP34"
             dName={tools && tools[3].type}
             antall={tools && tools[3].antall}
+            art={tools && tools[3].art}
           />
           <ToolImageCard
             img={vpp32Bolt}
@@ -103,6 +107,7 @@ const SegmenterMainPage = () => {
             maskin="VP34"
             dName={tools && tools[4].type}
             antall={tools && tools[4].antall}
+            art={tools && tools[4].art}
           />
           <ToolImageCard
             img={vp32SegmentV}
@@ -114,6 +119,7 @@ const SegmenterMainPage = () => {
             maskin="VP34"
             dName={tools && tools[5].type}
             antall={tools && tools[5].antall}
+            art={tools && tools[5].art}
           />
           <ToolImageCard
             img={vp34SegmentSkrue}
@@ -138,6 +144,7 @@ const SegmenterMainPage = () => {
             maskin="VP48"
             dName={tools && tools[6].type}
             antall={tools && tools[6].antall}
+            art={tools && tools[6].art}
           />
           <ToolImageCard
             img={vp48SegmentV}
@@ -149,6 +156,7 @@ const SegmenterMainPage = () => {
             maskin="VP48"
             dName={tools && tools[7].type}
             antall={tools && tools[7].antall}
+            art={tools && tools[7].art}
           />
           <ToolImageCard
             img={vp34SegmentSkrue}

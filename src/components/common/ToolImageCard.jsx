@@ -16,11 +16,11 @@ const ToolImageCard = ({
   return (
     <>
       <div className="container">
-        <Image src={img} />
+        <Image src={img} alt="" />
         <h1 className="card-header">{title}</h1>
         {type && <p className="text">Type: {type}</p>}
         <p className="text">{dim}</p>
-        {antTenner && <p className="text">antall tenner: {antTenner}</p>}
+        {antTenner && <p className="text">Antall tenner: {antTenner}</p>}
         {antMaskin && <p className="text">Antall i maskin: {antMaskin}</p>}
         {maskin && <p className="text">Maskin: {maskin}</p>}
         {antall && <p className="text">Antall lager: {antall}</p>}
@@ -45,7 +45,8 @@ const ToolImageCard = ({
           }
           .text {
             font-style: italic;
-            color: var(--text);
+            color: var(--middle);
+            font-size: 0.8rem;
           }
           @media only screen and (max-width: 1000px) {
             .container {

@@ -78,6 +78,8 @@ function MyApp({ Component, pageProps }) {
     })();
   }, []);
 
+  console.log(tabellLinckBlad);
+
   
 
   //TOOLS
