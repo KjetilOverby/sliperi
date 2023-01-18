@@ -43,7 +43,10 @@ const KniverOversiktVisuell = () => {
             maskin="V40 (ZD1/ZD2)"
             dName={tools && tools[8].type}
             antall={tools && tools[8].antall}
+<<<<<<< HEAD
             art={tools && tools[8].art}
+=======
+>>>>>>> ffd7fb41880b016ae889b0d01d2f042d8fe1c039
           />
           <ToolImageCard
             img={v40motsl}
@@ -95,7 +98,10 @@ const KniverOversiktVisuell = () => {
             maskin="VP34/VPP34"
             dName={tools && tools[9].type}
             antall={tools && tools[9].antall}
+<<<<<<< HEAD
             art={tools && tools[9].art}
+=======
+>>>>>>> ffd7fb41880b016ae889b0d01d2f042d8fe1c039
           />
           <ToolImageCard
             img={vpp34holder}
@@ -156,7 +162,10 @@ const KniverOversiktVisuell = () => {
             maskin="VP34"
             dName={tools && tools[10].type}
             antall={tools && tools[10].antall}
+<<<<<<< HEAD
             art={tools && tools[10].art}
+=======
+>>>>>>> ffd7fb41880b016ae889b0d01d2f042d8fe1c039
           />
           <ToolImageCard
             img={vp34motst}
@@ -199,7 +208,10 @@ const KniverOversiktVisuell = () => {
             maskin="VP48"
             dName={tools && tools[11].type}
             antall={tools && tools[11].antall}
+<<<<<<< HEAD
             art={tools && tools[11].art}
+=======
+>>>>>>> ffd7fb41880b016ae889b0d01d2f042d8fe1c039
           />
           <ToolImageCard
             img={vp48motstH}
@@ -250,7 +262,10 @@ const KniverOversiktVisuell = () => {
             maskin="Bruks 820 CS"
             dName={tools && tools[12].type}
             antall={tools && tools[12].antall}
+<<<<<<< HEAD
             art={tools && tools[12].art}
+=======
+>>>>>>> ffd7fb41880b016ae889b0d01d2f042d8fe1c039
           />
           <ToolImageCard
             img={bruksmotst15}
