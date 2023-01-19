@@ -7,6 +7,7 @@ import { FcAddDatabase } from "react-icons/fc";
 import { FcViewDetails } from "react-icons/fc";
 import { FcCalendar } from "react-icons/fc";
 import { FcNews } from "react-icons/fc";
+import tooldata from "../../data/tooldata";
 
 const StartPageMainComponent = () => {
   const { linckBlades, tabellLinckBlad, tools } = useContext(MyContext);
@@ -18,21 +19,21 @@ const StartPageMainComponent = () => {
           <p className="bestill-header">Må bestilles:</p>
           {tabellLinckBlad && tabellLinckBlad[0].typeCount < 15 && (
             <p className="bestill-tools">
-              Art.nr: V-SH9495, {tabellLinckBlad[0]._id.type},{" "}
+              Art.nr: {tooldata.k22.art}, {tabellLinckBlad[0]._id.type},{" "}
               {15 - tabellLinckBlad[0].typeCount}
               stk
             </p>
           )}
           {tabellLinckBlad && tabellLinckBlad[1].typeCount < 20 && (
             <p className="bestill-tools">
-              Art.nr: V-SH9502, {tabellLinckBlad[1]._id.type},{" "}
+              Art.nr: {tooldata.k24.art}, {tabellLinckBlad[1]._id.type},{" "}
               {20 - tabellLinckBlad[1].typeCount}
               stk
             </p>
           )}
           {tabellLinckBlad && tabellLinckBlad[2].typeCount < 65 && (
             <p className="bestill-tools">
-              Art.nr: V-SH9505, {tabellLinckBlad[2]._id.type},{" "}
+              Art.nr: {tooldata.k26.art}, {tabellLinckBlad[2]._id.type},{" "}
               {65 - tabellLinckBlad[2].typeCount}
               stk
             </p>

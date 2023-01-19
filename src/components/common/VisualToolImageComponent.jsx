@@ -45,7 +45,7 @@ const VisualToolImageComponent = ({
             font-style: italic;
             color: var(--middle);
             font-size: 0.8rem;
-            font-weight: 300;
+            font-weight: 600;
           }
           @media only screen and (max-width: 600px) {
             .container {

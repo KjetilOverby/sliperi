@@ -47,6 +47,7 @@ const ToolImageCard = ({
             font-style: italic;
             color: var(--middle);
             font-size: 0.8rem;
+            font-weight: 600;
           }
           @media only screen and (max-width: 1000px) {
             .container {
