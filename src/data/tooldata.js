@@ -153,6 +153,86 @@ const tooldata = {
         "art": "V-SH1008",
         "nom": 10
       },
+      "redSegH": {
+        "navn": "Reduserersegment høyre",
+        "type": "V40-41-117-SV",
+        "dim": "ø854,2/698-4,5/3,5",
+        "z": "14",
+        "angle": "19",
+        "antM": '5',
+        "art": "V-SM0950",
+        "nom": 60
+      },
+      "redSegV": {
+        "navn": "Reduserersegment venstre",
+        "type": "V40-41-117-SV",
+        "dim": "ø854,2/698-4,5/3,5",
+        "z": "14",
+        "angle": "19",
+        "antM": '5',
+        "art": "V-SM0955",
+        "nom": 60
+      },
+      "f1-4H": {
+        "navn": "Fres 1/4 segment høyre",
+        "type": "VPS-28-053",
+        "dim": "ø401/200,4-3,5/2,5/8,00",
+        "z": "10",
+        "angle": "15",
+        "antM": '6',
+        "art": "V-SM1010",
+        "nom": 65
+      },
+      "f1-4V": {
+        "navn": "Fres 1/4 segment venstre",
+        "type": "VPS-28-053",
+        "dim": "ø401/200,4-3,5/2,5/8,00",
+        "z": "10",
+        "angle": "15",
+        "antM": '6',
+        "art": "V-SM1015",
+        "nom": 65
+      },
+      "f2H": {
+        "navn": "Fres 2 segment høyre",
+        "type": "VP34-08-056",
+        "dim": "ø401/200,4-3,5/2,5/8,00",
+        "z": "10",
+        "angle": "15",
+        "antM": '6',
+        "art": "V-SH9120",
+        "nom": 25
+      },
+      "f2V": {
+        "navn": "Fres 2 segment venstre",
+        "type": "VP34-08-056",
+        "dim": "ø403/305-3,5/2,5/5,00",
+        "z": "8",
+        "angle": "10",
+        "antM": '4',
+        "art": "V-SH9125",
+        "nom": 25
+      },
+      "f3H": {
+        "navn": "Fres 3 segment høyre",
+        "type": "VP34-08-056",
+        "dim": "ø403/305-3,5/2,5/5,00",
+        "z": "10",
+        "angle": "15",
+        "antM": '6',
+        "art": "",
+        "nom": 25
+      },
+      "f3V": {
+        "navn": "Fres 3 segment venstre",
+        "type": "VP34-08-056",
+        "dim": "ø403/305-3,5/2,5/5,00",
+        "z": "8",
+        "angle": "10",
+        "antM": '4',
+        "art": "",
+        "nom": 25
+      },
 }
 
 
