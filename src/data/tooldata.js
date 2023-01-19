@@ -124,7 +124,7 @@ const tooldata = {
         "z": "96",
         "angle": "-5",
         "art": "V-SH0985",
-        "nom": 25
+        "nom": 60
       },
       "jvEndekapp": {
         "navn": "Kanefusa endekapp justerverk",
@@ -135,7 +135,7 @@ const tooldata = {
         "art": "V-SH0675",
         "nom": 5
       },
-      "rsTrimmer": {
+      "jvEksakt": {
         "navn": "Kanefusa eksakt justerverk",
         "type": "",
         "dim": "Ø400x3,5/2,5 ø30",

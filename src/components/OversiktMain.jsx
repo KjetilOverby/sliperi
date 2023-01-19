@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { MyContext } from "../contexts/MyContext";
+import tooldata from "../data/tooldata";
 
 const OversiktMain = ({
   wasteTab,
@@ -12,71 +13,71 @@ const OversiktMain = ({
   const { tabellLinckBlad, linckBlades } = useContext(MyContext);
   const nom = [
     {
-      ant: 20,
+      ant: `${tooldata.k22.nom}`,
       id: 1,
     },
     {
-      ant: 20,
+      ant: `${tooldata.k24.nom}`,
       id: 2,
     },
     {
-      ant: 65,
+      ant: `${tooldata.k26.nom}`,
       id: 3,
     },
     {
-      ant: 65,
+      ant: `${tooldata.k28.nom}`,
       id: 4,
     },
     {
-      ant: 30,
+      ant: `${tooldata.k30.nom}`,
       id: 5,
     },
     {
-      ant: 70,
+      ant: `${tooldata.k32.nom}`,
       id: 6,
     },
     {
-      ant: 25,
+      ant: `${tooldata.nBlad.nom}`,
       id: 7,
     },
     {
-      ant: 25,
+      ant: `${tooldata.vs66h.nom}`,
       id: 8,
     },
     {
-      ant: 25,
+      ant: `${tooldata.vs66hF.nom}`,
       id: 9,
     },
     {
-      ant: 25,
+      ant: `${tooldata.vs66v.nom}`,
       id: 10,
     },
     {
-      ant: 25,
+      ant: `${tooldata.vs66vF.nom}`,
       id: 11,
     },
     {
-      ant: 25,
+      ant: 0,
       id: 12,
     },
     {
-      ant: 25,
+      ant: 0,
       id: 13,
     },
     {
-      ant: 60,
+      ant: `${tooldata.jvTrimmer.nom}`,
       id: 14,
     },
     {
-      ant: 5,
+      ant: `${tooldata.jvEksakt.nom}`,
       id: 15,
     },
     {
-      ant: 5,
+      ant: `${tooldata.jvEndekapp.nom}`,
       id: 16,
     },
     {
-      ant: 15,
+      ant: `${tooldata.rsTrimmer.nom}`,
       id: 17,
     },
   ];
@@ -108,8 +109,7 @@ const OversiktMain = ({
                   return (
                     <p
                       key={item.id}
-                      className="tabell-text nom-single-container"
-                    >
+                      className="tabell-text nom-single-container">
                       {item.ant}
                     </p>
                   );
@@ -124,8 +124,7 @@ const OversiktMain = ({
                 return (
                   <div
                     key={item._id.type}
-                    className="container blade-container"
-                  >
+                    className="container blade-container">
                     <p className="type tabell-text">{item._id.type}</p>
                     <p className="tabell-text">{item.typeCount}</p>
                   </div>
@@ -139,8 +138,7 @@ const OversiktMain = ({
                 return (
                   <div
                     key={item._id.type}
-                    className="container blade-container"
-                  >
+                    className="container blade-container">
                     <p className="type tabell-text">{item._id.type}</p>
                     <p className="tabell-text">{item.typeCount}</p>
                   </div>
@@ -154,8 +152,7 @@ const OversiktMain = ({
                 return (
                   <div
                     key={item._id.type}
-                    className="container blade-container"
-                  >
+                    className="container blade-container">
                     <p className="type tabell-text">{item._id.type}</p>
                     <p className="tabell-text">{item.typeCount}</p>
                   </div>

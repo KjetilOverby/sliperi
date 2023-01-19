@@ -20,72 +20,78 @@ const StartPageMainComponent = () => {
           {tabellLinckBlad && tabellLinckBlad[0].typeCount < 15 && (
             <p className="bestill-tools">
               Art.nr: {tooldata.k22.art}, {tabellLinckBlad[0]._id.type},{" "}
-              {15 - tabellLinckBlad[0].typeCount}
+              {tooldata.k22.nom - tabellLinckBlad[0].typeCount}
               stk
             </p>
           )}
           {tabellLinckBlad && tabellLinckBlad[1].typeCount < 20 && (
             <p className="bestill-tools">
               Art.nr: {tooldata.k24.art}, {tabellLinckBlad[1]._id.type},{" "}
-              {20 - tabellLinckBlad[1].typeCount}
+              {tooldata.k24.nom - tabellLinckBlad[1].typeCount}
               stk
             </p>
           )}
           {tabellLinckBlad && tabellLinckBlad[2].typeCount < 65 && (
             <p className="bestill-tools">
               Art.nr: {tooldata.k26.art}, {tabellLinckBlad[2]._id.type},{" "}
-              {65 - tabellLinckBlad[2].typeCount}
+              {tooldata.k26.nom - tabellLinckBlad[2].typeCount}
               stk
             </p>
           )}
 
           {tabellLinckBlad && tabellLinckBlad[3].typeCount < 65 && (
             <p className="bestill-tools">
-              Art.nr: V-SH9496, {tabellLinckBlad[3]._id.type},{" "}
-              {65 - tabellLinckBlad[3].typeCount}
+              Art.nr: {tooldata.k28.art}, {tabellLinckBlad[3]._id.type},{" "}
+              {tooldata.k28.nom - tabellLinckBlad[3].typeCount}
               stk
             </p>
           )}
           {tabellLinckBlad && tabellLinckBlad[4].typeCount < 30 && (
             <p className="bestill-tools">
-              {tabellLinckBlad[4]._id.type}, {30 - tabellLinckBlad[4].typeCount}
+              Art.nr: {tooldata.k30.art}, {tabellLinckBlad[4]._id.type},{" "}
+              {tooldata.k30.nom - tabellLinckBlad[4].typeCount}
               stk
             </p>
           )}
           {tabellLinckBlad && tabellLinckBlad[5].typeCount < 70 && (
             <p className="bestill-tools">
-              {tabellLinckBlad[5]._id.type}, {70 - tabellLinckBlad[5].typeCount}
+              Art.nr: {tooldata.k32.art}, {tabellLinckBlad[5]._id.type},{" "}
+              {tooldata.k32.nom - tabellLinckBlad[5].typeCount}
               stk
             </p>
           )}
           {tabellLinckBlad && tabellLinckBlad[6].typeCount < 25 && (
             <p className="bestill-tools">
-              {tabellLinckBlad[6]._id.type}, {25 - tabellLinckBlad[6].typeCount}
+              Art.nr: {tooldata.nBlad.art}, {tabellLinckBlad[6]._id.type},{" "}
+              {tooldata.nBlad.nom - tabellLinckBlad[6].typeCount}
               stk
             </p>
           )}
           {tabellLinckBlad && tabellLinckBlad[7].typeCount < 25 && (
             <p className="bestill-tools">
-              {tabellLinckBlad[7]._id.type}, {25 - tabellLinckBlad[7].typeCount}
+              Art.nr: {tooldata.vs66h.art}, {tabellLinckBlad[7]._id.type},{" "}
+              {tooldata.vs66h.nom - tabellLinckBlad[7].typeCount}
               stk
             </p>
           )}
           {tabellLinckBlad && tabellLinckBlad[8].typeCount < 25 && (
             <p className="bestill-tools">
-              {tabellLinckBlad[8]._id.type}, {25 - tabellLinckBlad[8].typeCount}
+              Art.nr: {tooldata.vs66hF.art}, {tabellLinckBlad[8]._id.type},{" "}
+              {tooldata.vs66hF.nom - tabellLinckBlad[8].typeCount}
               stk
             </p>
           )}
           {tabellLinckBlad && tabellLinckBlad[9].typeCount < 25 && (
             <p className="bestill-tools">
-              {tabellLinckBlad[9]._id.type}, {25 - tabellLinckBlad[9].typeCount}
+              Art.nr: {tooldata.vs66v.art}, {tabellLinckBlad[9]._id.type},{" "}
+              {tooldata.vs66v.nom - tabellLinckBlad[9].typeCount}
               stk
             </p>
           )}
           {tabellLinckBlad && tabellLinckBlad[10].typeCount < 25 && (
             <p className="bestill-tools">
-              {tabellLinckBlad[10]._id.type},{" "}
-              {25 - tabellLinckBlad[10].typeCount}
+              Art.nr: {tooldata.vs66vF.art}, {tabellLinckBlad[10]._id.type},{" "}
+              {tooldata.vs66vF.nom - tabellLinckBlad[10].typeCount}
               stk
             </p>
           )}
@@ -97,29 +103,29 @@ const StartPageMainComponent = () => {
           )} */}
           {tabellLinckBlad && tabellLinckBlad[13].typeCount < 60 && (
             <p className="bestill-tools">
-              {tabellLinckBlad[13]._id.type},{" "}
-              {60 - tabellLinckBlad[13].typeCount}
+              Art.nr: {tooldata.jvTrimmer.art}, {tabellLinckBlad[13]._id.type},{" "}
+              {tooldata.jvTrimmer.nom - tabellLinckBlad[13].typeCount}
               stk
             </p>
           )}
           {tabellLinckBlad && tabellLinckBlad[14].typeCount < 5 && (
             <p className="bestill-tools">
-              {tabellLinckBlad[14]._id.type},{" "}
-              {5 - tabellLinckBlad[14].typeCount}
+              Art.nr: {tooldata.jvEksakt.art}, {tabellLinckBlad[14]._id.type},{" "}
+              {tooldata.jvEksakt.nom - tabellLinckBlad[14].typeCount}
               stk
             </p>
           )}
           {tabellLinckBlad && tabellLinckBlad[15].typeCount < 5 && (
             <p className="bestill-tools">
-              {tabellLinckBlad[15]._id.type},{" "}
-              {5 - tabellLinckBlad[15].typeCount}
+              Art.nr: {tooldata.jvEndekapp.art}, {tabellLinckBlad[15]._id.type},{" "}
+              {tooldata.jvEndekapp.nom - tabellLinckBlad[15].typeCount}
               stk
             </p>
           )}
           {tabellLinckBlad && tabellLinckBlad[16].typeCount < 10 && (
             <p className="bestill-tools">
-              {tabellLinckBlad[16]._id.type},{" "}
-              {15 - tabellLinckBlad[16].typeCount}
+              Art.nr: {tooldata.rsTrimmer.art}, {tabellLinckBlad[16]._id.type},{" "}
+              {tooldata.rsTrimmer.nom - tabellLinckBlad[16].typeCount}
               stk
             </p>
           )}
