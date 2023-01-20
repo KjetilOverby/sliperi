@@ -18,6 +18,7 @@ import eksakt from "../../../assets/sagblad/eksaktKappe.jpg";
 import endekapp from "../../../assets/sagblad/endekapp.jpg";
 import trimmerBord from "../../../assets/sagblad/trimmerBord.jpg";
 import VisualToolImageComponent from "../common/VisualToolImageComponent";
+import tooldata from "../../data/tooldata";
 
 const VisuellBladoversikt = () => {
   const { tabellLinckBlad } = useContext(MyContext);
@@ -37,7 +38,7 @@ const VisuellBladoversikt = () => {
             angle="25"
             dataName={tabellLinckBlad && tabellLinckBlad[0]._id.type}
             antall={tabellLinckBlad && tabellLinckBlad[0].typeCount}
-            art="V-SH9495"
+            art={tooldata.k22.art}
           />
           <VisualToolImageComponent
             img={mkv2}
@@ -48,7 +49,7 @@ const VisuellBladoversikt = () => {
             angle="25"
             dataName={tabellLinckBlad && tabellLinckBlad[1]._id.type}
             antall={tabellLinckBlad && tabellLinckBlad[1].typeCount}
-            art="V-SH9502"
+            art={tooldata.k24.art}
           />
           <VisualToolImageComponent
             img={mkv3}
@@ -59,7 +60,7 @@ const VisuellBladoversikt = () => {
             angle="25"
             dataName={tabellLinckBlad && tabellLinckBlad[2]._id.type}
             antall={tabellLinckBlad && tabellLinckBlad[2].typeCount}
-            art="V-SH9505"
+            art={tooldata.k26.art}
           />
           <VisualToolImageComponent
             img={mkv4}
@@ -70,7 +71,7 @@ const VisuellBladoversikt = () => {
             angle="25"
             dataName={tabellLinckBlad && tabellLinckBlad[3]._id.type}
             antall={tabellLinckBlad && tabellLinckBlad[3].typeCount}
-            art="V-SH9496"
+            art={tooldata.k28.art}
           />
           <VisualToolImageComponent
             img={mkv5}
@@ -81,6 +82,7 @@ const VisuellBladoversikt = () => {
             angle="25"
             dataName={tabellLinckBlad && tabellLinckBlad[4]._id.type}
             antall={tabellLinckBlad && tabellLinckBlad[4].typeCount}
+            art={tooldata.k30.art}
           />
           <VisualToolImageComponent
             img={mkv6}
@@ -91,6 +93,7 @@ const VisuellBladoversikt = () => {
             angle="25"
             dataName={tabellLinckBlad && tabellLinckBlad[5]._id.type}
             antall={tabellLinckBlad && tabellLinckBlad[5].typeCount}
+            art={tooldata.k32.art}
           />
         </div>
         <h1 className="visuell-header">VS-66 bordsag</h1>
@@ -105,6 +108,7 @@ const VisuellBladoversikt = () => {
             angle="25"
             dataName={tabellLinckBlad && tabellLinckBlad[6]._id.type}
             antall={tabellLinckBlad && tabellLinckBlad[6].typeCount}
+            art={tooldata.nBlad.art}
           />
           <VisualToolImageComponent
             img={vs66H}
@@ -115,6 +119,7 @@ const VisuellBladoversikt = () => {
             angle="25"
             dataName={tabellLinckBlad && tabellLinckBlad[7]._id.type}
             antall={tabellLinckBlad && tabellLinckBlad[7].typeCount}
+            art={tooldata.vs66h.art}
           />
           <VisualToolImageComponent
             img={vs66V}
@@ -125,6 +130,7 @@ const VisuellBladoversikt = () => {
             angle="25"
             dataName={tabellLinckBlad && tabellLinckBlad[8]._id.type}
             antall={tabellLinckBlad && tabellLinckBlad[8].typeCount}
+            art={tooldata.vs66v.art}
           />
           <VisualToolImageComponent
             img={vs66FlensH}
@@ -135,6 +141,7 @@ const VisuellBladoversikt = () => {
             angle="25"
             dataName={tabellLinckBlad && tabellLinckBlad[9]._id.type}
             antall={tabellLinckBlad && tabellLinckBlad[9].typeCount}
+            art={tooldata.vs66hF.art}
           />
           <VisualToolImageComponent
             img={vs66FlensV}
@@ -145,6 +152,7 @@ const VisuellBladoversikt = () => {
             angle="25"
             dataName={tabellLinckBlad && tabellLinckBlad[10]._id.type}
             antall={tabellLinckBlad && tabellLinckBlad[10].typeCount}
+            art={tooldata.vs66vF.art}
           />
           <VisualToolImageComponent
             img={nessjoH}
@@ -179,7 +187,7 @@ const VisuellBladoversikt = () => {
             angle="-5"
             dataName={tabellLinckBlad && tabellLinckBlad[13]._id.type}
             antall={tabellLinckBlad && tabellLinckBlad[13].typeCount}
-            art="V-SH0985"
+            art={tooldata.jvTrimmer.art}
           />
           <VisualToolImageComponent
             img={eksakt}
@@ -190,7 +198,7 @@ const VisuellBladoversikt = () => {
             angle="-5"
             dataName={tabellLinckBlad && tabellLinckBlad[14]._id.type}
             antall={tabellLinckBlad && tabellLinckBlad[14].typeCount}
-            art="V-SH4038"
+            art={tooldata.jvEksakt.art}
           />
           <VisualToolImageComponent
             img={endekapp}
@@ -201,7 +209,7 @@ const VisuellBladoversikt = () => {
             angle="10"
             dataName={tabellLinckBlad && tabellLinckBlad[15]._id.type}
             antall={tabellLinckBlad && tabellLinckBlad[15].typeCount}
-            art="V-SH0675"
+            art={tooldata.jvEndekapp.art}
           />
           <VisualToolImageComponent
             img={trimmerBord}
@@ -212,7 +220,7 @@ const VisuellBladoversikt = () => {
             angle="10"
             dataName={tabellLinckBlad && tabellLinckBlad[16]._id.type}
             antall={tabellLinckBlad && tabellLinckBlad[16].typeCount}
-            art="V-SH1008"
+            art={tooldata.rsTrimmer.art}
           />
         </div>
       </div>
