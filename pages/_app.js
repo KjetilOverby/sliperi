@@ -76,9 +76,9 @@ function MyApp({ Component, pageProps }) {
         console.log(error.response.body);
       }
     })();
-  }, []);
+  }, [linckUpdateDatabase]);
 
-  console.log(tabellLinckBlad);
+
 
   
 

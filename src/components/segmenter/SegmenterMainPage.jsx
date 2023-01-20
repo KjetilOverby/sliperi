@@ -12,6 +12,7 @@ import vp32SegmentV from "../../../assets/segmenter/vp32segmentV.jpg";
 import vp34SegmentSkrue from "../../../assets/segmenter/vp34segmentskrue.jpg";
 import vp48SegmentH from "../../../assets/segmenter/vp48segmentH.jpg";
 import vp48SegmentV from "../../../assets/segmenter/vp48segmentV.jpg";
+import tooldata from "../../data/tooldata";
 
 const SegmenterMainPage = () => {
   const { tools } = useContext(MyContext);
@@ -26,8 +27,8 @@ const SegmenterMainPage = () => {
           <ToolImageCard
             img={v40segmentH}
             title="Reduserersegment Høyre"
-            type=" V40-41-117-SV"
-            dim="ø854,2/698-4,5/3,5"
+            type={tooldata.redSegH.type}
+            dim={tooldata.redSegH.dim}
             antTenner="14"
             antMaskin="5"
             maskin="V40"
@@ -38,8 +39,8 @@ const SegmenterMainPage = () => {
           <ToolImageCard
             img={v40segmentV}
             title="Reduserersegment Venstre"
-            type=" V40-41-117-SV"
-            dim="ø854,2/698-4,5/3,5"
+            type={tooldata.redSegV.type}
+            dim={tooldata.redSegV.dim}
             antTenner="14"
             antMaskin="5"
             maskin="V40"
@@ -63,8 +64,8 @@ const SegmenterMainPage = () => {
           <ToolImageCard
             img={vpp32SegmentH}
             title="Fres 1/4 segment høyre"
-            type="VPS-28-053"
-            dim="ø401/200,4-3,5/2,5/8,00"
+            type={tooldata.f1a4SegH.type}
+            dim={tooldata.f1a4SegH.dim}
             antTenner="10"
             antMaskin="6"
             maskin=" VP34/VPP34"
@@ -75,8 +76,8 @@ const SegmenterMainPage = () => {
           <ToolImageCard
             img={vpp32SegmentV}
             title="Fres 1/4 segment venstre"
-            type="VPS-28-053"
-            dim="ø401/200,4-3,5/2,5/8,00"
+            type={tooldata.f1a4SegV.type}
+            dim={tooldata.f1a4SegV.dim}
             antTenner="10"
             antMaskin="6"
             maskin=" VP34/VPP34"
@@ -100,8 +101,8 @@ const SegmenterMainPage = () => {
           <ToolImageCard
             img={vp32SegmentH}
             title="Fres 2 segment høyre"
-            type="VP34-08-056"
-            dim="ø403/305-3,5/2,5/5,00"
+            type={tooldata.f2H.type}
+            dim={tooldata.f2H.dim}
             antTenner="8"
             antMaskin="4"
             maskin="VP34"
@@ -112,8 +113,8 @@ const SegmenterMainPage = () => {
           <ToolImageCard
             img={vp32SegmentV}
             title="Fres 2 segment venstre"
-            type="VP34-08-056"
-            dim="ø403/305-3,5/2,5/5,00"
+            type={tooldata.f2V.type}
+            dim={tooldata.f2V.dim}
             antTenner="8"
             antMaskin="4"
             maskin="VP34"
@@ -137,8 +138,8 @@ const SegmenterMainPage = () => {
           <ToolImageCard
             img={vp48SegmentH}
             title="Fres 3 segment høyre"
-            type="VP34-08-056"
-            dim="ø403/305-3,5/2,5/5,00"
+            type={tooldata.f3H.type}
+            dim={tooldata.f3H.dim}
             antTenner="8"
             antMaskin="4"
             maskin="VP48"
@@ -149,8 +150,8 @@ const SegmenterMainPage = () => {
           <ToolImageCard
             img={vp48SegmentV}
             title="Fres 3 segment venstre"
-            type="VP34-08-056"
-            dim="ø403/305-3,5/2,5/5,00"
+            type={tooldata.f3V.type}
+            dim={tooldata.f3V.dim}
             antTenner="8"
             antMaskin="4"
             maskin="VP48"

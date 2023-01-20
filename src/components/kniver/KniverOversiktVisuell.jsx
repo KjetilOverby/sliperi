@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { MyContext } from "../../contexts/MyContext";
+import tooldata from "../../data/tooldata";
 import ToolImageCard from "../common/ToolImageCard";
 import v40kniv from "../../../assets/kniver/v40kniv.jpg";
 import v40motsl from "../../../assets/kniver/v40motsl.jpg";
@@ -43,7 +44,7 @@ const KniverOversiktVisuell = () => {
             maskin="V40 (ZD1/ZD2)"
             dName={tools && tools[8].type}
             antall={tools && tools[8].antall}
-            art={tools && tools[8].art}
+            art={tooldata.redKniv.art}
           />
           <ToolImageCard
             img={v40motsl}
@@ -95,7 +96,7 @@ const KniverOversiktVisuell = () => {
             maskin="VP34/VPP34"
             dName={tools && tools[9].type}
             antall={tools && tools[9].antall}
-            art={tools && tools[9].art}
+            art={tooldata.f1a4Kniv.art}
           />
           <ToolImageCard
             img={vpp34holder}
@@ -156,7 +157,7 @@ const KniverOversiktVisuell = () => {
             maskin="VP34"
             dName={tools && tools[10].type}
             antall={tools && tools[10].antall}
-            art={tools && tools[10].art}
+            art={tooldata.f2a3Kniv.art}
           />
           <ToolImageCard
             img={vp34motst}
@@ -199,7 +200,7 @@ const KniverOversiktVisuell = () => {
             maskin="VP48"
             dName={tools && tools[11].type}
             antall={tools && tools[11].antall}
-            art={tools && tools[11].art}
+            art={tooldata.f3Kniv.art}
           />
           <ToolImageCard
             img={vp48motstH}
@@ -250,7 +251,7 @@ const KniverOversiktVisuell = () => {
             maskin="Bruks 820 CS"
             dName={tools && tools[12].type}
             antall={tools && tools[12].antall}
-            art={tools && tools[12].art}
+            art={tooldata.hugger.art}
           />
           <ToolImageCard
             img={bruksmotst15}

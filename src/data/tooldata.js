@@ -165,7 +165,7 @@ const tooldata = {
       },
       "redSegV": {
         "navn": "Reduserersegment venstre",
-        "type": "V40-41-117-SV",
+        "type": "V40-41-118-SV",
         "dim": "ø854,2/698-4,5/3,5",
         "z": "14",
         "angle": "19",
@@ -185,7 +185,7 @@ const tooldata = {
       },
       "f1a4SegV": {
         "navn": "Fres 1/4 segment venstre",
-        "type": "VPS-28-053",
+        "type": "VPS-28-052",
         "dim": "ø401/200,4-3,5/2,5/8,00",
         "z": "10",
         "angle": "15",
@@ -215,8 +215,8 @@ const tooldata = {
       },
       "f3H": {
         "navn": "Fres 3 segment høyre",
-        "type": "VP34-08-056",
-        "dim": "ø403/305-3,5/2,5/5,00",
+        "type": "VP48-08-008A",
+        "dim": "ø412/ø96-4,0/3,0/5,0",
         "z": "10",
         "angle": "15",
         "antM": '6',
@@ -225,8 +225,8 @@ const tooldata = {
       },
       "f3V": {
         "navn": "Fres 3 segment venstre",
-        "type": "VP34-08-056",
-        "dim": "ø403/305-3,5/2,5/5,00",
+        "type": "VP48-08-007A",
+        "dim": "ø412/ø96-4,0/3,0/5,0",
         "z": "8",
         "angle": "10",
         "antM": '4',
