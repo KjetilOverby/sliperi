@@ -173,7 +173,7 @@ const tooldata = {
         "art": "V-SM0955",
         "nom": 60
       },
-      "f1-4H": {
+      "f1a4SegH": {
         "navn": "Fres 1/4 segment høyre",
         "type": "VPS-28-053",
         "dim": "ø401/200,4-3,5/2,5/8,00",
@@ -183,7 +183,7 @@ const tooldata = {
         "art": "V-SM1010",
         "nom": 65
       },
-      "f1-4V": {
+      "f1a4SegV": {
         "navn": "Fres 1/4 segment venstre",
         "type": "VPS-28-053",
         "dim": "ø401/200,4-3,5/2,5/8,00",
@@ -232,6 +232,56 @@ const tooldata = {
         "antM": '4',
         "art": "",
         "nom": 25
+      },
+      "redKniv": {
+        "navn": "Reduser kniv V40",
+        "type": "V25-24-054",
+        "dim": "92x105x12mm H945",
+        "z": "",
+        "angle": "32",
+        "antM": '30',
+        "art": "V-KP1015",
+        "nom": 180
+      },
+      "f1a4Kniv": {
+        "navn": "Fres 1/4 kniv",
+        "type": "VP34/VPP34",
+        "dim": "41x105x8mm",
+        "z": "",
+        "angle": "31",
+        "antM": '48',
+        "art": "V-KP1018",
+        "nom": 240
+      },
+      "f2a3Kniv": {
+        "navn": "Fres 2/3 kniv (horizontal)",
+        "type": "",
+        "dim": "120x95x10mm",
+        "z": "",
+        "angle": "32",
+        "antM": '8',
+        "art": "V-KP1040",
+        "nom": 40
+      },
+      "f3Kniv": {
+        "navn": "Fres 3 kniv (vertical)",
+        "type": "VP48-08-037",
+        "dim": "50x100x10mm",
+        "z": "",
+        "angle": "32",
+        "antM": '8',
+        "art": "",
+        "nom": 30
+      },
+      "hugger": {
+        "navn": "Bruks 820 CS hugger",
+        "type": "",
+        "dim": "575x185x15/16mm 6-214,2/332",
+        "z": "",
+        "angle": "32",
+        "antM": '2',
+        "art": "V-KH5300",
+        "nom": 18
       },
 }
 

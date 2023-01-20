@@ -1,60 +1,61 @@
 import React, { useContext } from "react";
 import { MyContext } from "../../contexts/MyContext";
+import tooldata from "../../data/tooldata";
 
 const VerktoyOversikt = () => {
   const { tools, toolsDeleted, toolsNew } = useContext(MyContext);
 
   const nom = [
     {
-      ant: 60,
+      ant: `${tooldata.redSegH.nom}`,
       id: 1,
     },
     {
-      ant: 60,
+      ant: `${tooldata.redSegV.nom}`,
       id: 2,
     },
     {
-      ant: 65,
+      ant: `${tooldata.f1a4SegH.nom}`,
       id: 3,
     },
     {
-      ant: 65,
+      ant: `${tooldata.f1a4SegV.nom}`,
       id: 4,
     },
     {
-      ant: 25,
+      ant: `${tooldata.f2H.nom}`,
       id: 5,
     },
     {
-      ant: 25,
+      ant: `${tooldata.f2V.nom}`,
       id: 6,
     },
     {
-      ant: 25,
+      ant: `${tooldata.f3H.nom}`,
       id: 7,
     },
     {
-      ant: 25,
+      ant: `${tooldata.f3V.nom}`,
       id: 8,
     },
     {
-      ant: 180,
+      ant: `${tooldata.redKniv.nom}`,
       id: 9,
     },
     {
-      ant: 240,
+      ant: `${tooldata.f1a4Kniv.nom}`,
       id: 10,
     },
     {
-      ant: 40,
+      ant: `${tooldata.f2a3Kniv.nom}`,
       id: 11,
     },
     {
-      ant: 30,
+      ant: `${tooldata.f3Kniv.nom}`,
       id: 12,
     },
     {
-      ant: 16,
+      ant: `${tooldata.hugger.nom}`,
       id: 13,
     },
   ];
@@ -73,8 +74,7 @@ const VerktoyOversikt = () => {
                   return (
                     <div
                       key={tool.type}
-                      className="tool-container blade-container"
-                    >
+                      className="tool-container blade-container">
                       <p className="type">{tool.type}</p>
                       <p className="number">{tool.antall}</p>
                     </div>
