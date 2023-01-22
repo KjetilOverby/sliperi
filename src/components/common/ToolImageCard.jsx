@@ -19,7 +19,7 @@ const ToolImageCard = ({
         <Image src={img} alt="" />
         <h1 className="card-header">{title}</h1>
         {type && <p className="text">Type: {type}</p>}
-        <p className="text">{dim}</p>
+        <p className="text">Dimensjon: {dim}</p>
         {antTenner && <p className="text">Antall tenner: {antTenner}</p>}
         {antMaskin && <p className="text">Antall i maskin: {antMaskin}</p>}
         {maskin && <p className="text">Maskin: {maskin}</p>}

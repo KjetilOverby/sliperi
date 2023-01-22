@@ -228,8 +228,10 @@ const VisuellBladoversikt = () => {
         {`
           .container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-            grid-gap: 4rem;
+            grid-template-columns: repeat(auto-fit, minmax(22rem, 22rem));
+            grid-gap: 2rem;
+            align-items: left;
+            margin-bottom: 4rem;
           }
           .visuell-header {
             margin: 2rem 0;
