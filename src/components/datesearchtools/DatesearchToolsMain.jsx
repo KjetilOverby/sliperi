@@ -97,6 +97,8 @@ const DatesearchToolsMain = ({
       setMonthConvert2("desember");
     }
   }, [endDate]);
+
+  console.log(redSegmentV);
   return (
     <>
       <div className="content-container">
@@ -116,76 +118,76 @@ const DatesearchToolsMain = ({
         <div></div>
         <h4 className="mb">Antall vrak:</h4>
         <div>
-          {redSegmentH < 0 && (
+          {redSegmentH > 0 && (
             <p className="blade-container">
               <span className="span">{Math.abs(redSegmentH)}</span> Reduserer
               segment høyre
             </p>
           )}
-          {redSegmentV < 0 && (
+          {redSegmentV > 0 && (
             <p className="blade-container">
               <span className="span">{Math.abs(redSegmentV)}</span> Reduserer
               segment venstre
             </p>
           )}
-          {vpp34SegH < 0 && (
+          {vpp34SegH > 0 && (
             <p className="blade-container">
               <span className="span">{Math.abs(vpp34SegH)}</span> Fres 1/4
               segment høyre
             </p>
           )}
-          {vpp34SegV < 0 && (
+          {vpp34SegV > 0 && (
             <p className="blade-container">
               <span className="span">{Math.abs(vpp34SegV)}</span> Fres 1/4
               segment venstre
             </p>
           )}
-          {vp34SegH < 0 && (
+          {vp34SegH > 0 && (
             <p className="blade-container">
               <span className="span">{Math.abs(vp34SegH)}</span> Fres 2 segment
               høyre
             </p>
           )}
-          {vp34SegV < 0 && (
+          {vp34SegV > 0 && (
             <p className="blade-container">
               <span className="span">{Math.abs(vp34SegV)}</span> Fres 2 segment
               venstre
             </p>
           )}
-          {vp48segH < 0 && (
+          {vp48segH > 0 && (
             <p className="blade-container">
               <span className="span">{Math.abs(vp48segH)}</span> Fres 3 segment
               høyre
             </p>
           )}
-          {vp48segV < 0 && (
+          {vp48segV > 0 && (
             <p className="blade-container">
               <span className="span">{Math.abs(vp48segV)}</span> Fres 3 segment
               venstre
             </p>
           )}
-          {reduserKniv < 0 && (
+          {reduserKniv > 0 && (
             <p className="blade-container">
               <span className="span">{Math.abs(reduserKniv)}</span> Reduserer
               kniv
             </p>
           )}
-          {vpp34Kniv < 0 && (
+          {vpp34Kniv > 0 && (
             <p className="blade-container">
               <span className="span">{Math.abs(vpp34Kniv)}</span> Fres 1/4 kniv
             </p>
           )}
-          {vp34Kniv < 0 && (
+          {vp34Kniv > 0 && (
             <p className="blade-container">
               <span className="span">{Math.abs(vp34Kniv)}</span> Fres 2/3 kniv
             </p>
           )}
-          {vp48Kniv < 0 && (
+          {vp48Kniv > 0 && (
             <p className="blade-container">
               <span className="span">{Math.abs(vp48Kniv)}</span> Fres 3 kniv
             </p>
           )}
-          {bruksKniv < 0 && (
+          {bruksKniv > 0 && (
             <p className="blade-container">
               <span className="span">{Math.abs(bruksKniv)}</span>
               Hugger/stikkhugger kniv

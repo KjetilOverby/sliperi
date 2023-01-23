@@ -279,8 +279,6 @@ const Datesearchtools = () => {
     }
   }, [datePickerNew]);
 
-  console.log(datePickerNew);
-
   useEffect(() => {
     if (getVp34KnivNew || getVpp34KnivNew) {
       setRedSegmentHNew(

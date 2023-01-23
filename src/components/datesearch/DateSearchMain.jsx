@@ -117,6 +117,10 @@ const DateSearchMain = ({
     }
   }, [wasteCount, newCount, serviceCount]);
 
+  console.log(datePickerWaste);
+  console.log(datePickerService);
+  console.log(datePickerNew);
+
   return (
     <>
       <div className="content-container">
