@@ -146,7 +146,7 @@ const NewBladesMain = () => {
           actionBtn={deleteCreatedBladeHandler}
         />
       )}
-      <div className="content-container">
+      <div className="content-container main-container">
         <h1 className="header mb">Legg til nye blad</h1>
         <div className="addblades-container">
           {user && user.sub === process.env.USER_SUB ? (
@@ -157,11 +157,13 @@ const NewBladesMain = () => {
               onSubmit={onSubmit}
             />
           ) : (
-            <h3>Logg inn for å legge til nye blad</h3>
+            <h3 className="loggIn">Logg inn for å legge til nye blad</h3>
           )}
         </div>
         <div className="newblades-main-container">
-          <p className="mb">Antall nye blad: {newBlades && newBlades.length}</p>
+          <p className="mb text">
+            Antall nye blad: {newBlades && newBlades.length}
+          </p>
           {newBlades &&
             newBlades.map((item) => {
               const openDeleteNewbladesHandler = () => {
@@ -194,7 +196,8 @@ const NewBladesMain = () => {
           .addblades-container {
             width: 20rem;
           }
-          .container {
+          .main-container {
+            background: var(--secondary);
           }
           .newblade-container {
             display: flex;
@@ -215,6 +218,12 @@ const NewBladesMain = () => {
           }
           .date {
             margin-left: 1rem;
+          }
+          .text {
+            color: var(--middle);
+          }
+          .loggIn {
+            color: var(--text2);
           }
         `}
       </style>

@@ -133,14 +133,12 @@ const LinckCards = ({
             </div>
             <div
               onClick={openRetipModalHandler}
-              className="icon-container retip-btn-container"
-            >
+              className="icon-container retip-btn-container">
               <BsArrowRepeat style={{ fontSize: "1.2rem" }} />
             </div>
             <div
               onClick={openDeleteModalHandler}
-              className="icon-container delete-container"
-            >
+              className="icon-container delete-container">
               <RiDeleteBin6Line style={{ fontSize: "1.2rem" }} />
             </div>
           </div>
@@ -160,7 +158,7 @@ const LinckCards = ({
               "middle middle ."
               "bottom bottom ."
               "comment comment .";
-            background: var(--middle);
+            background: var(--primary);
           }
           .container:hover {
             cursor: pointer
@@ -266,13 +264,13 @@ const LinckCards = ({
             margin: 1rem 0;
           }
           .retip-text {
-            color: var(--primary);
+            color: var(--text2);
             font-style: italic;
             font-size: 0.9rem;
           }
           .serial {
             margin: 0 0.5rem 0 0;
-            color: var(--primary);
+            color: var(--middle);
           }
           .type {
             margin: 0;

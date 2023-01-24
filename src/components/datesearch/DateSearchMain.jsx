@@ -117,13 +117,13 @@ const DateSearchMain = ({
     }
   }, [wasteCount, newCount, serviceCount]);
 
-  console.log(datePickerWaste);
+  /* console.log(datePickerWaste);
   console.log(datePickerService);
-  console.log(datePickerNew);
+  console.log(datePickerNew); */
 
   return (
     <>
-      <div className="content-container">
+      <div className="content-container main-container">
         <h1 className="header mb">Søk på dato</h1>
         <div className="date-picker-container">
           <DatePicker
@@ -207,11 +207,14 @@ const DateSearchMain = ({
           .date-picker-container {
             background-image: linear-gradient(
               120deg,
-              var(--primary) 0%,
-              var(--text) 100%
+              var(--secondary) 0%,
+              var(--secondary) 100%
             );
             padding: 2rem;
             border-radius: 10px;
+          }
+          .main-container {
+            background: var(--secondary);
           }
           .duration-text {
             color: var(--primary);

@@ -22,7 +22,7 @@ const SideBar = () => {
   const [activate10, setActivate10] = useState();
   const [activate11, setActivate11] = useState();
   const [activate12, setActivate12] = useState();
-  const [activateAnimate, setActivateAnimate] = useState();
+  const [activateStats, setActivateStats] = useState();
   const [activateHeader, setActivateHeader] = useState();
   const [activateFooter, setActivateFooter] = useState();
   const router = useRouter();
@@ -69,6 +69,8 @@ const SideBar = () => {
       setActivate11("tab-active");
     } else if (router.pathname === "/slipemaskinhistorikk") {
       setActivate12("tab-active");
+    } else if (router.pathname === "/statistikk") {
+      setActivateStats("tab-active");
     }
   }, []);
   return (
@@ -81,8 +83,7 @@ const SideBar = () => {
       {openSidebar && isMobile && (
         <div
           onClick={openSidebarHandler}
-          className="menu-invisible-container"
-        ></div>
+          className="menu-invisible-container"></div>
       )}
       <div className={`container ${container}`}>
         <Link href="/">
@@ -126,6 +127,11 @@ const SideBar = () => {
 
         <Link href="/knivoversiktvisuell">
           <p className={`section-tab ${activate6}`}>Bilder Kniver og Motstål</p>
+        </Link>
+
+        <h4 className="section-header">Statistikk</h4>
+        <Link href="/statistikk">
+          <p className={`section-tab ${activateStats}`}>Årlig statistikk</p>
         </Link>
 
         {user && user.sub === process.env.USER_SUB && (

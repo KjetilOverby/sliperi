@@ -101,7 +101,7 @@ const DatesearchToolsMain = ({
   console.log(redSegmentV);
   return (
     <>
-      <div className="content-container">
+      <div className="content-container main-container">
         <h1 className="header mb">Søk på dato i kniver og segmenter</h1>
         <div className="date-picker-container">
           <DatePicker
@@ -283,13 +283,15 @@ const DatesearchToolsMain = ({
           .date-picker-container {
             background-image: linear-gradient(
               to right,
-              var(--primary) 0%,
-              var(--middle) 0%,
-              var(--text2) 100%
+              var(--secondary) 0%,
+              var(--secondary) 0%
             );
             padding: 2rem;
             margin-bottom: 3rem;
             border-radius: 10px;
+          }
+          .main-container {
+            background: var(--secondary);
           }
           .span {
             width: 2rem;
