@@ -38,10 +38,12 @@ const ShortButtons = ({ title, text, icon, link }) => {
           .title {
             color: var(--text);
             font-weight: 300;
+            font-size: 0.8rem;
           }
           .text {
             color: var(--text);
             font-weight: 300;
+            font-size: 0.8rem;
           }
         `}
       </style>

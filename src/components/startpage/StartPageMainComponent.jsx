@@ -15,6 +15,8 @@ const StartPageMainComponent = () => {
   return (
     <>
       <div className="content-container main-container">
+        <h1 className="header main-header">Verktøyregister</h1>
+
         <div className="bestill-container">
           <p className="bestill-header">Må bestilles:</p>
           {tabellLinckBlad && tabellLinckBlad[0].typeCount < 15 && (
@@ -208,7 +210,6 @@ const StartPageMainComponent = () => {
             </p>
           )}
         </div>
-        <h1 className="header main-header">Verktøyregister</h1>
 
         <div className="btn-container">
           <ShortButtons
@@ -248,17 +249,20 @@ const StartPageMainComponent = () => {
             flex-wrap: wrap;
           }
           .bestill-container {
-            position: absolute;
-            left: 16rem;
-            top: 1rem;
             color: white;
+            background: var(--primary);
+            padding: 3rem;
+            border-radius: 15px;
           }
           .bestill-header {
             font-style: italic;
             font-size: 0.8rem;
+            margin-bottom: 1rem;
+            color: var(--text2);
           }
           .bestill-tools {
             font-size: 0.8rem;
+            color: var(--middle);
           }
           .main-container {
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -270,7 +274,7 @@ const StartPageMainComponent = () => {
           }
           .main-header {
             color: var(--text);
-            font-size: 6rem;
+            font-size: 3rem;
           }
           @media only screen and (max-width: 1000px) {
             .btn-container {
