@@ -221,16 +221,17 @@ const SideBar = () => {
         }
         .section-tab:hover {
           cursor: pointer;
+          z-index: 10000;
         }
         .tab-active::before {
           content: "🁢 ";
           position: absolute;
           left: 0;
-          background: var(--middle);
-          color: var(--middle);
+          background: var(--secondary);
+          color: var(--secondary);
           width: 15rem;
           height: 3rem;
-          opacity: 0.4;
+          z-index: -1;
         }
 
         @keyframes openContainer {
