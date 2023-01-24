@@ -376,11 +376,7 @@ const stats = [
       {
         type: "Fres 1/4 kniv",
         ant: 190,
-        /*    
-          
-           
-            "redK": 122,
-            "bruks": 2 */
+     
       },
       {
         type: "Fres 1/4 segment høyre",
