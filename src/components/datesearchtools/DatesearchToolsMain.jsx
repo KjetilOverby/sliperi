@@ -102,7 +102,9 @@ const DatesearchToolsMain = ({
   return (
     <>
       <div className="content-container main-container">
-        <h1 className="header mb">Søk på dato i kniver og segmenter</h1>
+        <h1 className="header mb search-header">
+          Søk på dato i kniver og segmenter
+        </h1>
         <div className="date-picker-container">
           <DatePicker
             setStartDate={setStartDate}
@@ -292,9 +294,13 @@ const DatesearchToolsMain = ({
           }
           .main-container {
             background: var(--secondary);
+            color: var(--middle);
           }
           .span {
             width: 2rem;
+          }
+          .search-header {
+            color: var(--middle);
           }
         `}
       </style>

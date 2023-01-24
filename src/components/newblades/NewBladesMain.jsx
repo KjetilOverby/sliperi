@@ -134,7 +134,7 @@ const NewBladesMain = () => {
 
   return (
     <>
-      {openDeleteModal && (
+      {openDeleteModal && user && user.sub === process.env.USER_SUB && (
         <ModalComponentEdit
           cancel={setOpenDeleteModal}
           title="Slette "
