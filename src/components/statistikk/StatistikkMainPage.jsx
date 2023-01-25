@@ -8,13 +8,13 @@ const StatistikkMainPage = () => {
         <h1 className="stat-header">Statistikk årlig</h1>
         {stats.map((item) => {
           return (
-            <div className="year-container">
+            <div key={item.year} className="year-container">
               <div>
                 <h4>{item.year}</h4>
                 <p className="sub-header">Vrak ({item.allVrk}):</p>
                 {item.vrkList.map((item) => {
                   return (
-                    <div className="tool-text-container">
+                    <div key={item.typeCount} className="tool-text-container">
                       <p className="tool-text count">{item.typeCount}</p>
                       <p className="tool-text type">{item._id.type}</p>
                     </div>
@@ -26,7 +26,7 @@ const StatistikkMainPage = () => {
                 <p className="sub-header">Service ({item.allSrv}):</p>
                 {item.srvList.map((item) => {
                   return (
-                    <div className="tool-text-container">
+                    <div key={item.typeCount} className="tool-text-container">
                       <p className="tool-text count">{item.typeCount}</p>
                       <p className="tool-text type">{item._id.type}</p>
                     </div>
@@ -38,7 +38,7 @@ const StatistikkMainPage = () => {
                 <p className="sub-header">Nye blad ({item.allNew}):</p>
                 {item.newList.map((item) => {
                   return (
-                    <div className="tool-text-container">
+                    <div key={item.typeCount} className="tool-text-container">
                       <p className="tool-text count">{item.typeCount}</p>
                       <p className="tool-text type">{item._id.type}</p>
                     </div>
@@ -50,7 +50,7 @@ const StatistikkMainPage = () => {
                 <p className="sub-header">Vrak segmenter og kniver:</p>
                 {item.toolsVrak.map((item) => {
                   return (
-                    <div className="tool-text-container">
+                    <div key={item.typeCount} className="tool-text-container">
                       <p className="tool-text count">{item.ant}</p>
                       <p className="tool-text type">{item.type}</p>
                     </div>
@@ -62,7 +62,7 @@ const StatistikkMainPage = () => {
                 <p className="sub-header">Nye segmenter og kniver:</p>
                 {item.toolsNew.map((item) => {
                   return (
-                    <div className="tool-text-container">
+                    <div key={item.typeCount} className="tool-text-container">
                       <p className="tool-text count">{item.ant}</p>
                       <p className="tool-text type">{item.type}</p>
                     </div>
