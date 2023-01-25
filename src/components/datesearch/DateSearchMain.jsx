@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import DatePicker from "./DatePicker";
 import DatePickerListComponent from "./DatePickerListComponent";
+import dateFormat, { masks } from "dateformat";
 
 const DateSearchMain = ({
   setStartDate,
@@ -180,11 +181,23 @@ const DateSearchMain = ({
             commentsByDate.map((item) => {
               return (
                 <div key={item.comment} className="comment-container">
-                  <p>
+                  <p className="type">
                     {item.serial} {item.type}
                   </p>
-                  <p>{item.comment.map((com) => com)}</p>
-                  <p>{item.commentDate.map((comd) => comd)}</p>
+                  <div className="comment-sub-container">
+                    <div className="comment">
+                      {item.commentDate.map((comd) => (
+                        <p>{comd}</p>
+                      ))}
+                    </div>
+                    <div className="s-comment">
+                      <div className="comment">
+                        {item.comment.map((com) => (
+                          <p>{com}</p>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
                 </div>
               );
             })}
@@ -203,6 +216,19 @@ const DateSearchMain = ({
           }
           .comment-container {
             padding: 1rem;
+            margin-bottom: 1rem;
+          }
+          .comment-sub-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(13rem, 18rem));
+          }
+          .comment {
+            color: var(--text2);
+            font-size: 0.8rem;
+            font-style: italic;
+            display: inline-block;
+          }
+          .s-comment {
           }
           .date-picker-container {
             background-image: linear-gradient(
@@ -224,6 +250,10 @@ const DateSearchMain = ({
             color: darkblue;
             font-size: 1.2rem;
             font-weight: 600;
+          }
+          .type {
+            color: var(--middle);
+            font-size: 0.8rem;
           }
         `}
       </style>
