@@ -187,13 +187,13 @@ const DateSearchMain = ({
                   <div className="comment-sub-container">
                     <div className="comment">
                       {item.commentDate.map((comd) => (
-                        <p>{comd}</p>
+                        <p key={comd}>{comd}</p>
                       ))}
                     </div>
                     <div className="s-comment">
                       <div className="comment">
                         {item.comment.map((com) => (
-                          <p>{com}</p>
+                          <p key={com}>{com}</p>
                         ))}
                       </div>
                     </div>

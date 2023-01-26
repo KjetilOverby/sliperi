@@ -43,6 +43,7 @@ const Datesearch = () => {
         console.log(error);
       }
     })();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [startDate, endDate]);
 
   useEffect(() => {
@@ -66,6 +67,7 @@ const Datesearch = () => {
         console.log(error);
       }
     })();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [startDate, endDate]);
 
   useEffect(() => {
@@ -86,6 +88,7 @@ const Datesearch = () => {
         console.log(error);
       }
     })();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [startDate, endDate]);
 
   const [commentsByDate, setCommentsByDate] = useState();
@@ -112,6 +115,7 @@ const Datesearch = () => {
         console.log(error);
       }
     })();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [startDate, endDate]);
 
   return (
