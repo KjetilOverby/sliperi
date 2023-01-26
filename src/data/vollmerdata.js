@@ -95,6 +95,20 @@ const vollmer = [
     img7: "https://lh3.googleusercontent.com/pw/AL9nZEUtt9IS7RFkZMvBFOiXecGPxa8T-FrDdj8e6N4FQSbMQ2PkTTNpl22QEExApaaTbu226UgDNbzuiqCd0YBK5g4yKmbpyj-Akvr3jem9PjdtFso6XzLClETB5HEDx-X0Ksh-b-aVQ0BWamPG2HcLN1ZZ=w1024-h768-no?authuser=0",
     tag: "Service",
   },
+  {
+    date: "26.09.2022",
+    title: "Olje oppsamlingsunderlag ankommet",
+    
+    img: "https://lh3.googleusercontent.com/pw/AMWts8Asbm53xxVluvbOaskHCVfFjywToANRqQZTgqf6p_Q66gpK2XaHzgxtU_vlpDmxdJdBRB8m6O8VBvKbZ2IBP2oUjwUD_5MoWYWiy-FVBgPQdl8VYTIfVesovaQGtQI7kgDMvKi3SX9PvZ6aP7xZQUcK=w800-h600-no?authuser=0",
+    tag: "Annet",
+  },
+  {
+    date: "05.01.2023",
+    title: "Montering underlag til slipemaskinen",
+    description: "Tor Engebretsen, Dag Olav Midtsunstad og Kjetil Øverby setter den på plass. Tor får også på plass flexirør fra avsug på slipemaskinen så vi får lufta fra slipemaskinen ut av rommet. Det ble mye bedre luft på sliperiet etter det.",
+    img: "https://lh3.googleusercontent.com/pw/AMWts8BoEVuSnJueuClUmCyXdPJT-vB32c5swGu2P_058OOJ39MICLC0YZgVZHHh4475617i8CDEPgl4yr1Ay7G_HArxYj_5FEkOCMTON3wK1A3xJATaNe4Hiid3ZQQatWyxkeluSbONU8a_Mu11vxI_23ed=w800-h600-no?authuser=0",
+    tag: "Annet",
+  },
 ];
 
 export default vollmer;
