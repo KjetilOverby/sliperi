@@ -20,11 +20,11 @@ const VisualToolImageComponent = ({
           <h3 className="card-header">{title}</h3>
           <p className="text">Type: {type}</p>
           <p className="text">Dimmensjon: {dim}</p>
-          <p className="text">Antall tenner: {zAnt}</p>
-          <p className="text">Brystvinkel: {angle} grader</p>
-          <p className="text">Antall lager: {antall} stk</p>
-          <p className="text">Datanavn: {dataName}</p>
-          <p className="text">Art. nr: {art}</p>
+          {zAnt && <p className="text">Antall tenner: {zAnt}</p>}
+          {angle && <p className="text">Brystvinkel: {angle} grader</p>}
+          {antall && <p className="text">Antall lager: {antall} stk</p>}
+          {dataName && <p className="text">Datanavn: {dataName}</p>}
+          {art && <p className="text">Art. nr: {art}</p>}
         </div>
       </div>
       <style jsx>

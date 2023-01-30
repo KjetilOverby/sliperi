@@ -174,6 +174,46 @@ const VisuellBladoversikt = () => {
             dataName={tabellLinckBlad && tabellLinckBlad[12]._id.type}
             antall={tabellLinckBlad && tabellLinckBlad[12].typeCount}
           />
+          <VisualToolImageComponent
+            img={nessjoV}
+            title="Skrue for feste av blad"
+            type=""
+            dim="M8x20 5mm unbrako senk"
+            zAnt=""
+            angle=""
+            dataName=""
+            antall=""
+          />
+          <VisualToolImageComponent
+            img={nessjoV}
+            title="Bolt for flensblad"
+            type=""
+            dim="M12x180 8mm unbrako senk"
+            zAnt=""
+            angle=""
+            dataName=""
+            antall=""
+          />
+          <VisualToolImageComponent
+            img={nessjoV}
+            title="Bolt for enkeltblad indre ring"
+            type=""
+            dim="M12x160 10mm unbrako"
+            zAnt=""
+            angle=""
+            dataName=""
+            antall=""
+          />
+          <VisualToolImageComponent
+            img={nessjoV}
+            title="Mutter"
+            type=""
+            dim="M12 19mm sekskant"
+            zAnt=""
+            angle=""
+            dataName=""
+            antall=""
+          />
         </div>
         <h1 className="visuell-header">Trimmer Justerverk/råsortering</h1>
         <hr />
