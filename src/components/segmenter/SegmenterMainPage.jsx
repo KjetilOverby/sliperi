@@ -49,6 +49,15 @@ const SegmenterMainPage = () => {
             art={tools && tools[1].art}
           />
           <ToolImageCard
+            img={vp34SegmentSkrue}
+            title="Skrue til distansekloss"
+            type=""
+            dim="M8x16 5mm unbraco senk"
+            antTenner=""
+            antMaskin="160"
+            maskin=" V40"
+          />
+          <ToolImageCard
             img={v40segmentBolt}
             title="Bolt til V40 segmenter"
             type=""
@@ -126,7 +135,7 @@ const SegmenterMainPage = () => {
             img={vp34SegmentSkrue}
             title="Skrue til fres2 segmenter"
             type=""
-            dim="M10x20 6mm unbraco"
+            dim="M10x20 6mm unbraco senk"
             antTenner=""
             antMaskin="32"
             maskin=" VP34"
@@ -163,7 +172,7 @@ const SegmenterMainPage = () => {
             img={vp34SegmentSkrue}
             title="Skrue til fres 3 segmenter"
             type=""
-            dim="M10x20 6mm unbraco"
+            dim="M10x20 6mm unbraco senk"
             antTenner=""
             antMaskin="32"
             maskin=" VP48"

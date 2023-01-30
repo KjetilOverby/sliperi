@@ -127,8 +127,17 @@ const KniverOversiktVisuell = () => {
           />
           <ToolImageCard
             img={vpp34Bolt}
+            title="Skruer for motstål"
+            type=""
+            dim="M8x20 6mm unbraco, lavt hode"
+            antTenner=""
+            antMaskin="96"
+            maskin="VP34"
+          />
+          <ToolImageCard
+            img={vpp34Bolt}
             title="Bolt"
-            type="Unbraco 17mm lavt hode"
+            type="M20x60 Unbraco 17mm lavt hode"
             dim="M20x60"
             antTenner=""
             antMaskin="48"
@@ -171,8 +180,8 @@ const KniverOversiktVisuell = () => {
           <ToolImageCard
             img={vp34Bolt}
             title="Bolt"
-            type="Unbraco 12mm lavt hode"
-            dim="M16x45"
+            type=""
+            dim="M16x45 Unbraco 14mm lavt hode"
             antTenner=""
             antMaskin="16"
             maskin="VP34"
@@ -220,11 +229,12 @@ const KniverOversiktVisuell = () => {
             antMaskin="16"
             maskin="VP34"
           />
+
           <ToolImageCard
             img={vp34Bolt}
             title="Bolt"
-            type="Unbraco 12mm lavt hode"
-            dim="M16x45"
+            type=""
+            dim="M16x45 Unbraco 14mm lavt hode"
             antTenner=""
             antMaskin="16"
             maskin="VP48"
