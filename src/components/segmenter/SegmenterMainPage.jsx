@@ -49,6 +49,30 @@ const SegmenterMainPage = () => {
             art={tools && tools[1].art}
           />
           <ToolImageCard
+            img={v40segmentV}
+            title="Distansekloss høyre"
+            type="V40-41-115"
+            dim=""
+            antTenner=""
+            antMaskin="10"
+            maskin="V40"
+            dName=""
+            antall=""
+            art=""
+          />
+          <ToolImageCard
+            img={v40segmentV}
+            title="Distansekloss Venstre"
+            type="V40-41-116"
+            dim=""
+            antTenner=""
+            antMaskin="10"
+            maskin="V40"
+            dName=""
+            antall=""
+            art=""
+          />
+          <ToolImageCard
             img={vp34SegmentSkrue}
             title="Skrue til distansekloss"
             type=""
