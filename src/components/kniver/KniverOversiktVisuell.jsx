@@ -23,6 +23,8 @@ import vp48motstV from "../../../assets/kniver/vp48motstV.jpg";
 import bruks from "../../../assets/kniver/bruks.jpg";
 import bruksmotst15 from "../../../assets/kniver/bruksmotst15.jpg";
 import bruksmotst44 from "../../../assets/kniver/bruksmotst44.jpg";
+import skrueFres2a3 from "../../../assets/kniver/skrueFres2a3.jpg";
+import f1a4motsSkrue from "../../../assets/kniver/f1a4motsSkrue.jpg";
 import bruksJust from "../../../assets/kniver/bruksJust.jpg";
 
 const KniverOversiktVisuell = () => {
@@ -126,7 +128,7 @@ const KniverOversiktVisuell = () => {
             maskin="VP34/VPP34"
           />
           <ToolImageCard
-            img={vpp34Bolt}
+            img={f1a4motsSkrue}
             title="Skruer for motstål"
             type=""
             dim="M8x20 6mm unbraco, lavt hode"
@@ -178,7 +180,7 @@ const KniverOversiktVisuell = () => {
             maskin="VP34"
           />
           <ToolImageCard
-            img={vp34Bolt}
+            img={skrueFres2a3}
             title="Bolt"
             type=""
             dim="M16x45 Unbraco 14mm lavt hode"
@@ -197,7 +199,7 @@ const KniverOversiktVisuell = () => {
           />
         </div>
         <h1 className="card-header">Fres 3 Vertical (VP48)</h1>
-
+        <hr />
         <div className="container">
           <ToolImageCard
             img={vp48kniv}
@@ -231,7 +233,7 @@ const KniverOversiktVisuell = () => {
           />
 
           <ToolImageCard
-            img={vp34Bolt}
+            img={skrueFres2a3}
             title="Bolt"
             type=""
             dim="M16x45 Unbraco 14mm lavt hode"
@@ -250,6 +252,7 @@ const KniverOversiktVisuell = () => {
           />
         </div>
         <h1 className="card-header">Råsortering/stikkhugger (Bruks)</h1>
+        <hr />
         <div className="container">
           <ToolImageCard
             img={bruks}

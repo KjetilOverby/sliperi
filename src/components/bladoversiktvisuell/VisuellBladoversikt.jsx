@@ -17,6 +17,11 @@ import trimmerJusterverk from "../../../assets/sagblad/trimmerJusterverk.jpg";
 import eksakt from "../../../assets/sagblad/eksaktKappe.jpg";
 import endekapp from "../../../assets/sagblad/endekapp.jpg";
 import trimmerBord from "../../../assets/sagblad/trimmerBord.jpg";
+import skrueVs66 from "../../../assets/linckblad/skrueVs66.jpg";
+import boltDobbelPost from "../../../assets/linckblad/boltDobbelPost.jpg";
+import boltEnkelVs66 from "../../../assets/linckblad/boltEnkelVs66.jpg";
+import mutter from "../../../assets/linckblad/mutter.jpg";
+import vs66EnkBolt from "../../../assets/linckblad/vs66EnkBolt.jpg";
 import VisualToolImageComponent from "../common/VisualToolImageComponent";
 import tooldata from "../../data/tooldata";
 
@@ -175,7 +180,7 @@ const VisuellBladoversikt = () => {
             antall={tabellLinckBlad && tabellLinckBlad[12].typeCount}
           />
           <VisualToolImageComponent
-            img={nessjoV}
+            img={skrueVs66}
             title="Skrue for feste av blad"
             type=""
             dim="M8x20 5mm unbrako senk"
@@ -185,7 +190,7 @@ const VisuellBladoversikt = () => {
             antall=""
           />
           <VisualToolImageComponent
-            img={nessjoV}
+            img={boltDobbelPost}
             title="Bolt for flensblad"
             type=""
             dim="M12x180 8mm unbrako senk"
@@ -195,7 +200,7 @@ const VisuellBladoversikt = () => {
             antall=""
           />
           <VisualToolImageComponent
-            img={nessjoV}
+            img={boltEnkelVs66}
             title="Bolt for enkeltblad indre ring"
             type=""
             dim="M12x160 10mm unbrako"
@@ -205,10 +210,20 @@ const VisuellBladoversikt = () => {
             antall=""
           />
           <VisualToolImageComponent
-            img={nessjoV}
+            img={mutter}
             title="Mutter"
             type=""
             dim="M12 19mm sekskant"
+            zAnt=""
+            angle=""
+            dataName=""
+            antall=""
+          />
+          <VisualToolImageComponent
+            img={vs66EnkBolt}
+            title="Skrue VS-66"
+            type=""
+            dim=""
             zAnt=""
             angle=""
             dataName=""
