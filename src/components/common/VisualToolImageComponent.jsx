@@ -17,14 +17,16 @@ const VisualToolImageComponent = ({
       <div className="container">
         <Image src={img} alt="" />
         <div>
-          <h3 className="card-header">{title}</h3>
-          <p className="text">Type: {type}</p>
-          <p className="text">Dimmensjon: {dim}</p>
-          {zAnt && <p className="text">Antall tenner: {zAnt}</p>}
-          {angle && <p className="text">Brystvinkel: {angle} grader</p>}
-          {antall && <p className="text">Antall lager: {antall} stk</p>}
-          {dataName && <p className="text">Datanavn: {dataName}</p>}
-          {art && <p className="text">Art. nr: {art}</p>}
+          <div className="text-box">
+            <h3 className="card-header">{title}</h3>
+            <p className="text">Type: {type}</p>
+            <p className="text">Dimmensjon: {dim}</p>
+            {zAnt && <p className="text">Antall tenner: {zAnt}</p>}
+            {angle && <p className="text">Brystvinkel: {angle} grader</p>}
+            {antall && <p className="text">Antall lager: {antall} stk</p>}
+            {dataName && <p className="text">Datanavn: {dataName}</p>}
+            {art && <p className="text">Art. nr: {art}</p>}
+          </div>
         </div>
       </div>
       <style jsx>
@@ -32,20 +34,22 @@ const VisualToolImageComponent = ({
           .container {
             width: 18rem;
             height: auto;
-            padding: 1rem;
-            border-radius: 15px;
             background: var(--primary);
           }
           .card-header {
             font-weight: 600;
             margin: 0.5rem 0;
             color: var(--text2);
+            font-size: 1rem;
           }
           .text {
             font-style: italic;
-            color: var(--middle);
+            color: var(--text3);
             font-size: 0.8rem;
             font-weight: 600;
+          }
+          .text-box {
+            padding: 0.5rem;
           }
           @media only screen and (max-width: 600px) {
             .container {

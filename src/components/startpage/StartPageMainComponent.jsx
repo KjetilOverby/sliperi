@@ -262,7 +262,7 @@ const StartPageMainComponent = () => {
           }
           .bestill-tools {
             font-size: 0.8rem;
-            color: var(--middle);
+            color: var(--text3);
           }
           .main-container {
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),

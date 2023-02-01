@@ -4,7 +4,8 @@
   --middle: #64485c;
   --text: #83677b;
   --text2: #adadad;
-} */
+  --text3: #6c4962; 
+}*/
 /* :root {
   --primary: #05386b;
   --secondary: #379683;
@@ -41,20 +42,7 @@
   --text: #c96567;
   --text2: #97aabd;
 } */
-/* :root {
-  --primary: #2d283e;
-  --secondary: #69467e;
-  --middle: #564f6f;
-  --text: #4c495d;
-  --text2: #d1d7e0;
-} */
-/* :root {
-  --primary: #026670;
-  --secondary: #80beac;
-  --middle: #fef9c7;
-  --text: #fce181;
-  --text2: #edeae5;
-} */
+
 /* ************************************* */
 /* :root {
   --primary: #003b46;
@@ -70,6 +58,7 @@
   --middle: #f0810f;
   --text: #e6df44;
   --text2: #edeae5;
+  --text3: #828282;
 }
 /* :root {
   --primary: #af4425;
