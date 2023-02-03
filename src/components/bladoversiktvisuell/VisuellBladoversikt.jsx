@@ -235,7 +235,7 @@ const VisuellBladoversikt = () => {
         <div className="container">
           <VisualToolImageComponent
             img={trimmerJusterverk}
-            title="Kanefusa Trimmer"
+            title={tooldata.jvTrimmer.navn}
             type="V-SH0985 SUPER Hi-MAX"
             dim="Ø500x4,0/2,8ø30mm -5˚"
             zAnt="96"
@@ -246,10 +246,10 @@ const VisuellBladoversikt = () => {
           />
           <VisualToolImageComponent
             img={eksakt}
-            title="Eksaktkappe"
-            type="V-SH1003"
+            title={tooldata.jvEksakt.navn}
+            type="Eksaktkappe"
             dim="Ø400x3,5/2,5 ø30 -5˚"
-            zAnt="96"
+            zAnt={tooldata.jvEksakt.z}
             angle="-5"
             dataName={tabellLinckBlad && tabellLinckBlad[14]._id.type}
             antall={tabellLinckBlad && tabellLinckBlad[14].typeCount}
@@ -258,7 +258,7 @@ const VisuellBladoversikt = () => {
           <VisualToolImageComponent
             img={endekapp}
             title="Endekapp"
-            type="V-SH0675"
+            type="Endekappe"
             dim="Ø610x4,4/3,3-ø30 10˚"
             zAnt="96"
             angle="10"
@@ -269,7 +269,7 @@ const VisuellBladoversikt = () => {
           <VisualToolImageComponent
             img={trimmerBord}
             title="Trimmer bordsortering"
-            type=" V-SH1008"
+            type=""
             dim="Ø450x4,0/2,8 ø35"
             zAnt="72"
             angle="10"
