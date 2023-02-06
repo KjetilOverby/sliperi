@@ -205,7 +205,7 @@ const StartPageMainComponent = () => {
           )}
           {tools && tools[12].antall < 16 && (
             <p className="bestill-tools">
-              Art.nr: {tools[12].art}, {tools[12].type}, {16 - tools[12].antall}
+              Art.nr: {tools[12].art}, {tools[12].type}, {18 - tools[12].antall}
               stk
             </p>
           )}
