@@ -47,6 +47,7 @@ const KniverOversiktVisuell = () => {
             dName={tools && tools[8].type}
             antall={tools && tools[8].antall}
             art={tooldata.redKniv.art}
+            price={tooldata.redKniv.price}
           />
           <ToolImageCard
             img={v40motsl}
@@ -99,6 +100,7 @@ const KniverOversiktVisuell = () => {
             dName={tools && tools[9].type}
             antall={tools && tools[9].antall}
             art={tooldata.f1a4Kniv.art}
+            price={tooldata.f1a4Kniv.price}
           />
           <ToolImageCard
             img={vpp34holder}
@@ -169,6 +171,7 @@ const KniverOversiktVisuell = () => {
             dName={tools && tools[10].type}
             antall={tools && tools[10].antall}
             art={tooldata.f2a3Kniv.art}
+            price={tooldata.f2a3Kniv.price}
           />
           <ToolImageCard
             img={vp34motst}
@@ -212,6 +215,7 @@ const KniverOversiktVisuell = () => {
             dName={tools && tools[11].type}
             antall={tools && tools[11].antall}
             art={tooldata.f3Kniv.art}
+            price={tooldata.f3Kniv.price}
           />
           <ToolImageCard
             img={vp48motstH}
@@ -265,6 +269,7 @@ const KniverOversiktVisuell = () => {
             dName={tools && tools[12].type}
             antall={tools && tools[12].antall}
             art={tooldata.hugger.art}
+            price={tooldata.hugger.price}
           />
           <ToolImageCard
             img={bruksmotst15}

@@ -44,6 +44,7 @@ const VisuellBladoversikt = () => {
             dataName={tabellLinckBlad && tabellLinckBlad[0]._id.type}
             antall={tabellLinckBlad && tabellLinckBlad[0].typeCount}
             art={tooldata.k22.art}
+            price={tooldata.k22.price}
           />
           <VisualToolImageComponent
             img={mkv2}
@@ -55,6 +56,7 @@ const VisuellBladoversikt = () => {
             dataName={tabellLinckBlad && tabellLinckBlad[1]._id.type}
             antall={tabellLinckBlad && tabellLinckBlad[1].typeCount}
             art={tooldata.k24.art}
+            price={tooldata.k24.price}
           />
           <VisualToolImageComponent
             img={mkv3}
@@ -66,6 +68,7 @@ const VisuellBladoversikt = () => {
             dataName={tabellLinckBlad && tabellLinckBlad[2]._id.type}
             antall={tabellLinckBlad && tabellLinckBlad[2].typeCount}
             art={tooldata.k26.art}
+            price={tooldata.k26.price}
           />
           <VisualToolImageComponent
             img={mkv4}
@@ -77,6 +80,7 @@ const VisuellBladoversikt = () => {
             dataName={tabellLinckBlad && tabellLinckBlad[3]._id.type}
             antall={tabellLinckBlad && tabellLinckBlad[3].typeCount}
             art={tooldata.k28.art}
+            price={tooldata.k28.price}
           />
           <VisualToolImageComponent
             img={mkv5}
@@ -88,6 +92,7 @@ const VisuellBladoversikt = () => {
             dataName={tabellLinckBlad && tabellLinckBlad[4]._id.type}
             antall={tabellLinckBlad && tabellLinckBlad[4].typeCount}
             art={tooldata.k30.art}
+            price={tooldata.k30.price}
           />
           <VisualToolImageComponent
             img={mkv6}
@@ -99,6 +104,7 @@ const VisuellBladoversikt = () => {
             dataName={tabellLinckBlad && tabellLinckBlad[5]._id.type}
             antall={tabellLinckBlad && tabellLinckBlad[5].typeCount}
             art={tooldata.k32.art}
+            price={tooldata.k32.price}
           />
         </div>
         <h1 className="visuell-header">VS-66 bordsag</h1>
@@ -114,6 +120,7 @@ const VisuellBladoversikt = () => {
             dataName={tabellLinckBlad && tabellLinckBlad[6]._id.type}
             antall={tabellLinckBlad && tabellLinckBlad[6].typeCount}
             art={tooldata.nBlad.art}
+            price={tooldata.nBlad.price}
           />
           <VisualToolImageComponent
             img={vs66H}
@@ -125,6 +132,7 @@ const VisuellBladoversikt = () => {
             dataName={tabellLinckBlad && tabellLinckBlad[7]._id.type}
             antall={tabellLinckBlad && tabellLinckBlad[7].typeCount}
             art={tooldata.vs66h.art}
+            price={tooldata.vs66h.price}
           />
           <VisualToolImageComponent
             img={vs66V}
@@ -136,6 +144,7 @@ const VisuellBladoversikt = () => {
             dataName={tabellLinckBlad && tabellLinckBlad[8]._id.type}
             antall={tabellLinckBlad && tabellLinckBlad[8].typeCount}
             art={tooldata.vs66v.art}
+            price={tooldata.vs66v.price}
           />
           <VisualToolImageComponent
             img={vs66FlensH}
@@ -147,6 +156,7 @@ const VisuellBladoversikt = () => {
             dataName={tabellLinckBlad && tabellLinckBlad[9]._id.type}
             antall={tabellLinckBlad && tabellLinckBlad[9].typeCount}
             art={tooldata.vs66hF.art}
+            price={tooldata.vs66hF.price}
           />
           <VisualToolImageComponent
             img={vs66FlensV}
@@ -158,6 +168,7 @@ const VisuellBladoversikt = () => {
             dataName={tabellLinckBlad && tabellLinckBlad[10]._id.type}
             antall={tabellLinckBlad && tabellLinckBlad[10].typeCount}
             art={tooldata.vs66vF.art}
+            price={tooldata.vs66vF.price}
           />
           <VisualToolImageComponent
             img={nessjoH}
@@ -243,6 +254,7 @@ const VisuellBladoversikt = () => {
             dataName={tabellLinckBlad && tabellLinckBlad[13]._id.type}
             antall={tabellLinckBlad && tabellLinckBlad[13].typeCount}
             art={tooldata.jvTrimmer.art}
+            price={tooldata.jvTrimmer.price}
           />
           <VisualToolImageComponent
             img={eksakt}
@@ -254,6 +266,7 @@ const VisuellBladoversikt = () => {
             dataName={tabellLinckBlad && tabellLinckBlad[14]._id.type}
             antall={tabellLinckBlad && tabellLinckBlad[14].typeCount}
             art={tooldata.jvEksakt.art}
+            price={tooldata.jvEksakt.price}
           />
           <VisualToolImageComponent
             img={endekapp}
@@ -265,6 +278,7 @@ const VisuellBladoversikt = () => {
             dataName={tabellLinckBlad && tabellLinckBlad[15]._id.type}
             antall={tabellLinckBlad && tabellLinckBlad[15].typeCount}
             art={tooldata.jvEndekapp.art}
+            price={tooldata.jvEndekapp.price}
           />
           <VisualToolImageComponent
             img={trimmerBord}
@@ -276,6 +290,7 @@ const VisuellBladoversikt = () => {
             dataName={tabellLinckBlad && tabellLinckBlad[16]._id.type}
             antall={tabellLinckBlad && tabellLinckBlad[16].typeCount}
             art={tooldata.rsTrimmer.art}
+            price={tooldata.rsTrimmer.price}
           />
         </div>
       </div>

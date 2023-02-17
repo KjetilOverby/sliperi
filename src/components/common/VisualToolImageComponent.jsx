@@ -11,6 +11,7 @@ const VisualToolImageComponent = ({
   dataName,
   antall,
   art,
+  price,
 }) => {
   return (
     <>
@@ -25,6 +26,7 @@ const VisualToolImageComponent = ({
             {angle && <p className="text">Brystvinkel: {angle} grader</p>}
             {antall && <p className="text">Antall lager: {antall} stk</p>}
             {dataName && <p className="text">Datanavn: {dataName}</p>}
+            {price && <p className="text">Pris {price}</p>}
             {art && <p className="text">Art. nr: {art}</p>}
           </div>
         </div>

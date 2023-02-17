@@ -38,6 +38,7 @@ const SegmenterMainPage = () => {
             dName={tools && tools[0].type}
             antall={tools && tools[0].antall}
             art={tools && tools[0].art}
+            price={tooldata && tooldata.redSegH.price}
           />
           <ToolImageCard
             img={v40segmentV}
@@ -50,6 +51,7 @@ const SegmenterMainPage = () => {
             dName={tools && tools[1].type}
             antall={tools && tools[1].antall}
             art={tools && tools[1].art}
+            price={tooldata && tooldata.redSegV.price}
           />
           <ToolImageCard
             img={v40Hdistanse}
@@ -108,6 +110,7 @@ const SegmenterMainPage = () => {
             dName={tools && tools[2].type}
             antall={tools && tools[2].antall}
             art={tools && tools[2].art}
+            price={tooldata && tooldata.f1a4SegH.price}
           />
           <ToolImageCard
             img={vpp32SegmentV}
@@ -120,6 +123,7 @@ const SegmenterMainPage = () => {
             dName={tools && tools[3].type}
             antall={tools && tools[3].antall}
             art={tools && tools[3].art}
+            price={tooldata && tooldata.f1a4SegV.price}
           />
           <ToolImageCard
             img={vpp32Bolt}
@@ -145,6 +149,7 @@ const SegmenterMainPage = () => {
             dName={tools && tools[4].type}
             antall={tools && tools[4].antall}
             art={tools && tools[4].art}
+            price={tooldata && tooldata.f2H.price}
           />
           <ToolImageCard
             img={vp32SegmentV}
@@ -157,6 +162,7 @@ const SegmenterMainPage = () => {
             dName={tools && tools[5].type}
             antall={tools && tools[5].antall}
             art={tools && tools[5].art}
+            price={tooldata && tooldata.f2V.price}
           />
           <ToolImageCard
             img={vp34SegmentSkrue}
@@ -182,6 +188,7 @@ const SegmenterMainPage = () => {
             dName={tools && tools[6].type}
             antall={tools && tools[6].antall}
             art={tools && tools[6].art}
+            price={tooldata && tooldata.f3H.price}
           />
           <ToolImageCard
             img={vp48SegmentV}
@@ -194,6 +201,7 @@ const SegmenterMainPage = () => {
             dName={tools && tools[7].type}
             antall={tools && tools[7].antall}
             art={tools && tools[7].art}
+            price={tooldata && tooldata.f3V.price}
           />
           <ToolImageCard
             img={vp34SegmentSkrue}
