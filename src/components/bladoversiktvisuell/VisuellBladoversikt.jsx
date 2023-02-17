@@ -179,6 +179,7 @@ const VisuellBladoversikt = () => {
             angle="25"
             dataName={tabellLinckBlad && tabellLinckBlad[11]._id.type}
             antall={tabellLinckBlad && tabellLinckBlad[11].typeCount}
+            price={tooldata.vs66hN.price}
           />
           <VisualToolImageComponent
             img={nessjoV}
@@ -189,6 +190,7 @@ const VisuellBladoversikt = () => {
             angle="25"
             dataName={tabellLinckBlad && tabellLinckBlad[12]._id.type}
             antall={tabellLinckBlad && tabellLinckBlad[12].typeCount}
+            price={tooldata.vs66vN.price}
           />
           <VisualToolImageComponent
             img={skrueVs66}
