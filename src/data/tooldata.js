@@ -7,6 +7,7 @@ const tooldata = {
     angle: "25",
     art: "V-SH9495",
     nom: 18,
+    price: "2022: -",
   },
   k24: {
     navn: "Kanefusa 2.4-3.8",
@@ -16,6 +17,7 @@ const tooldata = {
     angle: "25",
     art: "V-SH9502",
     nom: 20,
+    price: "2022: 2243",
   },
   k26: {
     navn: "Kanefusa 2.6-4.0",
@@ -25,6 +27,7 @@ const tooldata = {
     angle: "25",
     art: "V-SH9505",
     nom: 65,
+    price: "2022: 2357",
   },
   k28: {
     navn: "Kanefusa 2.8-4.2",
@@ -34,6 +37,7 @@ const tooldata = {
     angle: "25",
     art: "V-SH9496",
     nom: 65,
+    price: "2022: 2357",
   },
   k30: {
     navn: "Kanefusa 3.0-4.4",
@@ -43,6 +47,7 @@ const tooldata = {
     angle: "25",
     art: "V-SH9528",
     nom: 30,
+    price: "2022: 2481",
   },
   k32: {
     navn: "Kanefusa 3.2-4.6",
@@ -52,6 +57,7 @@ const tooldata = {
     angle: "25",
     art: "V-SH9745",
     nom: 70,
+    price: "2022: 2866",
   },
   vs66h: {
     navn: "Kanefusa VS-66 høyre",
@@ -61,6 +67,7 @@ const tooldata = {
     angle: "25",
     art: "V-SH9619",
     nom: 25,
+    price: "2022: 2925",
   },
   vs66v: {
     navn: "Kanefusa VS-66 venstre",
@@ -70,6 +77,7 @@ const tooldata = {
     angle: "25",
     art: "V-SH9621",
     nom: 25,
+    price: "2022: 2925",
   },
   vs66hN: {
     navn: "Nässjö høyre",
@@ -79,6 +87,7 @@ const tooldata = {
     angle: "25",
     art: "V-SH9692",
     nom: 0,
+    price: "2022: 4559",
   },
   vs66vN: {
     navn: "Nässjö venstre",
@@ -88,6 +97,7 @@ const tooldata = {
     angle: "25",
     art: "V-SH9693",
     nom: 0,
+    price: "2022: 4559",
   },
   vs66hF: {
     navn: "Kanefusa høyre flens",
@@ -97,6 +107,7 @@ const tooldata = {
     angle: "25",
     art: "V-SH9625",
     nom: 25,
+    price: "2022: 6225",
   },
   vs66vF: {
     navn: "Kanefusa venstre flens",
@@ -106,6 +117,7 @@ const tooldata = {
     angle: "25",
     art: "V-SH9626",
     nom: 25,
+    price: "2022: 6225",
   },
   nBlad: {
     navn: "Kanefusa N-blad VS-66",
@@ -115,6 +127,7 @@ const tooldata = {
     angle: "25",
     art: "V-SH9630",
     nom: 25,
+    price: "2022: -",
   },
   jvTrimmer: {
     navn: "Kanefusa trimmer justerverk",
@@ -124,6 +137,7 @@ const tooldata = {
     angle: "-5",
     art: "V-SH0985",
     nom: 60,
+    price: "2022: 2899",
   },
   jvEndekapp: {
     navn: "Kanefusa endekapp justerverk",
@@ -133,6 +147,7 @@ const tooldata = {
     angle: "10",
     art: "V-SH0675",
     nom: 5,
+    price: "2022: 3150",
   },
   jvEksakt: {
     navn: "Swedex eksakt justerverk",
@@ -142,6 +157,7 @@ const tooldata = {
     angle: "-5",
     art: "V-SH0736",
     nom: 5,
+    price: "2022: -",
   },
   rsTrimmer: {
     navn: "Kanefusa trimmer råsortering",
@@ -151,6 +167,7 @@ const tooldata = {
     angle: "10",
     art: "V-SH1008",
     nom: 10,
+    price: "2022: 1788",
   },
   redSegH: {
     navn: "Reduserersegment høyre",
@@ -161,6 +178,7 @@ const tooldata = {
     antM: "5",
     art: "V-SM0950",
     nom: 60,
+    price: "2022: 706",
   },
   redSegV: {
     navn: "Reduserersegment venstre",
@@ -171,6 +189,7 @@ const tooldata = {
     antM: "5",
     art: "V-SM0955",
     nom: 60,
+    price: "2022: 706",
   },
   f1a4SegH: {
     navn: "Fres 1/4 segment høyre",
@@ -181,6 +200,7 @@ const tooldata = {
     antM: "6",
     art: "V-SM1010",
     nom: 65,
+    price: "2022: 607",
   },
   f1a4SegV: {
     navn: "Fres 1/4 segment venstre",
@@ -191,6 +211,7 @@ const tooldata = {
     antM: "6",
     art: "V-SM1015",
     nom: 65,
+    price: "2022: 607",
   },
   f2H: {
     navn: "Fres 2 segment høyre",
@@ -201,6 +222,7 @@ const tooldata = {
     antM: "6",
     art: "V-SH9120",
     nom: 25,
+    price: "2022: 448",
   },
   f2V: {
     navn: "Fres 2 segment venstre",
@@ -211,6 +233,7 @@ const tooldata = {
     antM: "4",
     art: "V-SH9125",
     nom: 25,
+    price: "2022: 448",
   },
   f3H: {
     navn: "Fres 3 segment høyre",
@@ -221,6 +244,7 @@ const tooldata = {
     antM: "6",
     art: "",
     nom: 25,
+    price: "2022: 449",
   },
   f3V: {
     navn: "Fres 3 segment venstre",
@@ -231,6 +255,7 @@ const tooldata = {
     antM: "4",
     art: "",
     nom: 25,
+    price: "2022: 449",
   },
   redKniv: {
     navn: "Reduser kniv V40",
@@ -241,6 +266,7 @@ const tooldata = {
     antM: "30",
     art: "V-KP1015",
     nom: 180,
+    price: "2022: 262",
   },
   f1a4Kniv: {
     navn: "Fres 1/4 kniv",
@@ -251,6 +277,7 @@ const tooldata = {
     antM: "48",
     art: "V-KP1018",
     nom: 240,
+    price: "2022: 201",
   },
   f2a3Kniv: {
     navn: "Fres 2/3 kniv (horizontal)",
@@ -261,6 +288,7 @@ const tooldata = {
     antM: "8",
     art: "V-KP1040",
     nom: 40,
+    price: "2022: 241",
   },
   f3Kniv: {
     navn: "Fres 3 kniv (vertical)",
@@ -271,6 +299,7 @@ const tooldata = {
     antM: "8",
     art: "",
     nom: 30,
+    price: "2022: 198",
   },
   hugger: {
     navn: "Bruks 820 CS hugger",
@@ -281,6 +310,7 @@ const tooldata = {
     antM: "2",
     art: "V-KH5300",
     nom: 18,
+    price: "2022: 1814",
   },
 };
 
