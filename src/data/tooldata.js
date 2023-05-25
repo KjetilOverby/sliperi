@@ -199,7 +199,7 @@ const tooldata = {
     angle: "15",
     antM: "6",
     art: "V-SM1010",
-    nom: 65,
+    nom: 60,
     price: "2022: 607",
   },
   f1a4SegV: {
@@ -210,7 +210,7 @@ const tooldata = {
     angle: "15",
     antM: "6",
     art: "V-SM1015",
-    nom: 65,
+    nom: 60,
     price: "2022: 607",
   },
   f2H: {
