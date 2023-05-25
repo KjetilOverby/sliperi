@@ -27,8 +27,21 @@ const ToolImageCard = ({
           {maskin && <p className="text">Maskin: {maskin}</p>}
           {antall && <p className="text">Antall lager: {antall}</p>}
           {dName && <p className="text">Datanavn: {dName}</p>}
-          {price && <p className="text">pris: {price}</p>}
           {art && <p className="text">Art.nr: {art}</p>}
+          {price && <p className="text">Pris:</p>}
+          {price && (
+            <div>
+              {price.map((item) => {
+                return (
+                  <ul>
+                    <li style={{ marginBottom: "-10px" }} className="text">
+                      {item} kr.
+                    </li>
+                  </ul>
+                );
+              })}
+            </div>
+          )}
         </div>
       </div>
       <style jsx>
