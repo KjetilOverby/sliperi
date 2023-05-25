@@ -26,8 +26,21 @@ const VisualToolImageComponent = ({
             {angle && <p className="text">Brystvinkel: {angle} grader</p>}
             {antall && <p className="text">Antall lager: {antall} stk</p>}
             {dataName && <p className="text">Datanavn: {dataName}</p>}
-            {price && <p className="text">Pris {price}</p>}
             {art && <p className="text">Art. nr: {art}</p>}
+            <p className="text">Pris:</p>
+            {price && (
+              <div>
+                {price.map((item) => {
+                  return (
+                    <ul>
+                      <li style={{ marginBottom: "-10px" }} className="text">
+                        {item} kr.
+                      </li>
+                    </ul>
+                  );
+                })}
+              </div>
+            )}
           </div>
         </div>
       </div>
