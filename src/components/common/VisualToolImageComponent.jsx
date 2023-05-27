@@ -32,7 +32,7 @@ const VisualToolImageComponent = ({
               <div>
                 {price.map((item) => {
                   return (
-                    <ul>
+                    <ul key={item.type}>
                       <li style={{ marginBottom: "-10px" }} className="text">
                         {item} kr.
                       </li>

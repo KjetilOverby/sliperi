@@ -309,7 +309,7 @@ const tooldata = {
     angle: "32",
     antM: "2",
     art: "V-KH5300",
-    nom: 18,
+    nom: 16,
     price: ["2022: 1814"],
   },
 };
