@@ -53,7 +53,7 @@ const ToolImageCard = ({
             height: auto;
             background: white;
             margin-right: 2rem;
-            box-shadow: 15px 15px 30px gainsboro;
+            box-shadow: 5px 5px 30px gainsboro;
             border-radius: 10px;
           }
           .card-header {

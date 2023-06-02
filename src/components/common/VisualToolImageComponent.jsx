@@ -50,7 +50,7 @@ const VisualToolImageComponent = ({
             width: 18rem;
             height: auto;
             background: white;
-            box-shadow: 15px 15px 25px grey;
+            box-shadow: 5px 5px 25px grey;
             border-radius: 10px;
             padding-top: 2rem;
           }
