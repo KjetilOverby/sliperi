@@ -27,6 +27,9 @@ import skrueFres2a3 from "../../../assets/kniver/skrueFres2a3.jpg";
 import f1a4motsSkrue from "../../../assets/kniver/f1a4motsSkrue.jpg";
 import bruksJust from "../../../assets/kniver/bruksJust.jpg";
 
+// NEW IMAGES
+import fres1knivNew from "../../../assets/kniver/fres1knivNew.jpg";
+
 const KniverOversiktVisuell = () => {
   const { tools } = useContext(MyContext);
   return (
@@ -90,7 +93,7 @@ const KniverOversiktVisuell = () => {
         <hr />
         <div className="container">
           <ToolImageCard
-            img={vpp34kniv}
+            img={fres1knivNew}
             title="Kniv"
             type=""
             dim="41x105x8mm"
@@ -304,7 +307,7 @@ const KniverOversiktVisuell = () => {
         {`
           .card-header {
             font-weight: 300;
-            color: var(--text2);
+            color: black;
             margin-bottom: 2rem;
             font-size: 1.2rem;
           }
@@ -318,7 +321,7 @@ const KniverOversiktVisuell = () => {
           .main-header {
             margin-bottom: 5rem;
             font-weight: 100;
-            color: var(--text);
+            color: black);
           }
           @media only screen and (max-width: 1000px) {
             .container {

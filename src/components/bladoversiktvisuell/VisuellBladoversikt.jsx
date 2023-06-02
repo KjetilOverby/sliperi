@@ -307,7 +307,7 @@ const VisuellBladoversikt = () => {
           }
           .visuell-header {
             margin: 2rem 0;
-            color: lightgrey;
+            color: black;
             font-weight: 300;
             font-size: 1.3rem;
           }

@@ -17,9 +17,11 @@ const ToolImageCard = ({
   return (
     <>
       <div className="container">
-        <Image src={img} alt="" />
         <div className="text-box">
           <h1 className="card-header">{title}</h1>
+          <div className="img-box">
+            <Image src={img} alt="" />
+          </div>
           {type && <p className="text">Type: {type}</p>}
           <p className="text">Dimensjon: {dim}</p>
           {antTenner && <p className="text">Antall tenner: {antTenner}</p>}
@@ -49,15 +51,19 @@ const ToolImageCard = ({
           .container {
             width: 18rem;
             height: auto;
-            background: var(--primary);
-
+            background: white;
             margin-right: 2rem;
+            box-shadow: 15px 15px 30px gainsboro;
+            border-radius: 10px;
           }
           .card-header {
             font-weight: 600;
-            margin: 0.5rem 0;
+            margin: 0.5rem 0 2rem 0;
             font-size: 1rem;
-            color: var(--text2);
+            color: black;
+          }
+          .img-box {
+            margin-bottom: 2rem;
           }
           .text {
             font-style: italic;

@@ -218,7 +218,7 @@ const SegmenterMainPage = () => {
         {`
           .card-header {
             font-weight: 300;
-            color: var(--text2);
+            color: black;
             margin-bottom: 2rem;
             font-size: 1.2rem;
           }
@@ -232,7 +232,7 @@ const SegmenterMainPage = () => {
           .main-header {
             margin-bottom: 5rem;
             font-weight: 100;
-            color: var(--text);
+            color: black;
           }
           @media only screen and (max-width: 1000px) {
             .container {

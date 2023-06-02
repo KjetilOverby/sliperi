@@ -16,10 +16,10 @@ const VisualToolImageComponent = ({
   return (
     <>
       <div className="container">
-        <Image src={img} alt="" />
         <div>
+          <h3 className="card-header">{title}</h3>
+          <Image src={img} alt="" />
           <div className="text-box">
-            <h3 className="card-header">{title}</h3>
             <p className="text">Type: {type}</p>
             <p className="text">Dimmensjon: {dim}</p>
             {zAnt && <p className="text">Antall tenner: {zAnt}</p>}
@@ -49,12 +49,15 @@ const VisualToolImageComponent = ({
           .container {
             width: 18rem;
             height: auto;
-            background: var(--primary);
+            background: white;
+            box-shadow: 15px 15px 25px grey;
+            border-radius: 10px;
+            padding-top: 2rem;
           }
           .card-header {
             font-weight: 600;
-            margin: 0.5rem 0;
-            color: var(--text2);
+            margin: 0.5rem 0 2rem 0.5rem;
+            color: black;
             font-size: 1rem;
           }
           .text {

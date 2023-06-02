@@ -17,7 +17,7 @@ const segmentoversiktvisuell = () => {
       <style jsx>
         {`
           .container {
-            background: var(--secondary);
+            background: white;
           }
         `}
       </style>
