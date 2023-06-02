@@ -49,12 +49,14 @@ const ToolImageCard = ({
       <style jsx>
         {`
           .container {
-            width: 18rem;
+            width: 22rem;
             height: auto;
             background: white;
             margin-right: 2rem;
-            box-shadow: 5px 5px 30px gainsboro;
+            box-shadow: inset 1px 1px 25px slategrey;
             border-radius: 10px;
+            padding: 1rem;
+            border: 1px solid grey;
           }
           .card-header {
             font-weight: 600;

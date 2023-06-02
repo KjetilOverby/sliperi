@@ -18,7 +18,9 @@ const VisualToolImageComponent = ({
       <div className="container">
         <div>
           <h3 className="card-header">{title}</h3>
-          <Image src={img} alt="" />
+          <div className="img-box">
+            <Image src={img} alt="" />
+          </div>
           <div className="text-box">
             <p className="text">Type: {type}</p>
             <p className="text">Dimmensjon: {dim}</p>
@@ -44,15 +46,17 @@ const VisualToolImageComponent = ({
           </div>
         </div>
       </div>
+
       <style jsx>
         {`
           .container {
-            width: 18rem;
-            height: auto;
+            width: 22rem;
+            min-height: auto;
             background: white;
-            box-shadow: 5px 5px 25px grey;
+            box-shadow: inset 5px 5px 25px grey;
             border-radius: 10px;
-            padding-top: 2rem;
+            padding: 2rem;
+            border: 1px solid grey;
           }
           .card-header {
             font-weight: 600;
@@ -60,6 +64,10 @@ const VisualToolImageComponent = ({
             color: black;
             font-size: 1rem;
           }
+          .img-box {
+            margin-bottom: 2rem;
+          }
+
           .text {
             font-style: italic;
             color: var(--text3);

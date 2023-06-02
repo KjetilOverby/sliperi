@@ -12,7 +12,7 @@ import vp32SegmentV from "../../../assets/segmenter/vp32segmentV.jpg";
 import vp34SegmentSkrue from "../../../assets/segmenter/vp34segmentskrue.jpg";
 import vp48SegmentH from "../../../assets/segmenter/vp48segmentH.jpg";
 import vp48SegmentV from "../../../assets/segmenter/vp48segmentV.jpg";
-import skruev40Seg from "../../../assets/segmenter/skruev40Seg.jpg";
+import skruev40Seg from "../../../assets/segmenter/skrueV40Seg.jpg";
 import v40Hdistanse from "../../../assets/segmenter/v40Hdistanse.jpg";
 import v40Vdistanse from "../../../assets/segmenter/v40Vdistanse.jpg";
 import tooldata from "../../data/tooldata";
