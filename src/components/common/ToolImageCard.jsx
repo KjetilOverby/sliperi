@@ -30,18 +30,22 @@ const ToolImageCard = ({
           {antall && <p className="text">Antall lager: {antall}</p>}
           {dName && <p className="text">Datanavn: {dName}</p>}
           {art && <p className="text">Art.nr: {art}</p>}
-          {price && <p className="text">Pris:</p>}
           {price && (
-            <div>
-              {price.map((item) => {
-                return (
-                  <ul key={item.type}>
-                    <li style={{ marginBottom: "-10px" }} className="text">
-                      {item} kr.
-                    </li>
-                  </ul>
-                );
-              })}
+            <div className="price-box">
+              {price && <p className="text">Pris:</p>}
+              {price && (
+                <div>
+                  {price.map((item) => {
+                    return (
+                      <ul key={item.type}>
+                        <li style={{ marginBottom: "-10px" }} className="text">
+                          {item} kr.
+                        </li>
+                      </ul>
+                    );
+                  })}
+                </div>
+              )}
             </div>
           )}
         </div>
@@ -67,9 +71,15 @@ const ToolImageCard = ({
           .img-box {
             margin-bottom: 2rem;
           }
+          .price-box {
+            background: var(--middle);
+            padding: 1rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+          }
           .text {
             font-style: italic;
-            color: var(--text3);
+            color: black;
             font-size: 0.8rem;
             font-weight: 600;
           }

@@ -14,13 +14,13 @@
   --text2: #edf5e1;
 } */
 
-/* :root {
-  --primary: #0b0c10;
+:root {
+  --primary: linear-gradient(to right, #0b0c10, #2f313b);
   --secondary: #1f2833;
   --middle: #c5c6c7;
   --text: #66fcf1;
   --text2: #45a29e;
-} */
+}
 /* :root {
   --primary: #2c3531;
   --secondary: #116466;
@@ -75,14 +75,14 @@
   --text: #ddc5a2;
   --text2: #edeae5;
 } */
-:root {
+/* :root {
   --primary: #04202c;
   --secondary: #304040;
   --middle: #5b7065;
   --text: #c9d1c8;
   --text2: #edeae5;
   --text3: #828282;
-}
+} */
 /* :root {
   --primary: #217ca3;
   --secondary: #32384d;

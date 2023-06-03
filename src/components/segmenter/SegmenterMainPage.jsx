@@ -23,7 +23,7 @@ const SegmenterMainPage = () => {
   return (
     <>
       <div className="content-container">
-        <h1 className="main-header">SEGMENTER</h1>
+        <h1 className="main-header">Segmenter</h1>
         <h1 className="card-header">Reduserer segment (ZD1/ZD2)</h1>
         <hr />
         <div className="container">

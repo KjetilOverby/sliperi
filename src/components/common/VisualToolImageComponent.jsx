@@ -29,18 +29,21 @@ const VisualToolImageComponent = ({
             {antall && <p className="text">Antall lager: {antall} stk</p>}
             {dataName && <p className="text">Datanavn: {dataName}</p>}
             {art && <p className="text">Art. nr: {art}</p>}
-            <p className="text">Pris:</p>
+
             {price && (
-              <div>
-                {price.map((item) => {
-                  return (
-                    <ul key={item.type}>
-                      <li style={{ marginBottom: "-10px" }} className="text">
-                        {item} kr.
-                      </li>
-                    </ul>
-                  );
-                })}
+              <div className="price-box">
+                <div>
+                  <p className="text">Pris:</p>
+                  {price.map((item) => {
+                    return (
+                      <ul key={item.type}>
+                        <li style={{ marginBottom: "-10px" }} className="text">
+                          {item} kr.
+                        </li>
+                      </ul>
+                    );
+                  })}
+                </div>
               </div>
             )}
           </div>
@@ -66,6 +69,12 @@ const VisualToolImageComponent = ({
           }
           .img-box {
             margin-bottom: 2rem;
+          }
+          .price-box {
+            background: var(--middle);
+            padding: 1rem;
+            border-radius: 10px;
+            margin-top: 1rem;
           }
 
           .text {
