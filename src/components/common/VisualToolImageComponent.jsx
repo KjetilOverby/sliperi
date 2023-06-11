@@ -49,6 +49,7 @@ const VisualToolImageComponent = ({
           </div>
         </div>
       </div>
+      
 
       <style jsx>
         {`

@@ -1,6 +1,3 @@
 comment on linckBlades
 
 
-ferdige data
-- fres 3 segmenter
-- fres 1/4 segmenter
