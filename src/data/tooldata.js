@@ -178,7 +178,7 @@ const tooldata = {
     antM: "5",
     art: "V-SM0950",
     nom: 60,
-    price: ["2022: 706"],
+    price: ["2022: 706", "2023: 928"],
   },
   redSegV: {
     navn: "Reduserersegment venstre",
@@ -189,7 +189,7 @@ const tooldata = {
     antM: "5",
     art: "V-SM0955",
     nom: 60,
-    price: ["2022: 706"],
+    price: ["2022: 706", "2023: 928"],
   },
   f1a4SegH: {
     navn: "Fres 1/4 segment høyre",
@@ -211,7 +211,7 @@ const tooldata = {
     antM: "6",
     art: "V-SM1015",
     nom: 60,
-    price: ["2022: 607"],
+    price: ["2022: 607", "2023: 784"],
   },
   f2H: {
     navn: "Fres 2 segment høyre",
@@ -222,7 +222,7 @@ const tooldata = {
     antM: "6",
     art: "V-SH9120",
     nom: 25,
-    price: ["2022: 448"],
+    price: ["2022: 448", "2023: 784"],
   },
   f2V: {
     navn: "Fres 2 segment venstre",
