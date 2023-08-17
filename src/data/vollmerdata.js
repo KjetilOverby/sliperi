@@ -111,6 +111,14 @@ const vollmer = [
     tag: "Annet",
   },
   {
+    date: "05.01.2023",
+    title: "Skiftet filter",
+    description: "Skiftet alle 4 filtrene.",
+    list: ["Kjetil"],
+    img: "",
+    tag: "Service",
+  },
+  {
     date: "09.08.2023",
     title: "Skiftet filter",
     description: "Skiftet alle 4 filtrene.",

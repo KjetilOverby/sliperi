@@ -7,7 +7,7 @@ const api = axios.create({
   baseURL: process.env.api,
 });
 
-const statistikk = () => {
+const Statistikk = () => {
   const [wasteThisYear, setWasteThisYear] = useState();
   const [serviceThisYear, setServiceThisYear] = useState();
   const [newThisYear, setNewThisYear] = useState();
@@ -96,4 +96,4 @@ const statistikk = () => {
   );
 };
 
-export default statistikk;
+export default Statistikk;
