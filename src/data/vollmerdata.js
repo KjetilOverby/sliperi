@@ -98,16 +98,25 @@ const vollmer = [
   {
     date: "26.09.2022",
     title: "Olje oppsamlingsunderlag ankommet",
-    
+
     img: "https://lh3.googleusercontent.com/pw/AMWts8Asbm53xxVluvbOaskHCVfFjywToANRqQZTgqf6p_Q66gpK2XaHzgxtU_vlpDmxdJdBRB8m6O8VBvKbZ2IBP2oUjwUD_5MoWYWiy-FVBgPQdl8VYTIfVesovaQGtQI7kgDMvKi3SX9PvZ6aP7xZQUcK=w800-h600-no?authuser=0",
     tag: "Annet",
   },
   {
     date: "05.01.2023",
     title: "Montering underlag til slipemaskinen",
-    description: "Tor Engebretsen, Dag Olav Midtsunstad og Kjetil Øverby setter den på plass. Tor får også på plass flexirør fra avsug på slipemaskinen så vi får lufta fra slipemaskinen ut av rommet. Det ble mye bedre luft på sliperiet etter det.",
+    description:
+      "Tor Engebretsen, Dag Olav Midtsunstad og Kjetil Øverby setter den på plass. Tor får også på plass flexirør fra avsug på slipemaskinen så vi får lufta fra slipemaskinen ut av rommet. Det ble mye bedre luft på sliperiet etter det.",
     img: "https://lh3.googleusercontent.com/pw/AMWts8BoEVuSnJueuClUmCyXdPJT-vB32c5swGu2P_058OOJ39MICLC0YZgVZHHh4475617i8CDEPgl4yr1Ay7G_HArxYj_5FEkOCMTON3wK1A3xJATaNe4Hiid3ZQQatWyxkeluSbONU8a_Mu11vxI_23ed=w800-h600-no?authuser=0",
     tag: "Annet",
+  },
+  {
+    date: "09.08.2023",
+    title: "Skiftet filter",
+    description: "Skiftet alle 4 filtrene.",
+    list: ["Kjetil"],
+    img: "",
+    tag: "Service",
   },
 ];
 

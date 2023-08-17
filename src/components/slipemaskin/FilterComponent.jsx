@@ -4,7 +4,7 @@ const FilterComponent = ({ input, title }) => {
   return (
     <>
       <div className="container">
-        <label>Vis :</label>
+        <label className="label">Velg kategori: </label>
 
         <select onChange={(e) => input(e.target.value)} className="select">
           <option value="Service">Service</option>
@@ -21,8 +21,11 @@ const FilterComponent = ({ input, title }) => {
             margin-top: 1rem;
             font-size: 2rem;
           }
+          .label {
+            color: var(--text2);
+          }
           .select {
-            background: var(--primary);
+            background: var(--secondary);
             border: none;
             color: var(--text);
             margin-left: 1rem;
