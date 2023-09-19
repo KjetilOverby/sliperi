@@ -26,7 +26,7 @@ const StartPageMainComponent = () => {
               stk
             </p>
           )}
-          {tabellLinckBlad && tabellLinckBlad[1].typeCount < 20 && (
+          {tabellLinckBlad && tabellLinckBlad[1].typeCount < 30 && (
             <p className="bestill-tools">
               Art.nr: {tooldata.k24.art}, {tabellLinckBlad[1]._id.type},{" "}
               {tooldata.k24.nom - tabellLinckBlad[1].typeCount}
