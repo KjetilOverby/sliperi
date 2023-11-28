@@ -276,7 +276,7 @@ const tooldata = {
     angle: "31",
     antM: "48",
     art: "V-KP1018",
-    nom: 240,
+    nom: 252,
     price: ["2022: 201"],
   },
   f2a3Kniv: {
@@ -287,7 +287,7 @@ const tooldata = {
     angle: "32",
     antM: "8",
     art: "V-KP1040",
-    nom: 40,
+    nom: 48,
     price: ["2022: 241"],
   },
   f3Kniv: {
