@@ -44,7 +44,7 @@ function MyApp({ Component, pageProps }) {
         console.log(error.response.body);
       }
     })();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [linckUpdateDatabase]);
 
   // SERVICE
@@ -60,7 +60,7 @@ function MyApp({ Component, pageProps }) {
         console.log(error.response.body);
       }
     })();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [linckUpdateDatabase]);
 
   // Tabell Data
@@ -78,10 +78,6 @@ function MyApp({ Component, pageProps }) {
     })();
   }, [linckUpdateDatabase]);
 
-
-
-  
-
   //TOOLS
   const [tools, setTools] = useState();
 
@@ -98,8 +94,6 @@ function MyApp({ Component, pageProps }) {
     })();
   }, [toolUpdateDatabase]);
 
-  
-
   const [toolsDeleted, setToolsDeleted] = useState();
 
   useEffect(() => {
@@ -113,7 +107,7 @@ function MyApp({ Component, pageProps }) {
         console.log(error);
       }
     })();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const [toolsNew, setToolsNew] = useState();
@@ -128,15 +122,14 @@ function MyApp({ Component, pageProps }) {
         console.log(error);
       }
     })();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <Auth0Provider
       domain={domain}
       clientId={clientId}
-      redirectUri={typeof window !== "undefined" && window.location.origin}
-    >
+      redirectUri={typeof window !== "undefined" && window.location.origin}>
       <MyContext.Provider
         value={{
           linckBlades,
@@ -155,8 +148,7 @@ function MyApp({ Component, pageProps }) {
           toolUpdateDatabase,
           toolsDeleted,
           toolsNew,
-        }}
-      >
+        }}>
         <Component {...pageProps} />
       </MyContext.Provider>
     </Auth0Provider>
