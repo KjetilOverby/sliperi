@@ -429,7 +429,7 @@ const stats = [
     year: "2023",
     allVrk: 205,
     allSrv: 363,
-    allNew: 152,
+    allNew: 153,
     vrkList: [
       {
         _id: {
@@ -565,6 +565,24 @@ const stats = [
           type: "Nessjø VS-66 venstre",
         },
         typeCount: 14,
+      },
+      {
+        _id: {
+          type: "Kanefusa 3.2-4.6",
+        },
+        typeCount: 13,
+      },
+      {
+        _id: {
+          type: "Kanefusa 3.0-4.4",
+        },
+        typeCount: 6,
+      },
+      {
+        _id: {
+          type: "Kanefusa VS-66 høyre F",
+        },
+        typeCount: 1,
       },
     ],
     newList: [
