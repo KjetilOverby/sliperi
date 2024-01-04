@@ -41,7 +41,7 @@ const StartPageMainComponent = () => {
             </p>
           )}
 
-          {tabellLinckBlad && tabellLinckBlad[3].typeCount < 65 && (
+          {tabellLinckBlad && tabellLinckBlad[3].typeCount < 72 && (
             <p className="bestill-tools">
               Art.nr: {tooldata.k28.art}, {tabellLinckBlad[3]._id.type},{" "}
               {tooldata.k28.nom - tabellLinckBlad[3].typeCount}

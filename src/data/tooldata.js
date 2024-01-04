@@ -36,7 +36,7 @@ const tooldata = {
     z: "36",
     angle: "25",
     art: "V-SH9496",
-    nom: 65,
+    nom: 72,
     price: ["2022: 2357"],
   },
   k30: {
