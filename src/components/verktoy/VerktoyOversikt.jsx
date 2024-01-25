@@ -74,7 +74,8 @@ const VerktoyOversikt = () => {
                   return (
                     <div
                       key={tool.type}
-                      className="tool-container blade-container">
+                      className="tool-container blade-container"
+                    >
                       <p className="type">{tool.type}</p>
                       <p className="number">{tool.antall}</p>
                     </div>

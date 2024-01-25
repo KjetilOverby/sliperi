@@ -74,7 +74,7 @@ const KniverOversiktVisuell = () => {
             img={v40Bolt}
             title="Bolt"
             type=""
-            dim="M20x45 30 mm pipe"
+            dim="M20x45 30 mm pipe 10.9"
             antTenner=""
             antMaskin="30"
             maskin="V40 (ZD1/ZD2)"
